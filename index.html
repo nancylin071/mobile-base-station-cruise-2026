@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-mode="fast">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>行動基地台 出海去｜2026 探索星號 那霸・石垣島</title>
+<meta name="description" content="行動基地台 2026/09/20–09/23 探索星號 基隆→那霸→石垣島 員工旅遊行程頁：時間表、截止時間、餐廳必點、購物、注意事項。">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#ffffff;--fg:#111111;--muted:#4a4a4a;--line:#d0d0d0;--card:#f5f5f5;
+  --accent:#0b4fb3;--accent-bg:#e6efff;
+  --danger:#b3261e;--danger-bg:#fde7e5;
+  --warn:#7a4b00;--warn-bg:#fff1c9;
+  --ok:#1b5e20;--ok-bg:#e3f3e5;
+  --grey:#555;--grey-bg:#ececec;
+  --base:17px;--gutter:16px;--maxw:760px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121212;--fg:#f2f2f2;--muted:#c9c9c9;--line:#3a3a3a;--card:#1e1e1e;
+    --accent:#8ab4ff;--accent-bg:#1a2a4a;
+    --danger:#ff8a80;--danger-bg:#3a1512;
+    --warn:#ffd166;--warn-bg:#3a2d00;
+    --ok:#9be29f;--ok-bg:#12331a;
+    --grey:#bdbdbd;--grey-bg:#2a2a2a;}
+}
+*{box-sizing:border-box}
+html{font-size:var(--base);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+main,header.top,footer{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+h1{font-size:1.5rem;line-height:1.3;margin:.6em 0 .2em}
+h2{font-size:1.35rem;margin:1.6em 0 .5em;padding-top:.4em;border-top:3px solid var(--fg)}
+h3{font-size:1.12rem;margin:1.3em 0 .4em}
+h4{font-size:1.02rem;margin:0 0 .3em}
+p{margin:.5em 0}
+ul,ol{padding-left:1.3em;margin:.4em 0}
+li{margin:.25em 0}
+small,.sub{color:var(--muted);font-size:.92em}
+section{scroll-margin-top:104px}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6em 0}
+table{border-collapse:collapse;width:100%;font-size:.95em}
+th,td{border:1px solid var(--line);padding:.45em .55em;text-align:left;vertical-align:top}
+th{background:var(--card);white-space:nowrap}
+.nw td:nth-child(-n+2){white-space:nowrap}
+/* header + tools */
+header.top{padding-top:.8rem}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:.5em 0}
+button{font:inherit;cursor:pointer;border:2px solid var(--fg);background:var(--bg);color:var(--fg);border-radius:8px;padding:.45em .8em}
+button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+#modeBtn{font-weight:700}
+.tabs{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding:.5em var(--gutter);-webkit-overflow-scrolling:touch}
+.tabs a{text-decoration:none;padding:.35em .7em;border-radius:999px;border:1px solid var(--line);color:var(--fg);font-size:.95em}
+.tabs a[aria-current="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* modes */
+html[data-mode="fast"] .detail{display:none !important}
+html[data-mode="detail"] .fast-only{display:none}
+.modehint{font-size:.9em;color:var(--muted)}
+/* deadline */
+.deadline{border-left:6px solid var(--danger);background:var(--danger-bg);padding:.6em .8em;margin:.8em 0;border-radius:0 8px 8px 0;break-inside:avoid}
+.deadline .t{font-size:2rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--danger)}
+.deadline .l{font-weight:700}
+.deadline .s{color:var(--muted);font-size:.92em}
+/* badges */
+.badge{display:inline-block;font-size:.75em;font-weight:700;padding:.1em .5em;border-radius:6px;vertical-align:middle;margin-left:.3em;white-space:nowrap}
+.b-hard{background:var(--danger);color:#fff}
+.b-verify{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn)}
+.b-avoid{color:var(--danger);border:1.5px solid var(--danger)}
+.b-mixed{color:var(--warn);border:1.5px solid var(--warn)}
+.b-skip{background:var(--grey-bg);color:var(--grey);border:1px solid var(--grey)}
+.b-ok{background:var(--ok);color:#fff}
+.b-either{background:var(--accent);color:#fff}
+.b-backup{background:var(--grey-bg);color:var(--fg)}
+@media (prefers-color-scheme:dark){.b-hard{color:#121212}.b-ok{color:#121212}.b-either{color:#121212}}
+.skip h4,.skip .name{text-decoration:line-through;color:var(--muted)}
+/* timeline */
+.timeline{list-style:none;padding:0;margin:.6em 0}
+.timeline li{display:grid;grid-template-columns:6.6em 1fr;gap:10px;padding:.45em 0;border-bottom:1px dashed var(--line)}
+.timeline time{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95em}
+.timeline li.hard{background:var(--danger-bg);border-left:5px solid var(--danger);padding-left:.5em;border-radius:0 6px 6px 0}
+.timeline li.hard time{color:var(--danger)}
+.timeline li.warn{background:var(--warn-bg);border-left:5px solid var(--warn);padding-left:.5em}
+.timeline li .n{display:block;color:var(--muted);font-size:.93em}
+/* cards */
+.place,.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.7em .85em;margin:.7em 0;break-inside:avoid}
+.place header{display:flex;flex-wrap:wrap;gap:.3em .5em;align-items:baseline}
+.place .type{color:var(--muted);font-size:.9em}
+.facts{display:grid;grid-template-columns:4.2em 1fr;gap:.2em .6em;margin:.5em 0 0}
+.facts dt{color:var(--muted);font-size:.9em}
+.facts dd{margin:0}
+.warnline{margin:.5em 0 0;padding:.35em .6em;background:var(--warn-bg);color:var(--warn);border-radius:6px;font-size:.95em}
+.alertline{margin:.5em 0 0;padding:.35em .6em;background:var(--danger-bg);color:var(--danger);border-radius:6px;font-size:.95em}
+details{margin:.5em 0}
+summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details[open] summary{margin-bottom:.4em}
+.quote{border-left:3px solid var(--line);padding-left:.6em;color:var(--muted);margin:.3em 0}
+/* grid boxes */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.box{background:var(--accent-bg);border-radius:10px;padding:.7em .85em}
+.box h3{margin-top:0}
+/* todo */
+.todo{list-style:none;padding:0}
+.todo li{display:flex;gap:.6em;align-items:flex-start;padding:.35em 0;border-bottom:1px dashed var(--line)}
+.todo input{width:1.3em;height:1.3em;margin-top:.15em;flex:none}
+.todo label{cursor:pointer}
+.todostat{display:flex;gap:1em;align-items:center;margin:.5em 0}
+/* naha switch */
+.seg{display:flex;gap:6px;margin:.6em 0}
+.seg button{flex:1}
+#d1[data-naha="car"] .naha-taxi{display:none}
+#d1[data-naha="taxi"] .naha-car{display:none}
+@media (min-width:900px){
+  .naha-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  #d1 .naha-car,#d1 .naha-taxi{display:block !important}
+  .seg{display:none}
+}
+.chk{list-style:none;padding:0}
+.chk li::before{content:"☐ ";color:var(--muted)}
+footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid var(--line);margin-top:2em}
+.toplink{position:fixed;right:12px;bottom:12px;background:var(--fg);color:var(--bg);border-radius:999px;padding:.5em .8em;text-decoration:none;font-size:.9em;opacity:.85}
+@media print{
+  .tabs,.toolbar,.seg,#todoReset,.toplink,.modehint{display:none !important}
+  .detail{display:block !important}
+  .naha-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  #d1 .naha-car,#d1 .naha-taxi{display:block !important}
+  h2{break-before:page}
+  h2:first-of-type{break-before:auto}
+  .place,.card,.deadline,.timeline li,.box{break-inside:avoid}
+  .badge{background:none !important;color:#000 !important;border:1px solid #000 !important}
+  .deadline{background:none;border:2px solid #000;border-left-width:8px}
+  .deadline .t{color:#000}
+  .facts a[href^="http"]:not([href*="google.com/maps"])::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}
+  a{color:#000}
+  body{font-size:14px}
+}
+</style>
+<script>
+(function(){try{var m=localStorage.getItem('mbs2026:mode');if(m==='detail'||m==='fast'){document.documentElement.setAttribute('data-mode',m);}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="toplink" href="#top" aria-label="回到頂部">▲ 頂部</a>
+<header class="top" id="top">
+  <h1>行動基地台 出海去｜2026 探索星號 那霸・石垣島</h1>
+  <p class="sub">2026/09/20（日）基隆出發 → 09/21 那霸 → 09/22 石垣島 → 09/23（三）回基隆。麗星郵輪 探索星號。</p>
+  <div class="toolbar">
+    <button id="modeBtn" type="button" aria-pressed="false">快速模式</button>
+    <span class="modehint" id="modeHint">只看結論與時間。想看原因、網友評價、雷點與來源，按一下切到詳細模式。</span>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="頁面分區">
+  <a href="#glance">總覽</a>
+  <a href="#todo">待辦</a>
+  <a href="#d0">9/20 登船</a>
+  <a href="#ship">船上</a>
+  <a href="#d1">9/21 那霸</a>
+  <a href="#d2">9/22 石垣</a>
+  <a href="#d3">9/23 回程</a>
+  <a href="#cost">費用</a>
+  <a href="#contacts">電話</a>
+  <a href="#sources" class="detail">來源</a>
+</nav>
+
+<main>
+
+<!-- ===== S1 一眼看懂 ===== -->
+<section id="glance">
+  <h2>一眼看懂</h2>
+  <div class="tbl"><table class="nw">
+    <tr><th>日期</th><th>港口</th><th>到</th><th>開</th></tr>
+    <tr><td>09/20 日</td><td>基隆</td><td>—</td><td>20:00（16:00–18:30 報到）</td></tr>
+    <tr><td>09/21 一</td><td>那霸</td><td>當地 15:00</td><td>當地 23:59</td></tr>
+    <tr><td>09/22 二</td><td>石垣島</td><td>當地 14:00</td><td>當地 23:00</td></tr>
+    <tr><td>09/23 三</td><td>基隆</td><td>09:00</td><td>—</td></tr>
+  </table></div>
+
+  <div class="two">
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">22:00</div><div class="l">9/21 那霸 回到船上</div>
+      <div class="s">當地時間。＝船上時鐘 21:00。開船 23:59。</div></div>
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">21:30</div><div class="l">9/22 石垣島 回到船上</div>
+      <div class="s">當地時間。＝船上時鐘 20:30。開船 23:00。</div></div>
+  </div>
+  <p><b>船不等人。</b>手機到日本會自動變日本時間，船上的鐘不會。所有靠岸行程都用當地時間寫，回船時間再往前抓 1.5 小時。</p>
+
+  <div class="two">
+    <div class="box"><h3>已決定</h3>
+      <ul>
+        <li>那霸：只去<b>瀨長島</b>，之後在<b>國際通</b>吃飯逛街。交通租車或大型計程車二選一，還沒定。</li>
+        <li>石垣島：包車 4 小時，<b>松鼠猴 → 鐘乳洞 → 富崎海灘看日落</b>，回市區吃石垣牛。</li>
+        <li>不去：舊海軍司令部壕、玉泉洞、護國寺。</li>
+      </ul></div>
+    <div class="box"><h3>現在要做的 3 件事</h3>
+      <ol>
+        <li>預約石垣島包車（8 人要兩台 4 人座或一台 9 人座）。</li>
+        <li>那霸交通二選一：租車 T1299 或大型計程車。</li>
+        <li>訂兩地晚餐。詳見 <a href="#todo">待辦</a>。</li>
+      </ol></div>
+  </div>
+
+  <div class="detail">
+    <h3>時區小抄</h3>
+    <div class="tbl"><table>
+      <tr><th>當地（日本）</th><th>船上時鐘（台灣）</th><th>意義</th></tr>
+      <tr><td>15:00</td><td>14:00</td><td>那霸靠岸</td></tr>
+      <tr><td>22:00</td><td>21:00</td><td>那霸最晚回船</td></tr>
+      <tr><td>14:00</td><td>13:00</td><td>石垣島靠岸</td></tr>
+      <tr><td>21:30</td><td>20:30</td><td>石垣島最晚回船</td></tr>
+    </table></div>
+    <p>船上郵報、表演、餐廳都寫台灣時間。上岸後看手機，回船前看兩個時間都對一次。</p>
+    <h3>下船要等多久</h3>
+    <ul>
+      <li>那霸是第一個日本港，<b>所有人都要辦日本入境</b>，不下船也要。網友回報排隊 1 到 2 小時，實際能下船約 16:00–16:30。</li>
+      <li>石垣島是第二港，通關快，不到 1 小時，約 14:30–14:45 下船。</li>
+      <li>有買船上岸上行程的先下船，之後依艙等。</li>
+    </ul>
+    <details><summary>網友怎麼說</summary>
+      <p class="quote">「靠港後至少 1 小時才走到計程車區，下船人潮極多。」Dcard，2026 年 3 月，同航線。</p>
+      <p class="quote">「基隆出發那霸石垣，現在 1 小時內。」Threads，2026 年 1 月。</p>
+      <p class="quote">「黃金公主號那霸等了將近 2 小時，到石垣島變成優先下船。」Threads，2026 年 1 月。</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===== S2 待辦 ===== -->
+<section id="todo">
+  <h2>待辦清單</h2>
+  <p class="sub">勾選只存在你這台手機或電腦，不會同步給別人。</p>
+  <div class="todostat"><span><b id="todoDone">0</b> / <span id="todoTotal">0</span> 完成</span><button id="todoReset" type="button">清除勾選</button></div>
+
+  <h3>急</h3>
+  <ul class="todo">
+    <li><input type="checkbox" id="t-charter" data-key="ishigaki-charter"><label for="t-charter">石垣島包車：09/22 當地 15:00 在新港郵輪岸壁「出關後往船尾方向、公廁旁」碰面，4 小時。8 人要兩台 4 人座或一台 9 人座。請業者代訂石垣牛晚餐。</label></li>
+    <li><input type="checkbox" id="t-naha" data-key="naha-transport"><label for="t-naha">那霸交通二選一：租車 GO!GO!TOUR T1299（僅剩 1 輛，先用 LINE 確認 4 件事）或 9 人座大型計程車 3 小時。</label></li>
+    <li><input type="checkbox" id="t-dinner-naha" data-key="naha-dinner"><label for="t-dinner-naha">那霸晚餐：うりずん（電話 098-885-2178）或 琉球の牛 久茂地（線上）。8 人 18:45。想吃豬排選 小やじ（20:00 關）或 コション。</label></li>
+    <li><input type="checkbox" id="t-dinner-ishi" data-key="ishigaki-dinner"><label for="t-dinner-ishi">石垣島晚餐：きたうち牧場 浜崎本店（0980-83-7000）或 焼肉おおつか。想吃生魚片訂 ひとし 本店。19:00 到店。</label></li>
+  </ul>
+
+  <h3>出發前</h3>
+  <ul class="todo">
+    <li><input type="checkbox" id="t-copy" data-key="passport-copy"><label for="t-copy">每人護照影本 A4 一份，一比一，不裁切，不寫字。</label></li>
+    <li><input type="checkbox" id="t-online" data-key="online-checkin"><label for="t-online">線上預辦登船：09/19 20:00 前完成（開船前 24 小時關閉）。緊急聯絡人填沒同行的親友。</label></li>
+    <li><input type="checkbox" id="t-license" data-key="license"><label for="t-license">駕駛人辦駕照日文譯本（監理站，當天可拿；只有租車版需要）。</label></li>
+    <li><input type="checkbox" id="t-pack" data-key="pack"><label for="t-pack">自備：牙刷牙膏、拖鞋、房卡掛繩、萬國插頭、薄外套、暈船藥、日圓零錢、eSIM。</label></li>
+    <li><input type="checkbox" id="t-uber" data-key="uber"><label for="t-uber">下載 Uber（那霸可用）。石垣島沒有 Uber。</label></li>
+  </ul>
+
+  <h3>要先打電話確認的店 <span class="badge b-verify">待確認</span></h3>
+  <ul class="todo">
+    <li><input type="checkbox" id="t-v1" data-key="v-banburumai"><label for="t-v1">那霸 漁師食堂 大ばんぶる舞：晚上幾點開、幾點關。</label></li>
+    <li><input type="checkbox" id="t-v2" data-key="v-tonton"><label for="t-v2">那霸 豚々ジャッキー TONTON JACKY：營業時間、地址。</label></li>
+    <li><input type="checkbox" id="t-v3" data-key="v-ootsuka"><label for="t-v3">石垣島 焼肉おおつか 本店：營業時間。只知道一定要預約。</label></li>
+    <li><input type="checkbox" id="t-v4" data-key="v-hitoshi"><label for="t-v4">石垣島 ひとし 本店：9/22 週二是否 17:00 開。</label></li>
+    <li><input type="checkbox" id="t-v5" data-key="v-egao"><label for="t-v5">石垣島 とんかつ カレー食堂 えがお：是否還在營業。訂位頁已下架。</label></li>
+    <li><input type="checkbox" id="t-v6" data-key="v-cave"><label for="t-v6">石垣島鐘乳洞門票價、石垣島市區回港計程車車資。</label></li>
+  </ul>
+
+  <h3>靠岸日帶下船</h3>
+  <ul class="todo">
+    <li><input type="checkbox" id="t-b1" data-key="b-card"><label for="t-b1">房卡＋護照影本（會貼上陸許可、蓋章）＋海關申報單（一家一張）。</label></li>
+    <li><input type="checkbox" id="t-b2" data-key="b-cash"><label for="t-b2">日圓現金：接駁車 200、市場、只收現金的店、租車餘款。</label></li>
+    <li><input type="checkbox" id="t-b3" data-key="b-esim"><label for="t-b3">eSIM 下船前 2 小時裝好。船上網路慢又貴。</label></li>
+  </ul>
+</section>
+
+<!-- ===== S3 09/20 登船 ===== -->
+<section id="d0">
+  <h2>09/20（日）登船日</h2>
+  <div class="deadline"><span class="badge b-hard">硬性截止</span>
+    <div class="t">18:30</div><div class="l">完成報到</div>
+    <div class="s">報到 16:00–18:30。關閘 19:00。開船 20:00。遲到視同放棄，不退費。</div></div>
+  <p><b>地點：</b><a href="https://www.google.com/maps/search/?api=1&amp;query=基隆港西岸旅客服務中心+基隆市仁愛區港西街16號">基隆港西岸旅客服務中心（仁愛區港西街 16 號）</a>。基隆火車站「北站」出口步行 4 分鐘。</p>
+  <p><b>帶：</b>護照正本、A4 護照影本一份、船票（紙本或手機）。</p>
+  <ol class="timeline">
+    <li><time>16:00</time><div><b>到西岸旅客中心</b><span class="n">現場人多，每關都排。建議 16:00 就到。</span></div></li>
+    <li><time>—</time><div><b>託運行李</b><span class="n">一人可代表多件。只收硬殼箱，不收軟袋。貴重物、藥品、證件不託運。</span></div></li>
+    <li><time>—</time><div><b>2 樓報到</b><span class="n">護照正本＋影本＋船票。領到：行李託運條、房卡、日本入境卡與海關申報單。遺失不補發。</span></div></li>
+    <li><time>—</time><div><b>安檢、移民署查驗</b></div></li>
+    <li><time>—</time><div><b>上船</b><span class="n">船員收走護照，最後一天憑房卡領回。檢查房卡英文名。</span></div></li>
+    <li class="warn"><time>開船前</time><div><b>安全演習，強制參加</b><span class="n">集合點印在房卡上。</span></div></li>
+    <li class="hard"><time>20:00</time><div><b>開船</b></div></li>
+  </ol>
+  <div class="detail">
+    <h3>不能帶上船</h3>
+    <ul>
+      <li>吹風機、電熨斗、直髮器、電湯匙、電毯。</li>
+      <li>指甲刀以外的刀具，含刮鬍刀片。</li>
+      <li>酒。會被保管到下船。</li>
+      <li>無人機、雷射筆、變壓器、電子菸。</li>
+      <li>未煮熟或未真空的食物。</li>
+    </ul>
+    <h3>不能帶進日本或台灣</h3>
+    <ul><li>肉類、水果、農產品、寵物飼料。肉類未申報最高罰 300 萬。</li></ul>
+    <h3>行李與健康</h3>
+    <ul>
+      <li>每人 2 件、合計 50 公斤內。</li>
+      <li>懷孕 24 週以上、未滿 6 個月嬰兒、90 歲以上不能上船。</li>
+    </ul>
+    <h3>證件細節</h3>
+    <ul>
+      <li>護照效期 6 個月以上。</li>
+      <li>影本：A4、一比一、清晰、不寫字、不用回收紙。</li>
+      <li>房號規則：前 1 到 2 位是樓層。例：06519 是 6 樓。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== S4 船上 ===== -->
+<section id="ship">
+  <h2>船上生活</h2>
+  <ul>
+    <li>船上一律<b>台灣時間</b>。</li>
+    <li>消費刷房卡記帳，離船前一晚到 7 樓結帳。信用卡只收 VISA、MASTER。</li>
+    <li>免費餐廳三間：麗都自助（12 樓船尾）、百味軒（6 樓船中）、星夢（6 樓船尾）。同一餐期只能選一間。</li>
+    <li>網路慢又貴。建議用日本 eSIM，靠近日本就有訊號。</li>
+    <li>房間有吹風機、保險箱、熱水壺。沒有瓶裝水，各樓層有飲水機。</li>
+  </ul>
+  <div class="detail">
+    <h3>錢</h3>
+    <ul>
+      <li>不用先綁信用卡。要綁去 7 樓接待處。</li>
+      <li>結帳：離船前一晚，或下船前至少 3 小時。</li>
+      <li>娛樂場用港幣換籌碼，只收現金。</li>
+      <li>服務費每人每晚 600 元（海景房）。日本觀光稅每人 220 元。船上另加 18% 服務費。</li>
+    </ul>
+    <h3>吃</h3>
+    <ul>
+      <li>同時段吃第二次免費餐廳要付費：早餐 350、午晚餐 450。</li>
+      <li>其他餐廳都要付費。</li>
+      <li>網友建議：上船先去餐廳吃，房間還在整理。12 樓自助餐要早到才不用排。</li>
+    </ul>
+    <h3>其他</h3>
+    <ul>
+      <li>每日郵報 The Daily 電子化，掃 QR code 看。7 樓櫃台有紙本。</li>
+      <li>7 樓櫃台可拿暈船藥。</li>
+      <li>醫務中心 4 樓船頭，收費。</li>
+      <li>只能在指定室外區抽菸。看表演不能錄影。</li>
+      <li>三、四人房加床晚餐後才會鋪。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== S5 09/21 那霸 ===== -->
+<section id="d1" data-naha="car">
+  <h2>09/21（一）那霸</h2>
+  <div class="two">
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">21:30</div><div class="l">離開國際通</div><div class="s">縣廳前搭計程車 5 分鐘回碼頭。</div></div>
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">22:00</div><div class="l">回到船上</div><div class="s">當地時間。＝船上 21:00。開船 23:59。</div></div>
+  </div>
+  <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。今天只去<b>瀨長島</b>，之後在<b>國際通</b>吃飯逛街。</p>
+
+  <h3>交通二選一 <span class="badge b-either">二選一</span></h3>
+  <div class="tbl"><table>
+    <tr><th></th><th>租車 T1299</th><th>大型計程車</th></tr>
+    <tr><td>怎麼上車</td><td>租車公司把車開到郵輪碼頭門口交給我們</td><td>司機舉牌在出口等</td></tr>
+    <tr><td>時間限制</td><td><b>19:00 前還車</b>，只能開約 2 小時</td><td>沒有還車限制，可看完 18:40 日落</td></tr>
+    <tr><td>費用</td><td>約 ¥23,400（車資 18,600＋保險）</td><td>3 小時 ¥15,500 起</td></tr>
+    <tr><td>適合</td><td>想自己開</td><td>想省錢、不想趕</td></tr>
+  </table></div>
+  <div class="seg" role="tablist">
+    <button type="button" data-naha="car" aria-pressed="true">租車版</button>
+    <button type="button" data-naha="taxi" aria-pressed="false">大型計程車版</button>
+  </div>
+
+  <div class="naha-grid">
+  <div class="naha-car">
+    <h3>租車版時間表</h3>
+    <ol class="timeline">
+      <li><time>15:00–16:30</time><div>靠岸、入境、下船</div></li>
+      <li><time>16:30–16:45</time><div><b>碼頭門口拿車</b><span class="n">檢查車況、拍照。先把還車地址設進導航。</span></div></li>
+      <li><time>16:45–17:05</time><div>開去瀨長島<span class="n">20 分鐘。停車免費。</span></div></li>
+      <li><time>17:05–18:10</time><div><b>瀨長島 Umikaji Terrace</b><span class="n">露台看海、看飛機、吊床咖啡。17:45 後天色最美。</span></div></li>
+      <li class="hard"><time>18:10</time><div><b>上車回那霸</b><span class="n">一定要準時。</span></div></li>
+      <li class="hard"><time>18:40</time><div><b>大和 ROYNET 那霸國際通飯店還車</b><span class="n">安里站旁，免費。最晚 19:00。</span></div></li>
+      <li><time>18:45–20:00</time><div>晚餐</div></li>
+      <li><time>20:00–21:30</time><div>逛國際通，由東往西</div></li>
+      <li class="hard"><time>21:30</time><div>縣廳前搭計程車回碼頭<span class="n">5 分鐘，約 ¥900。</span></div></li>
+      <li class="hard"><time>22:00</time><div><b>回到船上</b></div></li>
+    </ol>
+    <p><b>延誤怎麼辦</b></p>
+    <ul>
+      <li>17:15 還沒拿到車：改去 PARCO CITY（15 分鐘，屋頂看夕陽，停車免費），18:30 出發還車。</li>
+      <li>18:00 還沒拿到車：不開了。走路 15 分鐘進國際通。</li>
+    </ul>
+    <div class="place">
+      <header><h4>GO!GO!TOUR T1299｜Sunrise 租車 日產 Serena 8 人座</h4><span class="badge b-either">二選一</span></header>
+      <dl class="facts">
+        <dt>拿車</dt><dd>租車公司派人把車開到那霸郵輪碼頭門口。免費。</dd>
+        <dt>還車</dt><dd>開到安里站旁大和 ROYNET 那霸國際通飯店門口交車。免費。<b>最晚 19:00。</b>不能在碼頭還車。</dd>
+        <dt>費用</dt><dd>車資 ¥18,600（方案以 48 小時計）＋免責保險 ¥1,600×3 天，或含營業損失補償 ¥3,100×3 天。餘款拿車時付<b>日圓現金</b>。</dd>
+        <dt>訂位</dt><dd><a href="https://tw.gogo-tour.com/car/detail/?plan_id=1299">GO!GO!TOUR 方案頁</a>。僅剩 1 輛。</dd>
+        <dt>駕駛帶</dt><dd>台灣駕照正本、日文譯本、蓋章的護照影本。</dd>
+      </dl>
+      <p class="warnline">訂之前用 LINE 確認：① 送到若狹碼頭不是安謝新港，船延遲司機能等到幾點。② 還到大和 ROYNET 的最晚時間，能否延到 19:30。③ 只有護照影本＋上陸許可可以租。④ 現金餘款總額、有沒有押金。</p>
+      <div class="detail"><details><summary>網友用過的紀錄・保險</summary>
+        <p class="quote">2026 年 3 月，搭郵輪的台灣客人租同公司 8 人座：「老闆娘會說中文，行前用 LINE 聯絡沒問題。一抵達碼頭就拿到車，還車後再送我們回碼頭。」</p>
+        <p class="quote">2026 年 8 月：「港口拿車很方便，但不能港口還車，付費也不行。客人很多會忘記傳資訊，要主動問。」</p>
+        <p>保險：對人無上限；對物與車輛自負額 5 萬，加免責保險可免除。出事一定要報警並通知租車公司，否則不賠。</p>
+        <p>其他租車公司都不如 T1299。最接近的是日本租車波之上店（離碼頭走 10 分鐘、20:00 還車，電話 050-1712-2417），但是否接受護照影本要問。</p>
+      </details></div>
+    </div>
+  </div>
+
+  <div class="naha-taxi">
+    <h3>大型計程車版時間表</h3>
+    <ol class="timeline">
+      <li><time>15:00–16:30</time><div>靠岸、入境、下船<span class="n">司機舉牌在出口等，不用排計程車。</span></div></li>
+      <li><time>16:30–16:50</time><div>開去瀨長島</div></li>
+      <li><time>16:50–18:50</time><div><b>瀨長島 Umikaji Terrace</b><span class="n">吊床咖啡、看飛機，18:40 看完日落再走。</span></div></li>
+      <li><time>19:10</time><div>國際通東端（安里）放人，3 小時結束</div></li>
+      <li><time>19:15–20:15</time><div>晚餐</div></li>
+      <li><time>20:15–21:30</time><div>逛國際通，由東往西</div></li>
+      <li class="hard"><time>21:30</time><div>縣廳前搭計程車回碼頭<span class="n">5 分鐘，約 ¥900。</span></div></li>
+      <li class="hard"><time>22:00</time><div><b>回到船上</b></div></li>
+    </ol>
+    <div class="place">
+      <header><h4>9 人座大型計程車包 3 小時</h4><span class="badge b-either">二選一</span><span class="badge b-verify">待確認</span></header>
+      <dl class="facts">
+        <dt>價格</dt><dd>3 小時 ¥15,500 起（村タクシー價目）。那覇タクシー也有 3 小時起自由行程。</dd>
+        <dt>怎麼訂</dt><dd>多為日文。可請郵輪 7 樓岸上觀光櫃檯代訂，或請飯店代打。</dd>
+        <dt>要問</dt><dd>能否 16:30 在那霸郵輪碼頭出口舉牌等、9 人座是否可、3 小時能否拆成「去程＋瀨長島等候＋放到國際通」。</dd>
+      </dl>
+      <div class="detail"><details><summary>為什麼計程車值得考慮</summary>
+        <p>租車版 19:00 就要還車，實際只能開約 2 小時，看不到 18:40 的日落。計程車沒有這個限制，價錢也比較低。缺點是要用日文預約。</p>
+        <p class="quote">網友（2026 年 4 月）：「只有六小時的話搭計程車會比較方便，想要採買可以去國際通，否則每個點待不久。」</p>
+      </details></div>
+    </div>
+  </div>
+  </div><!-- /naha-grid -->
+
+  <div class="detail">
+    <h3>關於碼頭排計程車</h3>
+    <p>下船那一刻碼頭外會擠滿人排計程車。網友回報「靠港後至少 1 小時才走到計程車區」；那霸港官方說碼頭不代叫計程車。避開的方法：租車送到碼頭、事先預約大型計程車、在出口外叫 Uber（8 人要兩台）、或直接走 15 分鐘進國際通。</p>
+    <h3>瀨長島以外還能去哪</h3>
+    <div class="tbl"><table>
+      <tr><th>景點</th><th>車程</th><th>適合誰</th><th>說明</th></tr>
+      <tr><td><b>瀨長島 Umikaji Terrace</b></td><td>20 分</td><td>看海、喝咖啡</td><td>白色階梯建築面海。免費停車。店家開到 21:00。首選。</td></tr>
+      <tr><td>PARCO CITY</td><td>15 分</td><td>逛街也想看海</td><td>5 樓屋頂免費看夕陽，3 樓星巴克海景座。免費停車。開到 22:00。</td></tr>
+      <tr><td>首里城</td><td>20 分</td><td>看文化</td><td>只能看外觀，正殿內部 11/23 才開。門票 18:30 停賣。</td></tr>
+      <tr><td>iias 豐崎＋DMM 水族館</td><td>20 分</td><td>帶小孩、想吹冷氣</td><td>水族館最晚 19:00 入館。免費停車。</td></tr>
+      <tr><td>ASHIBINAA 暢貨中心</td><td>20 分</td><td>買國際品牌</td><td>20:00 關。網友說只有想撿過季品才需要去。</td></tr>
+    </table></div>
+    <p><span class="badge b-skip">不去</span> 美國村（單程 40 分）、玉泉洞（17:30 關，網友說體質敏感者不推）、齋場御嶽與知念岬（太遠）。</p>
+    <h3>停車</h3>
+    <ul>
+      <li>瀨長島、PARCO CITY、iias：免費。</li>
+      <li>縣廳前地下停車場：30 分 ¥100，一天最多 ¥1,500。</li>
+      <li>Apple Park 牧志 2 丁目 1：18:00 到 08:00 最多 ¥400。</li>
+      <li>看牌子注意「最大料金」封頂價、「小型車専用」不能停 8 人座、「夜間」從幾點起算。查價用 Times 停車場搜尋或 Google 地圖照片。</li>
+    </ul>
+  </div>
+
+  <h3>晚餐（先訂位）</h3>
+  <div class="place">
+    <header><h4><span lang="ja">うりずん</span> 本店</h4><span class="type">琉球料理・泡盛・老店</span><span class="badge b-either">二選一</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=うりずん+本店+那覇市安里">安里站旁，離還車飯店走 5 分鐘</a></dd>
+      <dt>電話</dt><dd><a href="tel:+81-98-885-2178">098-885-2178</a></dd>
+      <dt>營業</dt><dd>17:30–24:00，全年無休。110 席，有包廂。</dd>
+      <dt>訂位</dt><dd><b>只收電話</b>。8 人請訂包廂。可請飯店或會日文的人代打。</dd>
+      <dt>必點</dt><dd><b>ドゥル天</b>（田芋炸餅，發源店）、<b>ミヌダル</b>（黑芝麻蒸豬肉）、ラフテー、ジーマーミ豆腐、鸚哥魚生魚片、古酒泡盛。</dd>
+      <dt>價位</dt><dd>約 ¥1,900／人。約一般居酒屋兩倍。</dd>
+    </dl>
+    <div class="detail"><details><summary>網友怎麼說</summary>
+      <p class="quote">PTT 食記「新鮮生魚片配泡盛」：鸚哥魚生魚片、沖繩炊飯、韭菜炒豬腸、花生豆腐。</p>
+      <p class="quote">日本網友：「做工細，價錢合理」。</p>
+    </details></div>
+  </div>
+  <div class="place">
+    <header><h4><span lang="ja">琉球の牛 那覇久茂地</span></h4><span class="type">沖繩 A5 和牛燒肉</span><span class="badge b-either">二選一</span><span class="badge b-mixed">評價兩極</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=琉球の牛+那覇久茂地+久茂地3-16-1">久茂地 3-16-1，縣廳前站 300 公尺，國際通西端</a></dd>
+      <dt>營業</dt><dd>17:00–23:00</dd>
+      <dt>訂位</dt><dd><a href="https://www.tablecheck.com/en/shops/yakiniku-kumoji/reserve">TableCheck 線上訂位</a>。國際通本店要提前兩個月，久茂地店好訂很多。</dd>
+      <dt>必點</dt><dd><b>炙燒牛肉壽司</b>（烤 30 秒半熟）、<b>厚切牛舌</b>、特選炙烤肉捲起來烤。12 種燒肉套餐 ¥5,980，另加服務費 350。</dd>
+    </dl>
+    <p class="warnline">PTT 推文有人說「肉有怪味，不值這個價位」。另一位說「牛肉蠻好吃，適合不愛吃油的人，但鐵盤燙手」。</p>
+  </div>
+  <div class="place">
+    <header><h4>燒肉本部牧場 國際通店</h4><span class="type">沖繩黑毛和牛</span><span class="badge b-backup">備案</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=焼肉もとぶ牧場+国際通り店">國際通</a></dd>
+      <dt>營業</dt><dd>17:00–22:00</dd>
+      <dt>必點</dt><dd>本部牛上等牛舌、英式烤牛肉、牛尾湯。</dd>
+    </dl>
+  </div>
+
+  <h3>想吃豬排</h3>
+  <div class="place">
+    <header><h4><span lang="ja">とんかつ 小やじ</span></h4><span class="type">沖繩縣產豬豬排</span><span class="badge b-hard">20:00 關</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=とんかつ小やじ+那覇市松尾2-8-34">松尾 2-8-34，市場本通旁巷內，離國際通 2 分鐘</a></dd>
+      <dt>營業</dt><dd>11:00–20:00，無休。要早點去。</dd>
+      <dt>必點</dt><dd><b>上ロースカツ定食</b>（上等里肌豬排）¥1,980。</dd>
+    </dl>
+    <div class="detail"><details><summary>網友怎麼說</summary><p class="quote">日本食記：「上里肌軟、脂肪甘甜，沾鹽或山葵鹽吃」、「麵包粉粗，酥到有聲音，衣本身就有香氣，感動」。那霸評價最高的豬排店，已開第二家。</p></details></div>
+  </div>
+  <div class="place">
+    <header><h4><span lang="ja">アグーとんかつ コション 浮島通り店</span></h4><span class="type">阿古豬豬排</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=アグーとんかつコション+浮島通り店+那覇市牧志3-3-21">牧志 3-3-21，浮島通，牧志站走 5 分</a></dd>
+      <dt>電話</dt><dd><a href="tel:+81-98-988-3435">098-988-3435</a></dd>
+      <dt>營業</dt><dd>11:00–23:00，無休。晚上也吃得到。</dd>
+      <dt>必點</dt><dd><b>金アグー ロースかつ</b>。麥飯、高麗菜、豬肉味噌湯免費續。晚餐約 ¥1,500。</dd>
+    </dl>
+    <p class="sub">日本評論網站評價好，台灣網友心得少。</p>
+  </div>
+  <div class="detail">
+    <div class="place">
+      <header><h4>豚々ジャッキー TONTON JACKY</h4><span class="type">阿古豬炸豬排</span><span class="badge b-verify">待確認</span></header>
+      <p>Dcard「觀光客不常去的沖繩美食」推薦：「把腥味處理掉，只留甘甜的肉香跟油脂香」。營業時間與地址未查到，想去先確認。</p>
+    </div>
+    <div class="place">
+      <header><h4>島豚屋 久茂地店</h4><span class="type">蒸籠阿古豬（不是豬排）</span></header>
+      <p>17:00–23:00。Threads 一位「好吃到不行，超脆彈鮮甜」，另一位「清爽不重口味，但價位偏高」。</p>
+    </div>
+  </div>
+
+  <h3>想吃生魚片</h3>
+  <p>那霸最便宜的魚市場泊いゆまち 16:00 就關，晚上去不了。晚上的選擇：</p>
+  <ul>
+    <li><b>うりずん</b>：點鸚哥魚生魚片，就在還車飯店旁。</li>
+    <li><b>漁師食堂 大ばんぶる舞</b> <span class="badge b-verify">待確認</span>：泊漁港旁，離國際通約 10 分鐘車程。住沖繩的台灣人說「一個套餐 3,000 多日圓吃很飽」。必點奶油煎魚加鮪魚中落套餐 ¥1,580。晚上營業時間未查到。</li>
+    <li class="detail"><b>魚屋直営食堂 魚まる</b>：赤嶺站走 6 分鐘，11:00–21:00，週二休。網友「生魚片飯又便宜又好吃」。離國際通遠，只適合搭 Uber 的版本。</li>
+  </ul>
+
+  <h3>不用訂位</h3>
+  <ul>
+    <li><b>第一牧志公設市場 2 樓</b>：20:00 最後點餐，1 樓 19:45 停止代客料理。常點龍蝦、夜光貝、海葡萄。網友說偏貴。</li>
+    <li><b>國際通屋台村</b>：約 20 間小店，開到深夜。最後喝一杯。</li>
+    <li><b>ジャッキーステーキハウス</b> <span class="badge b-mixed">評價兩極</span>：離郵輪碼頭走 15 分鐘，11:00–22:00 受理，週一有開，不接受訂位。必點菲力牛排三分熟。20:30 前到。</li>
+  </ul>
+
+  <h3>雷店 <span class="badge b-avoid">雷店</span></h3>
+  <ul>
+    <li><b>幸福鬆餅</b>：就在瀨長島，排隊久，網友列雷店。不要排。</li>
+    <li><b>蝦蝦飯</b>：評價兩極。</li>
+    <li>國際通唐吉訶德人多空間小，補貨可以，別逛太久。</li>
+  </ul>
+
+  <h3>國際通要買什麼</h3>
+  <p><b>大家都說好</b></p>
+  <ul>
+    <li>御菓子御殿 <b>紅芋塔</b>：冰過更好吃，送長輩。</li>
+    <li>鹽屋 <b>宮古島雪塩厚夾心餅乾</b>：「沖繩版白色戀人」，兩篇開箱都說最好吃。</li>
+    <li><b>紅芋夾心餅乾</b>：國際通到處有，Dcard 作者最愛。</li>
+    <li><b>Royce 石垣鹽巧克力洋芋片</b>：日本價是台灣一半。</li>
+    <li>Calbee 國際通門市 <b>現炸紅芋條</b>：只有現場有。</li>
+    <li><b>Orion 豆菓子</b>：下酒，「兩大包一週吃完」。</li>
+    <li><b>石垣島辣油</b>：拌麵沾水餃。唐吉訶德買最便宜。</li>
+    <li>首里石鹼肥皂：住沖繩的台灣人推。</li>
+  </ul>
+  <div class="detail">
+    <p><b>評價兩極</b>：雪鹽金楚糕（豬油餅，買一小包試）、泡盛（想試買小瓶）。</p>
+    <p><b>不用買</b>：雪鹽費南雪（普通）、雪鹽棉花餅（「有點空虛」）。</p>
+    <p><b>訣竅</b>：國際通的美麗海水族館伴手禮專賣店可退稅、送購物袋。國際通藥妝店都很小難湊退稅，要買多去大國藥妝或唐吉訶德。多數店 21:00 到 22:00 關，Calbee 和鹽屋先逛。</p>
+  </div>
+
+  <h3>咖啡廳（給喜歡看書看海的人）</h3>
+  <div class="tbl"><table>
+    <tr><th>地點</th><th>時間</th><th>什麼時候去</th></tr>
+    <tr><td>HAMMOCK CAFE LA ISLA，瀨長島</td><td>11:00–21:00</td><td>在瀨長島時，吊床面海</td></tr>
+    <tr><td>PARCO CITY 3 樓星巴克</td><td>9:00–23:00</td><td>延誤時的替代，海景座</td></tr>
+    <tr><td>ジュンク堂書店 那霸店</td><td>10:00–21:00</td><td>大家逛藥妝時。沖繩最大書店，離國際通走 5 分</td></tr>
+    <tr><td>郵輪碼頭 3 樓觀景台</td><td>隨船開放</td><td>回船前最後看海</td></tr>
+  </table></div>
+
+  <h3>景點提醒</h3>
+  <ul>
+    <li><span class="badge b-skip">不去</span> <b>舊海軍司令部壕</b>：網友票選最可怕。戰爭遺跡。</li>
+    <li><span class="badge b-skip">不去</span> <b>玉泉洞</b>：體質敏感者不推，又悶又熱又長。</li>
+    <li><span class="badge b-skip">不去</span> <b>護國寺</b>（波上宮旁）：Dcard 有真實不好經驗。經過波上宮時別進去。</li>
+    <li>神社禮儀：不對正門拍照，不嬉鬧。</li>
+  </ul>
+  <div class="detail">
+    <h3>步行備案（不租車也不包車時）</h3>
+    <ol>
+      <li>出碼頭往右過橋 7 分鐘：波上宮、波之上海灘。</li>
+      <li>回大路往石獅子柱方向直走 15 分鐘：國際通西端。</li>
+      <li>國際通、牧志公設市場晚餐、唐吉訶德。</li>
+      <li>21:30 從縣廳前搭計程車 5 分鐘回碼頭，或走 20 分鐘。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== S6 09/22 石垣島 ===== -->
+<section id="d2">
+  <h2>09/22（二）石垣島</h2>
+  <div class="two">
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">17:40</div><div class="l">鐘乳洞最晚到達</div><div class="s">最後入場 18:00，18:30 關。</div></div>
+    <div class="deadline"><span class="badge b-hard">硬性截止</span>
+      <div class="t">21:30</div><div class="l">回到船上</div><div class="s">當地時間。＝船上 20:30。開船 23:00。這裡繳回護照影本。</div></div>
+  </div>
+  <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。<b>石垣島叫不到車，一定要事先預約包車。</b></p>
+  <p><b>集合點：</b>出關後往船尾方向，公廁旁。約 15:00 碰面。</p>
+
+  <h3>主行程：方案 C <span class="badge b-ok">已決定</span></h3>
+  <ol class="timeline">
+    <li><time>14:00–14:45</time><div>靠岸、下船</div></li>
+    <li><time>15:00</time><div><b>上包車</b><span class="n">出關後往船尾方向，公廁旁。</span></div></li>
+    <li><time>15:20–16:30</time><div><b>石垣やいま村 松鼠猴之森</b><span class="n">門票 ¥1,200，17:30 關。網友「可以近距離摸，但會翻口袋和背包」。</span></div></li>
+    <li class="hard"><time>16:50–17:40</time><div><b>石垣島鐘乳洞</b><span class="n">走 40 分鐘就夠。最後入場 18:00。</span></div></li>
+    <li><time>18:00–18:50</time><div><b>富崎海灘看日落</b><span class="n">日落 18:40。離市區 10 分鐘。</span></div></li>
+    <li><time>19:00</time><div>市區放人，包車 4 小時結束</div></li>
+    <li><time>19:00–20:15</time><div><b>石垣牛晚餐</b><span class="n">先訂位。公設市場 20:00 關，這版逛不到；改逛商店街藥妝，或請司機 18:50 前先停 SAN-A 超市。</span></div></li>
+    <li><time>20:15–20:45</time><div>歐格麗娜商店街、大國藥妝</div></li>
+    <li><time>20:45–21:00</time><div>計程車回港<span class="n">市區有招呼站，等 10 到 15 分鐘。不確定就請餐廳幫忙叫。</span></div></li>
+    <li class="hard"><time>21:30</time><div><b>回到船上</b></div></li>
+  </ol>
+
+  <div class="place">
+    <header><h4>包車：8 人怎麼算</h4><span class="badge b-verify">待確認</span></header>
+    <dl class="facts">
+      <dt>價目</dt><dd>港口官方觀光計程車，<b>4 人座</b>：2 小時 ¥8,800、3 小時 ¥13,200、4 小時 ¥17,600、5 小時 ¥22,000。</dd>
+      <dt>8 人</dt><dd><b>兩台 4 人座 4 小時 ¥35,200</b>，或一台 9 人座（石垣旅行社 6 小時 ¥33,000，4 小時報價要問）。以業者報價為準。</dd>
+      <dt>業者</dt><dd><b>石垣旅行社</b>：LINE 聯絡（LINE ID 待補），可代訂餐廳。網友 2025 年 4 月用過，「司機態度超好」。另有網友推薦「阿菜阿姨」，台語可通，未驗證。</dd>
+    </dl>
+    <div class="detail"><details><summary>距離與為什麼一定要預約</summary>
+      <ul>
+        <li>從郵輪碼頭：離島碼頭 10 分（接駁巴士 ¥200）、公設市場 10 分、SAN-A 與 MaxValu 超市 15 分、川平灣 40 分。</li>
+        <li>石垣市觀光交流協會：郵輪靠港時計程車嚴重不足，請預約。網友 2023 年沒預約走了 1 小時進城。石垣島沒有 Uber，DiDi 靠港時也叫不到。</li>
+        <li>石垣旅行社與 Threads 帳號 @ishigaki_twjp 的配偶有關，但 Dcard 兩位無關旅客實際用過並給正評。</li>
+      </ul>
+    </details></div>
+  </div>
+
+  <div class="detail">
+    <h3>為什麼選方案 C</h3>
+    <ul>
+      <li>兩個室內或樹蔭景點，帶小孩、怕曬都合適。網友：「這次去石垣島最喜歡的就是松鼠猴。」</li>
+      <li>不受玻璃船班次限制，時間好控制。</li>
+      <li>日落點離市區只有 10 分鐘，看完直接吃飯。</li>
+    </ul>
+    <h3>替代方案</h3>
+    <div class="tbl"><table>
+      <tr><th>方案</th><th>主角</th><th>一句話</th></tr>
+      <tr><td>A 川平灣玻璃船</td><td>海</td><td>網友首選。玻璃船 9:00–17:00 每 15–20 分一班，請業者先訂票。川平灣抓 90 分鐘，車程 40 分。</td></tr>
+      <tr><td>B 川平灣不搭船＋御神崎夕陽</td><td>海＋夕陽</td><td>御神崎離川平灣 15 分，免費，傍晚停車場會塞。</td></tr>
+      <tr><td>D 玉取崎展望台＋川平灣</td><td>山海全景</td><td>單程 60 分，各只能待 30 分。</td></tr>
+      <tr><td>E 市區慢遊＋風獅爺公園＋富崎海灘</td><td>放空</td><td>包車 2 小時就夠。</td></tr>
+    </table></div>
+    <p><span class="badge b-skip">去不了</span> 幻之島與藍洞浮潛（13:30 前出港）、平久保崎燈塔（單程 90 分）、星空團（20:00 起 80 分鐘，趕不回船）、名藏灣夕陽獨木舟或 SUP（約 2 小時，兩份資料開始時間衝突，無論何者都與晚餐衝突，視為不可行）。</p>
+
+    <h3>租機車？不建議</h3>
+    <ul>
+      <li>日本租機車要護照正本，我們只有影本。沒有機車店明說接受影本。</li>
+      <li>汽車駕照譯本只能騎 50cc 且不能雙載。8 人要 4 到 8 位有重機駕照加譯本的人。</li>
+      <li>機車店 17:00 到 18:00 停止還車。市區的 HAPPY ROAD 週二公休，9/22 正好週二。</li>
+      <li>石垣島機車本來就少，9 月颱風季。</li>
+    </ul>
+    <h3>備案</h3>
+    <ul>
+      <li><b>竹富島</b>：只在 15:00 前順利下船時用。15:30 高速船去，末班回程 <b>17:50</b>。港口旁沒店，腳踏車靠店家接送。</li>
+      <li><b>只逛市區</b>：接駁巴士到離島碼頭，走路逛商店街、公設市場。零風險但玩不過癮。</li>
+    </ul>
+  </div>
+
+  <h3>晚餐（先訂位）</h3>
+  <p class="sub">靠港日市區餐廳幾乎客滿，網友說「沒預約進不去」。請包車業者代訂。</p>
+  <div class="place">
+    <header><h4>石垣島<span lang="ja">きたうち牧場 浜崎本店</span>（舊名金城燒肉屋）</h4><span class="type">石垣牛燒肉</span><span class="badge b-either">二選一</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=石垣島きたうち牧場+浜崎本店+石垣市浜崎町2-3-24">浜崎町 2-3-24，離港口近，120 席</a></dd>
+      <dt>電話</dt><dd><a href="tel:+81-980-83-7000">0980-83-7000</a></dd>
+      <dt>營業</dt><dd>晚餐 16:30–22:00，21:30 最後點餐。9 月週二有開。</dd>
+      <dt>必點</dt><dd><b>特上肉盛</b>（特等拼盤）、主廚推薦拼盤、內臟拼盤。</dd>
+    </dl>
+    <p class="warnline">石垣牛油花多。網友：「從油花少的先吃，油花最多的留最後，配白飯。」</p>
+    <div class="detail"><details><summary>為什麼選它</summary><p>牧場直營、營業時間長沒午休、離港近。搭郵輪的部落客多次推薦。</p></details></div>
+  </div>
+  <div class="place">
+    <header><h4><span lang="ja">焼肉おおつか 本店</span></h4><span class="type">石垣牛燒肉</span><span class="badge b-either">二選一</span><span class="badge b-verify">待確認</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=焼肉おおつか+本店+石垣市大川270-2">大川 270-2，離公設市場走 5 分鐘</a></dd>
+      <dt>營業</dt><dd>未查到。只知道一定要先訂，現場幾乎不收散客。</dd>
+      <dt>訂位</dt><dd>KKday 可訂，或請包車業者代訂。</dd>
+      <dt>必點</dt><dd><b>石垣牛炙燒壽司</b>（桌邊炙燒）、<b>特選石垣牛拼盤</b>、<b>石垣牛五花</b>。</dd>
+      <dt>價位</dt><dd>Threads 網友 7 人吃 ¥34,800，每人約 5,000。中文友善，iPad 點餐，可刷卡。</dd>
+    </dl>
+  </div>
+  <div class="place">
+    <header><h4><span lang="ja">島そば一番地</span> 石垣本店</h4><span class="type">八重山蕎麥麵</span><span class="badge b-backup">快速選項</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=島そば一番地+石垣本店+石垣市字石垣1-1">石垣 1-1，離港口走 7 分鐘</a></dd>
+      <dt>電話</dt><dd><a href="tel:+81-980-88-1781">0980-88-1781</a></dd>
+      <dt>營業</dt><dd>晚餐 18:00–21:30。週四晚休。</dd>
+      <dt>必點</dt><dd>島そば ¥715、本ソーキそば（軟骨排骨）¥1,100、コッキそば（全配料）¥1,375。</dd>
+    </dl>
+    <p class="warnline">只收現金。網友：「柴魚昆布湯頭清甜，滷肉入口即化。」</p>
+  </div>
+
+  <h3>想吃生魚片</h3>
+  <div class="place">
+    <header><h4><span lang="ja">ひとし</span> 本店</h4><span class="type">鮪魚專門居酒屋</span><span class="badge b-verify">待確認</span></header>
+    <dl class="facts">
+      <dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=まぐろ専門居酒屋ひとし+本店+石垣市新栄町15-8">新榮町 15-8，市區</a></dd>
+      <dt>營業</dt><dd>17:00–23:30，週三 16:30 開。9/22 週二是否 17:00 開請確認。</dd>
+      <dt>訂位</dt><dd>電話預約必須。日本網友「快打烊時打比較容易通」。</dd>
+      <dt>必點</dt><dd><b>鮪魚生魚片拼盤</b>（有大腹卻便宜）、<b>海葡萄鮪魚軍艦</b>、グルクン唐揚。</dd>
+      <dt>價位</dt><dd>¥3,000–5,000／人。<b>只收現金。</b></dd>
+    </dl>
+  </div>
+  <div class="detail">
+    <div class="place">
+      <header><h4><span lang="ja">ひとし</span> 石敢當店</h4><span class="type">全島最難訂</span></header>
+      <dl class="facts">
+        <dt>電話</dt><dd><a href="tel:+81-980-88-5807">0980-88-5807</a>，網友說「基本接不通」，提前一到兩個月都不一定有。</dd>
+        <dt>營業</dt><dd>17:00–24:00，週日休。</dd>
+        <dt>必點</dt><dd>鮪魚生魚片三種拼盤（「一人一盤，很快賣完」）、石垣牛握壽司、墨魚炒飯、海膽麵線。</dd>
+      </dl>
+      <p class="sub">訂不到就別排。有網友 17:00 開門前去排現場才吃到。</p>
+    </div>
+    <p><span class="badge b-skip">不能去</span> つーなー（石垣生鮪魚壽司居酒屋）週二公休；公設市場旁海鮮攤多在 18:00 前收。</p>
+    <h3>想吃豬排</h3>
+    <p>石垣島的豬排店都是午餐店：とんかつ力（11:30–15:00 賣完關）、とんかつ石垣亭（11:30–14:30）。唯一晚上有開的えがお <span class="badge b-verify">待確認</span> 訂位頁已下架。<b>豬排留給那霸。</b></p>
+    <h3>順路小吃與提醒</h3>
+    <ul>
+      <li><b>Miru Miru 本舖</b>：新鮮水果冰淇淋，可看海。在島西邊，要排隊。</li>
+      <li><b>知念商會 Onisasa 飯糰雞排</b>：島民靈魂美食，只收現金。在登野城，離市區稍遠。</li>
+      <li><span class="badge b-skip">已休業</span> <b>辺銀食堂</b>（石垣島辣油發源店）2020 年起休業，很多舊攻略還在寫。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== S7 09/23 ===== -->
+<section id="d3">
+  <h2>09/23（三）回基隆</h2>
+  <p><b>前一晚</b></p>
+  <ul>
+    <li>房間會收到離船通知。</li>
+    <li>到 7 樓結帳（或下船前至少 3 小時）。</li>
+    <li>大件行李放門口，會有人收。</li>
+  </ul>
+  <p><b>當天</b></p>
+  <ul>
+    <li>依廣播領回護照。代領要帶對方房卡。</li>
+    <li>離房前檢查保險箱、抽屜、床底。</li>
+    <li>房卡帶著，下船前要再刷一次。</li>
+    <li>09:00 靠基隆。</li>
+  </ul>
+  <div class="detail">
+    <h3>入境台灣</h3>
+    <ul>
+      <li>酒 1.5 公升、菸 200 支以內免稅。</li>
+      <li>現金等值 1 萬美元以上要申報。</li>
+      <li>肉類、蔬果、種子不能帶。水果可以帶回船上吃，不能帶下船。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== S8 費用 ===== -->
+<section id="cost">
+  <h2>費用估算（日圓）</h2>
+  <div class="tbl"><table>
+    <tr><th>項目</th><th>金額</th><th>每人（8 人）</th></tr>
+    <tr><td>那霸租車版</td><td>¥18,600 ＋免責 ¥4,800 ＝ ¥23,400（含營業損失版 ¥27,900）＋回程計程車 ¥900</td><td>約 ¥3,000–3,600</td></tr>
+    <tr><td>那霸大型計程車版</td><td>3 小時 ¥15,500 起＋回程 ¥900</td><td>約 ¥2,050 起</td></tr>
+    <tr><td>那霸晚餐</td><td>うりずん 約 ¥1,900／琉球の牛 約 ¥6,300／豬排 ¥1,500–2,000</td><td>—</td></tr>
+    <tr><td><b>石垣島包車 4 小時</b></td><td><b>4 人座 ×2 台 ¥35,200</b>，或 9 人座（4 小時報價待問；6 小時 ¥33,000）</td><td>約 ¥4,100–4,400</td></tr>
+    <tr><td>石垣島門票</td><td>やいま村 ¥1,200；鐘乳洞 <span class="badge b-verify">待查</span></td><td>—</td></tr>
+    <tr><td>石垣島回港計程車</td><td><span class="badge b-verify">待查</span>，市區 10–15 分</td><td>—</td></tr>
+    <tr><td>石垣島晚餐</td><td>燒肉 ¥3,000–5,000／島そば ¥715–1,375</td><td>—</td></tr>
+    <tr><td>船上固定（台幣）</td><td>服務費 600×3 晚、日本觀光稅 220、網路 290/晚（選）</td><td>NT$2,020 起</td></tr>
+  </table></div>
+  <p class="sub">包車以港口看板 4 人座價 ×2 台估算，實際以業者報價為準。</p>
+</section>
+
+<!-- ===== S9 電話 ===== -->
+<section id="contacts">
+  <h2>電話與聯絡總表</h2>
+  <div class="tbl"><table>
+    <tr><th>對象</th><th>用途</th><th>電話／連結</th><th>備註</th></tr>
+    <tr><td>麗星郵輪 台灣客服</td><td>船務</td><td><a href="tel:0080-149-8887">0080 149 8887</a>；reservations.ts@rwcruises.com</td><td>只在台灣可撥免付費</td></tr>
+    <tr><td>GO!GO!TOUR T1299</td><td>那霸租車</td><td><a href="https://tw.gogo-tour.com/car/detail/?plan_id=1299">方案頁</a>，訂後 LINE 聯絡</td><td>僅剩 1 輛</td></tr>
+    <tr><td>日本租車 波之上店</td><td>那霸租車備案</td><td><a href="tel:+81-50-1712-2417">050-1712-2417</a></td><td>20:00 還車，問是否收護照影本</td></tr>
+    <tr><td>うりずん 本店</td><td>那霸晚餐</td><td><a href="tel:+81-98-885-2178">098-885-2178</a></td><td>只收電話</td></tr>
+    <tr><td>琉球の牛 久茂地</td><td>那霸晚餐</td><td><a href="https://www.tablecheck.com/en/shops/yakiniku-kumoji/reserve">TableCheck</a></td><td>線上</td></tr>
+    <tr><td>コション 浮島通り店</td><td>那霸豬排</td><td><a href="tel:+81-98-988-3435">098-988-3435</a></td><td>開到 23:00</td></tr>
+    <tr><td>石垣旅行社</td><td>石垣島包車</td><td>LINE（ID 待補）</td><td>可代訂餐廳</td></tr>
+    <tr><td>きたうち牧場 浜崎本店</td><td>石垣島晚餐</td><td><a href="tel:+81-980-83-7000">0980-83-7000</a></td><td>16:30–22:00</td></tr>
+    <tr><td>島そば一番地 石垣本店</td><td>石垣島晚餐</td><td><a href="tel:+81-980-88-1781">0980-88-1781</a></td><td>現金</td></tr>
+    <tr><td>ひとし 石敢當店</td><td>石垣島生魚片</td><td><a href="tel:+81-980-88-5807">0980-88-5807</a></td><td>幾乎接不通</td></tr>
+    <tr><td>e-SHARE 石垣</td><td>電動機車（不建議）</td><td><a href="tel:+81-980-87-5562">0980-87-5562</a></td><td>9:00–18:00</td></tr>
+    <tr><td>役男短期出境</td><td>出發前申請</td><td><a href="https://www.ris.gov.tw/departure/app/Departure/main">內政部役政署</a></td><td>出發前 3 到 30 日</td></tr>
+  </table></div>
+</section>
+
+<!-- ===== S10 來源 ===== -->
+<section id="sources" class="detail">
+  <h2>來源與證據</h2>
+  <p>篩選標準：時間新、有具體時間和費用、有抱怨或負評、留言互相印證。有推銷的排除。</p>
+  <h3>採用的社群心得</h3>
+  <ul>
+    <li>Dcard 探索星號心得，2026-03，同航線：那霸至少 1 小時到計程車區、Uber 可用、石垣島叫不到車。</li>
+    <li>Dcard 探索星號小細節，2025-04：石垣島包車約靠岸後 1 小時最保險、玻璃船要先訂。</li>
+    <li>PTT Cruise 歌詩達那霸石垣，2025-09：那霸過海關加排計程車約 1 小時。</li>
+    <li>PTT 石垣島交通提醒，2023-07：沒預約走了 1 小時進城。</li>
+    <li>Threads 多串，2025-05 至 2026-08：若狹碼頭走 15 分到國際通、下船後約有 7 小時、石垣島集合點在公廁旁、包車看板價目、松鼠猴、ひとし 訂不到、雷店名單（508 則回覆）、最可怕景點（舊海軍司令部壕、玉泉洞）。</li>
+    <li>Dcard 靈異板，2022-07：護國寺的不好經驗。</li>
+    <li>Dcard 兩篇伴手禮開箱（2023、2024）：紅芋塔、雪塩夾心、Royce 洋芋片、Orion 豆菓子。</li>
+  </ul>
+  <h3>官方與店家資料</h3>
+  <ul>
+    <li>石垣市觀光交流協會：郵輪乘客頁、計程車不足。港口看板：觀光計程車價目。</li>
+    <li>竹富島船班（NAVITIME）、川平灣玻璃船、石垣やいま村、石垣島鐘乳洞、首里城 7 到 9 月營業時間、瀨長島 Umikaji Terrace、PARCO CITY。</li>
+    <li>HotPepper、Retty、TableCheck：うりずん、琉球の牛、ひとし、つーなー、小やじ、コション。</li>
+    <li>GO!GO!TOUR T1299、T902、T1248 方案頁；日本租車波之上店。</li>
+  </ul>
+  <h3>排除或未證實</h3>
+  <ul>
+    <li>賣航次的 Threads 帳號、在問答串推銷包車或 eSIM 的帳號。</li>
+    <li>Dcard 留言推薦「幸和觀光」：無搭乘細節。</li>
+    <li>「9/20 晚上基隆開港祭煙火」：Threads 上 AI 生成回覆，未證實。</li>
+  </ul>
+  <p class="sub">筆記與網頁若有不同，以網頁為準。完整證據與連結在 Obsidian 資料夾的「04_附錄」。</p>
+</section>
+
+</main>
+
+<footer>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917。</p>
+  <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
+  <p>勾選狀態只存在你這台裝置。</p>
+</footer>
+
+<script>
+(function(){
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  // mode
+  var root=document.documentElement,btn=document.getElementById('modeBtn'),hint=document.getElementById('modeHint');
+  function applyMode(m){root.setAttribute('data-mode',m);store.set('mbs2026:mode',m);
+    if(m==='detail'){btn.textContent='詳細模式';btn.setAttribute('aria-pressed','true');hint.textContent='顯示原因、網友評價、雷點與來源。按一下切回快速模式。';}
+    else{btn.textContent='快速模式';btn.setAttribute('aria-pressed','false');hint.textContent='只看結論與時間。想看原因、網友評價、雷點與來源，按一下切到詳細模式。';}}
+  applyMode(root.getAttribute('data-mode')==='detail'?'detail':'fast');
+  btn.addEventListener('click',function(){applyMode(root.getAttribute('data-mode')==='detail'?'fast':'detail');});
+  // naha switch
+  var d1=document.getElementById('d1');
+  function applyNaha(v){d1.setAttribute('data-naha',v);store.set('mbs2026:naha',v);
+    d1.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-naha')===v?'true':'false');});}
+  applyNaha(store.get('mbs2026:naha')==='taxi'?'taxi':'car');
+  d1.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){applyNaha(b.getAttribute('data-naha'));});});
+  // todo
+  var todo={};try{todo=JSON.parse(store.get('mbs2026:todo')||'{}')||{}}catch(e){todo={}}
+  var boxes=document.querySelectorAll('.todo input[data-key]');
+  function stat(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});document.getElementById('todoDone').textContent=n;document.getElementById('todoTotal').textContent=boxes.length;}
+  boxes.forEach(function(b){b.checked=!!todo[b.getAttribute('data-key')];b.addEventListener('change',function(){todo[b.getAttribute('data-key')]=b.checked;store.set('mbs2026:todo',JSON.stringify(todo));stat();});});
+  stat();
+  document.getElementById('todoReset').addEventListener('click',function(){todo={};store.set('mbs2026:todo','{}');boxes.forEach(function(b){b.checked=false;});stat();});
+  // print: show all
+  var prevMode=null,opened=[];
+  window.addEventListener('beforeprint',function(){prevMode=root.getAttribute('data-mode');root.setAttribute('data-mode','detail');
+    document.querySelectorAll('details:not([open])').forEach(function(d){d.setAttribute('open','');opened.push(d);});});
+  window.addEventListener('afterprint',function(){if(prevMode)root.setAttribute('data-mode',prevMode);opened.forEach(function(d){d.removeAttribute('open');});opened=[];});
+  // current tab
+  var tabs=document.querySelectorAll('.tabs a');
+  if('IntersectionObserver' in window){
+    var map={};tabs.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){tabs.forEach(function(a){a.removeAttribute('aria-current');});var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}});},{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
