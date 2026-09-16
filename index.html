@@ -15,8 +15,8 @@
   --paper:#F4F7F9;--surface:#FFFFFF;--surface-2:#E9EFF3;
   --ink:#16232E;--ink-2:#566270;--rule:#D3DCE3;
   --sea:#0F6E8C;--sea-soft:#DCEEF3;
-  --gold:#B8892B;--gold-soft:#F6EEDB;
-  --coral:#C9483A;--coral-soft:#FBEBE8;
+  --gold:#8A6212;--gold-dot:#C9A24B;--gold-soft:#F6EEDB;
+  --coral:#B3372A;--coral-soft:#FBEBE8;
   --base:17px;--gutter:16px;--maxw:760px;--tabs-h:52px;
   --display:"Huninn","PingFang TC","Noto Sans TC",system-ui,sans-serif;
   --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
@@ -25,7 +25,7 @@
   :root{--paper:#0F1A22;--surface:#172430;--surface-2:#1F2E3A;
     --ink:#E8EEF2;--ink-2:#A9B6C1;--rule:#2C3C49;
     --sea:#62B7D2;--sea-soft:#16323D;
-    --gold:#D9B15C;--gold-soft:#33301E;
+    --gold:#D9B15C;--gold-dot:#D9B15C;--gold-soft:#33301E;
     --coral:#F08A7C;--coral-soft:#3A1B18;}
 }
 *{box-sizing:border-box}
@@ -58,7 +58,7 @@ header.top{padding-top:1rem}
 .route text{font-family:var(--body);font-size:19px;fill:var(--ink-2)}
 .route .name{fill:var(--ink);font-weight:700;font-size:24px}
 .route line{stroke:var(--sea);stroke-width:3}
-.route circle{fill:var(--gold);stroke:var(--paper);stroke-width:3}
+.route circle{fill:var(--gold-dot);stroke:var(--paper);stroke-width:3}
 .nw1 td:first-child,.nw1 th:first-child{white-space:nowrap}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:.6em 0 .8em}
 .segc{display:inline-flex;border:1px solid var(--sea);border-radius:999px;overflow:hidden}
@@ -78,7 +78,7 @@ html[data-mode="detail"] li.detail{border-left:0;padding-left:0;margin-left:0}
 html[data-mode="detail"] li.detail::before{content:none}
 html[data-mode="detail"] section.detail{border-left:0;padding-left:0;margin-left:0}
 html[data-mode="detail"] section.detail::before{content:none}
-html[data-mode="detail"] .tabs a.detail{border-left:0;padding-left:.7em;margin-left:0}
+html[data-mode="detail"] .tabs a.detail{border-left:0;padding-left:.7em;margin-left:0;margin-top:0;position:static}
 html[data-mode="detail"] .tabs a.detail::before{content:none}
 .tabs a{text-decoration:none;padding:.5em .7em;color:var(--ink-2);font-size:.95em;border-bottom:2px solid transparent}
 .tabs a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--sea);font-weight:700}
@@ -94,7 +94,7 @@ html[data-mode="detail"] .fast-only{display:none}
 .stickybar{position:sticky;top:var(--tabs-h);z-index:9;display:flex;gap:.6em;align-items:baseline;flex-wrap:wrap;background:var(--surface);border:1.5px solid var(--coral);border-radius:10px;padding:.35em .8em;margin:.6em 0 1em;font-variant-numeric:tabular-nums;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .stickybar .k{font-size:.8em;color:var(--ink-2);letter-spacing:.05em}
 .stickybar .n{font-size:1.5rem;line-height:1;color:var(--coral)}
-.stickybar .sep{color:var(--rule)}
+.stickybar .sep{color:var(--rule);user-select:none}
 /* badges */
 .badge{display:inline-block;font-size:.72em;font-weight:700;padding:.05em .5em .05em .35em;border-radius:999px;vertical-align:middle;margin-left:.35em;white-space:nowrap;border:1px solid currentColor;line-height:1.5}
 .badge::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:currentColor;margin-right:.35em;vertical-align:middle}
@@ -106,11 +106,11 @@ html[data-mode="detail"] .fast-only{display:none}
 /* timeline */
 .timeline{list-style:none;padding:0;margin:.8em 0 .4em .3em;border-left:2px solid var(--rule)}
 .timeline li{position:relative;display:grid;grid-template-columns:6.6em 1fr;gap:10px;padding:.45em 0 .45em 1em}
-.timeline li::before{content:"";position:absolute;left:-6px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.timeline li::before{content:"";position:absolute;left:-6px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--gold-dot);border:2px solid var(--paper)}
 .timeline time{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95em;color:var(--ink-2)}
 .timeline li.hard::before{background:var(--coral)}
 .timeline li.hard time,.timeline li.hard b{color:var(--coral)}
-.timeline li.warn::before{background:var(--gold)}
+.timeline li.warn::before{background:var(--gold-dot)}
 .timeline li .n{display:block;color:var(--ink-2);font-size:.93em;font-weight:400}
 /* cards */
 .place,.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:.85em 1em;margin:.8em 0;break-inside:avoid}
@@ -371,7 +371,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
       <li>不用先綁信用卡。要綁去 7 樓接待處。</li>
       <li>結帳：離船前一晚，或下船前至少 3 小時。</li>
       <li>娛樂場用港幣換籌碼，只收現金。</li>
-      <li>服務費每人每晚 600 元（海景房）。日本觀光稅每人 220 元。船上另加 18% 服務費。</li>
+      <li>服務費每人每晚 NT$600（海景房）。日本觀光稅每人 NT$220。船上另加 18% 服務費。</li>
     </ul>
     <h3>吃</h3>
     <ul>
@@ -493,7 +493,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
     <ul>
       <li>瀨長島、PARCO CITY、iias：免費。</li>
       <li>縣廳前地下停車場：30 分 ¥100，一天最多 ¥1,500。</li>
-      <li>Apple Park 牧志 2 丁目 1：18:00 到 08:00 最多 ¥400。</li>
+      <li>Apple Park 牧志 2 丁目 1：18:00–08:00 最多 ¥400。</li>
       <li>看牌子注意「最大料金」封頂價、「小型車専用」不能停 8 人座、「夜間」從幾點起算。查價用 Times 停車場搜尋或 Google 地圖照片。</li>
     </ul>
   </div>
@@ -601,7 +601,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   <div class="detail">
     <p><b>評價兩極</b>：雪鹽金楚糕（豬油餅，買一小包試）、泡盛（想試買小瓶）。</p>
     <p><b>不用買</b>：雪鹽費南雪（普通）、雪鹽棉花餅（「有點空虛」）。</p>
-    <p><b>訣竅</b>：國際通的美麗海水族館伴手禮專賣店可退稅、送購物袋。國際通藥妝店都很小難湊退稅，要買多去大國藥妝或唐吉訶德。多數店 21:00 到 22:00 關，Calbee 和鹽屋先逛。</p>
+    <p><b>訣竅</b>：國際通的美麗海水族館伴手禮專賣店可退稅、送購物袋。國際通藥妝店都很小難湊退稅，要買多去大國藥妝或唐吉訶德。多數店 21:00–22:00 關，Calbee 和鹽屋先逛。</p>
   </div>
 
   <h3>咖啡廳（給喜歡看書看海的人）</h3>
@@ -690,7 +690,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
     <ul>
       <li>日本租機車要護照正本，我們只有影本。沒有機車店明說接受影本。</li>
       <li>汽車駕照譯本只能騎 50cc 且不能雙載。8 人要 4 到 8 位有重機駕照加譯本的人。</li>
-      <li>機車店 17:00 到 18:00 停止還車。市區的 HAPPY ROAD 週二公休，9/22 正好週二。</li>
+      <li>機車店 17:00–18:00 停止還車。市區的 HAPPY ROAD 週二公休，9/22 正好週二。</li>
       <li>石垣島機車本來就少，9 月颱風季。</li>
     </ul>
     <h3>備案</h3>
@@ -867,7 +867,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917d。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917e。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
