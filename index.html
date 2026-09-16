@@ -5,110 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>行動基地台 出海去｜2026 探索星號 那霸・石垣島</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;700&display=swap">
 <meta name="description" content="行動基地台 2026/09/20–09/23 探索星號 基隆→那霸→石垣島 員工旅遊行程頁：時間表、截止時間、餐廳必點、購物、注意事項。">
 <style>
 :root{
   color-scheme:light dark;
-  --bg:#ffffff;--fg:#111111;--muted:#4a4a4a;--line:#d0d0d0;--card:#f5f5f5;
-  --accent:#0b4fb3;--accent-bg:#e6efff;
-  --danger:#b3261e;--danger-bg:#fde7e5;
-  --warn:#7a4b00;--warn-bg:#fff1c9;
-  --ok:#1b5e20;--ok-bg:#e3f3e5;
-  --grey:#555;--grey-bg:#ececec;
-  --base:17px;--gutter:16px;--maxw:760px;
+  --paper:#F4F7F9;--surface:#FFFFFF;--surface-2:#E9EFF3;
+  --ink:#16232E;--ink-2:#566270;--rule:#D3DCE3;
+  --sea:#0F6E8C;--sea-soft:#DCEEF3;
+  --gold:#B8892B;--gold-soft:#F6EEDB;
+  --coral:#C9483A;--coral-soft:#FBEBE8;
+  --base:17px;--gutter:16px;--maxw:760px;--tabs-h:52px;
+  --display:"Huninn","PingFang TC","Noto Sans TC",system-ui,sans-serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#121212;--fg:#f2f2f2;--muted:#c9c9c9;--line:#3a3a3a;--card:#1e1e1e;
-    --accent:#8ab4ff;--accent-bg:#1a2a4a;
-    --danger:#ff8a80;--danger-bg:#3a1512;
-    --warn:#ffd166;--warn-bg:#3a2d00;
-    --ok:#9be29f;--ok-bg:#12331a;
-    --grey:#bdbdbd;--grey-bg:#2a2a2a;}
+  :root{--paper:#0F1A22;--surface:#172430;--surface-2:#1F2E3A;
+    --ink:#E8EEF2;--ink-2:#A9B6C1;--rule:#2C3C49;
+    --sea:#62B7D2;--sea-soft:#16323D;
+    --gold:#D9B15C;--gold-soft:#33301E;
+    --coral:#F08A7C;--coral-soft:#3A1B18;}
 }
 *{box-sizing:border-box}
-html{font-size:var(--base);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+html{font-size:var(--base);-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--tabs-h) + 56px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;overflow-x:hidden}
 main,header.top,footer{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
-a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
-h1{font-size:1.5rem;line-height:1.3;margin:.6em 0 .2em}
-h2{font-size:1.35rem;margin:1.6em 0 .5em;padding-top:.4em;border-top:3px solid var(--fg)}
-h3{font-size:1.12rem;margin:1.3em 0 .4em}
-h4{font-size:1.02rem;margin:0 0 .3em}
+a{color:var(--sea);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+h1,h2,.eyebrow,.t,.stickybar .n{font-family:var(--display);font-weight:400}
+h1{font-size:1.7rem;line-height:1.25;margin:.4em 0 .3em;text-wrap:balance}
+h2{font-size:1.4rem;margin:0 0 .5em;line-height:1.3}
+h3{font-family:var(--body);font-size:.82rem;font-weight:700;color:var(--sea);letter-spacing:.06em;margin:1.8em 0 .5em;padding-top:.6em;border-top:1px solid var(--rule)}
+h4{font-family:var(--display);font-weight:400;font-size:1.1rem;margin:0 0 .2em}
 p{margin:.5em 0}
-ul,ol{padding-left:1.3em;margin:.4em 0}
-li{margin:.25em 0}
-small,.sub{color:var(--muted);font-size:.92em}
-section{scroll-margin-top:104px}
+ul,ol{padding-left:1.25em;margin:.4em 0}
+li{margin:.3em 0}
+b{font-weight:700}
+small,.sub{color:var(--ink-2);font-size:.92em}
+section{margin:2.4rem 0 0;padding-top:.2rem}
+section + section{border-top:1px solid var(--rule);padding-top:1.6rem}
+.eyebrow{display:block;color:var(--gold);font-size:1rem;letter-spacing:.02em;margin:0 0 .1em}
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6em 0}
 table{border-collapse:collapse;width:100%;font-size:.95em}
-th,td{border:1px solid var(--line);padding:.45em .55em;text-align:left;vertical-align:top}
-th{background:var(--card);white-space:nowrap}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:.5em .6em;text-align:left;vertical-align:top}
+th{font-size:.8em;font-weight:700;color:var(--ink-2);letter-spacing:.05em;white-space:nowrap}
+tbody tr:nth-child(even) td,table tr:nth-child(even) td{background:var(--surface-2)}
 .nw td:nth-child(-n+2){white-space:nowrap}
-/* header + tools */
-header.top{padding-top:.8rem}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:.5em 0}
-button{font:inherit;cursor:pointer;border:2px solid var(--fg);background:var(--bg);color:var(--fg);border-radius:8px;padding:.45em .8em}
-button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-#modeBtn{font-weight:700}
-.tabs{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding:.5em var(--gutter);-webkit-overflow-scrolling:touch}
-.tabs a{text-decoration:none;padding:.35em .7em;border-radius:999px;border:1px solid var(--line);color:var(--fg);font-size:.95em}
-.tabs a[aria-current="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* header */
+header.top{padding-top:1rem}
+.route{display:block;width:100%;height:auto;margin:.4rem 0 .8rem}
+.route text{font-family:var(--body);font-size:19px;fill:var(--ink-2)}
+.route .name{fill:var(--ink);font-weight:700;font-size:24px}
+.route line{stroke:var(--sea);stroke-width:3}
+.route circle{fill:var(--gold);stroke:var(--paper);stroke-width:3}
+.nw1 td:first-child,.nw1 th:first-child{white-space:nowrap}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:.6em 0 .8em}
+.segc{display:inline-flex;border:1px solid var(--sea);border-radius:999px;overflow:hidden}
+.segc button{border:0;border-radius:0;background:transparent;color:var(--sea);padding:.4em .9em;font-weight:700}
+.segc button[aria-pressed="true"]{background:var(--sea);color:var(--surface)}
+button{font:inherit;cursor:pointer;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:.45em .8em}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.modehint{font-size:.88em;color:var(--ink-2)}
+.tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding:.4em var(--gutter) 0;-webkit-overflow-scrolling:touch;height:var(--tabs-h)}
+.tabs a{text-decoration:none;padding:.5em .7em;color:var(--ink-2);font-size:.95em;border-bottom:2px solid transparent}
+.tabs a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--sea);font-weight:700}
 /* modes */
 html[data-mode="fast"] .detail{display:none !important}
 html[data-mode="detail"] .fast-only{display:none}
-.modehint{font-size:.9em;color:var(--muted)}
-/* deadline */
-.deadline{border-left:6px solid var(--danger);background:var(--danger-bg);padding:.6em .8em;margin:.8em 0;border-radius:0 8px 8px 0;break-inside:avoid}
-.deadline .t{font-size:2rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--danger)}
+/* deadline: compact */
+.deadline{display:flex;gap:.7em;align-items:center;border:1.5px solid var(--coral);background:var(--surface);padding:.55em .8em;border-radius:10px;margin:.6em 0;break-inside:avoid}
+.deadline .t{font-size:2rem;line-height:1;color:var(--coral);font-variant-numeric:tabular-nums;min-width:3.2em}
 .deadline .l{font-weight:700}
-.deadline .s{color:var(--muted);font-size:.92em}
+.deadline .s{color:var(--ink-2);font-size:.88em}
+.deadline .badge{display:none}
+.stickybar{position:sticky;top:var(--tabs-h);z-index:9;display:flex;gap:.6em;align-items:baseline;flex-wrap:wrap;background:var(--surface);border:1.5px solid var(--coral);border-radius:10px;padding:.35em .8em;margin:.6em 0 1em;font-variant-numeric:tabular-nums;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.stickybar .k{font-size:.8em;color:var(--ink-2);letter-spacing:.05em}
+.stickybar .n{font-size:1.5rem;line-height:1;color:var(--coral)}
+.stickybar .sep{color:var(--rule)}
 /* badges */
-.badge{display:inline-block;font-size:.75em;font-weight:700;padding:.1em .5em;border-radius:6px;vertical-align:middle;margin-left:.3em;white-space:nowrap}
-.b-hard{background:var(--danger);color:#fff}
-.b-verify{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn)}
-.b-avoid{color:var(--danger);border:1.5px solid var(--danger)}
-.b-mixed{color:var(--warn);border:1.5px solid var(--warn)}
-.b-skip{background:var(--grey-bg);color:var(--grey);border:1px solid var(--grey)}
-.b-ok{background:var(--ok);color:#fff}
-.b-either{background:var(--accent);color:#fff}
-.b-backup{background:var(--grey-bg);color:var(--fg)}
-@media (prefers-color-scheme:dark){.b-hard{color:#121212}.b-ok{color:#121212}.b-either{color:#121212}}
-.skip h4,.skip .name{text-decoration:line-through;color:var(--muted)}
+.badge{display:inline-block;font-size:.72em;font-weight:700;padding:.05em .5em .05em .35em;border-radius:999px;vertical-align:middle;margin-left:.35em;white-space:nowrap;border:1px solid currentColor;line-height:1.5}
+.badge::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:currentColor;margin-right:.35em;vertical-align:middle}
+.b-hard,.b-avoid{color:var(--coral)}
+.b-verify,.b-mixed{color:var(--gold)}
+.b-ok,.b-either{color:var(--sea)}
+.b-skip,.b-backup{color:var(--ink-2)}
+.skip h4,.skip .name{text-decoration:line-through;color:var(--ink-2)}
 /* timeline */
-.timeline{list-style:none;padding:0;margin:.6em 0}
-.timeline li{display:grid;grid-template-columns:6.6em 1fr;gap:10px;padding:.45em 0;border-bottom:1px dashed var(--line)}
-.timeline time{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95em}
-.timeline li.hard{background:var(--danger-bg);border-left:5px solid var(--danger);padding-left:.5em;border-radius:0 6px 6px 0}
-.timeline li.hard time{color:var(--danger)}
-.timeline li.warn{background:var(--warn-bg);border-left:5px solid var(--warn);padding-left:.5em}
-.timeline li .n{display:block;color:var(--muted);font-size:.93em}
+.timeline{list-style:none;padding:0;margin:.8em 0 .4em .3em;border-left:2px solid var(--rule)}
+.timeline li{position:relative;display:grid;grid-template-columns:6.6em 1fr;gap:10px;padding:.45em 0 .45em 1em}
+.timeline li::before{content:"";position:absolute;left:-6px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.timeline time{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95em;color:var(--ink-2)}
+.timeline li.hard::before{background:var(--coral)}
+.timeline li.hard time,.timeline li.hard b{color:var(--coral)}
+.timeline li.warn::before{background:var(--gold)}
+.timeline li .n{display:block;color:var(--ink-2);font-size:.93em;font-weight:400}
 /* cards */
-.place,.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.7em .85em;margin:.7em 0;break-inside:avoid}
-.place header{display:flex;flex-wrap:wrap;gap:.3em .5em;align-items:baseline}
-.place .type{color:var(--muted);font-size:.9em}
-.facts{display:grid;grid-template-columns:4.2em 1fr;gap:.2em .6em;margin:.5em 0 0}
-.facts dt{color:var(--muted);font-size:.9em}
+.place,.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:.85em 1em;margin:.8em 0;break-inside:avoid}
+.place header{display:flex;flex-wrap:wrap;gap:.2em .5em;align-items:baseline}
+.place .type{color:var(--ink-2);font-size:.88em}
+.facts{display:grid;grid-template-columns:4em 1fr;gap:.25em .6em;margin:.6em 0 0}
+.facts dt{color:var(--ink-2);font-size:.85em;padding-top:.15em}
 .facts dd{margin:0}
-.warnline{margin:.5em 0 0;padding:.35em .6em;background:var(--warn-bg);color:var(--warn);border-radius:6px;font-size:.95em}
-.alertline{margin:.5em 0 0;padding:.35em .6em;background:var(--danger-bg);color:var(--danger);border-radius:6px;font-size:.95em}
-details{margin:.5em 0}
-summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.warnline{margin:.6em 0 0;padding:.45em .7em;background:var(--gold-soft);color:var(--ink);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:.93em}
+.alertline{margin:.6em 0 0;padding:.45em .7em;background:var(--coral-soft);color:var(--ink);border-left:3px solid var(--coral);border-radius:0 6px 6px 0;font-size:.93em}
+details{margin:.6em 0 0}
+summary{cursor:pointer;font-weight:700;color:var(--sea);font-size:.93em}
 details[open] summary{margin-bottom:.4em}
-.quote{border-left:3px solid var(--line);padding-left:.6em;color:var(--muted);margin:.3em 0}
+.quote{border-left:3px solid var(--rule);padding-left:.7em;color:var(--ink-2);margin:.4em 0;font-size:.95em}
 /* grid boxes */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:.6em 0}
 @media (max-width:560px){.two{grid-template-columns:1fr}}
-.box{background:var(--accent-bg);border-radius:10px;padding:.7em .85em}
-.box h3{margin-top:0}
+.box{background:var(--sea-soft);border-radius:10px;padding:.8em 1em}
+.box h3{margin-top:0;border-top:0;padding-top:0}
 /* todo */
-.todo{list-style:none;padding:0}
-.todo li{display:flex;gap:.6em;align-items:flex-start;padding:.35em 0;border-bottom:1px dashed var(--line)}
-.todo input{width:1.3em;height:1.3em;margin-top:.15em;flex:none}
+.todo{list-style:none;padding:0;margin:.3em 0 1em}
+.todo li{display:flex;gap:.7em;align-items:flex-start;padding:.45em 0;border-bottom:1px solid var(--rule)}
+.todo input{width:1.25em;height:1.25em;margin-top:.2em;flex:none;accent-color:var(--sea)}
 .todo label{cursor:pointer}
-.todostat{display:flex;gap:1em;align-items:center;margin:.5em 0}
+.todostat{display:flex;gap:1em;align-items:center;margin:.6em 0}
+.todostat button{border:0;background:none;color:var(--sea);text-decoration:underline;padding:0}
+.prog{flex:1;height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden;max-width:220px}
+.prog i{display:block;height:100%;background:var(--sea);width:0;transition:width .2s}
 /* naha switch */
-.seg{display:flex;gap:6px;margin:.6em 0}
-.seg button{flex:1}
+.seg{display:flex;gap:0;margin:.8em 0;border:1px solid var(--sea);border-radius:999px;overflow:hidden}
+.seg button{flex:1;border:0;border-radius:0;background:transparent;color:var(--sea);font-weight:700}
+.seg button[aria-pressed="true"]{background:var(--sea);color:var(--surface)}
 #d1[data-naha="car"] .naha-taxi{display:none}
 #d1[data-naha="taxi"] .naha-car{display:none}
 @media (min-width:900px){
@@ -116,24 +138,21 @@ details[open] summary{margin-bottom:.4em}
   #d1 .naha-car,#d1 .naha-taxi{display:block !important}
   .seg{display:none}
 }
-.chk{list-style:none;padding:0}
-.chk li::before{content:"☐ ";color:var(--muted)}
-footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid var(--line);margin-top:2em}
-.toplink{position:fixed;right:12px;bottom:12px;background:var(--fg);color:var(--bg);border-radius:999px;padding:.5em .8em;text-decoration:none;font-size:.9em;opacity:.85}
+footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid var(--rule);margin-top:2.5em}
+.toplink{position:fixed;right:14px;bottom:14px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--sea);color:var(--surface);border-radius:50%;text-decoration:none;font-size:1rem;opacity:.85}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
 @media print{
-  .tabs,.toolbar,.seg,#todoReset,.toplink,.modehint{display:none !important}
+  .tabs,.toolbar,.seg,#todoReset,.toplink,.modehint,.stickybar{display:none !important}
   .detail{display:block !important}
   .naha-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   #d1 .naha-car,#d1 .naha-taxi{display:block !important}
-  h2{break-before:page}
-  h2:first-of-type{break-before:auto}
+  section{break-before:page;border-top:0}
+  section:first-of-type{break-before:auto}
   .place,.card,.deadline,.timeline li,.box{break-inside:avoid}
-  .badge{background:none !important;color:#000 !important;border:1px solid #000 !important}
-  .deadline{background:none;border:2px solid #000;border-left-width:8px}
-  .deadline .t{color:#000}
+  .badge{color:#000 !important}
   .facts a[href^="http"]:not([href*="google.com/maps"])::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}
   a{color:#000}
-  body{font-size:14px}
+  body{font-size:14px;background:#fff;color:#000}
 }
 </style>
 <script>
@@ -141,13 +160,24 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 </script>
 </head>
 <body>
-<a class="toplink" href="#top" aria-label="回到頂部">▲ 頂部</a>
+<a class="toplink" href="#top" aria-label="回到頂部">▲</a>
 <header class="top" id="top">
-  <h1>行動基地台 出海去｜2026 探索星號 那霸・石垣島</h1>
-  <p class="sub">2026/09/20（日）基隆出發 → 09/21 那霸 → 09/22 石垣島 → 09/23（三）回基隆。麗星郵輪 探索星號。</p>
+  <h1>行動基地台 出海去</h1>
+  <p class="sub">2026 探索星號｜基隆 → 那霸 → 石垣島 → 基隆｜09/20（日）到 09/23（三）</p>
+  <svg class="route" viewBox="0 0 720 110" role="img" aria-label="航線：基隆、那霸、石垣島、基隆">
+    <line x1="60" y1="30" x2="660" y2="30"/>
+    <circle cx="60" cy="30" r="9"/><circle cx="260" cy="30" r="9"/><circle cx="460" cy="30" r="9"/><circle cx="660" cy="30" r="9"/>
+    <text class="name" x="60" y="70" text-anchor="middle">基隆</text><text x="60" y="96" text-anchor="middle">9/20 20:00</text>
+    <text class="name" x="260" y="70" text-anchor="middle">那霸</text><text x="260" y="96" text-anchor="middle">9/21 15:00–23:59</text>
+    <text class="name" x="460" y="70" text-anchor="middle">石垣島</text><text x="460" y="96" text-anchor="middle">9/22 14:00–23:00</text>
+    <text class="name" x="660" y="70" text-anchor="middle">基隆</text><text x="660" y="96" text-anchor="middle">9/23 09:00</text>
+  </svg>
   <div class="toolbar">
-    <button id="modeBtn" type="button" aria-pressed="false">快速模式</button>
-    <span class="modehint" id="modeHint">只看結論與時間。想看原因、網友評價、雷點與來源，按一下切到詳細模式。</span>
+    <div class="segc" role="group" aria-label="閱讀模式">
+      <button id="modeFast" type="button" aria-pressed="true">快速</button>
+      <button id="modeDetail" type="button" aria-pressed="false">詳細</button>
+    </div>
+    <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：加上原因、網友評價、雷點與來源。</span>
   </div>
 </header>
 
@@ -168,6 +198,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S1 一眼看懂 ===== -->
 <section id="glance">
+  <span class="eyebrow">總覽</span>
   <h2>一眼看懂</h2>
   <div class="tbl"><table class="nw">
     <tr><th>日期</th><th>港口</th><th>到</th><th>開</th></tr>
@@ -228,9 +259,10 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S2 待辦 ===== -->
 <section id="todo">
+  <span class="eyebrow">出發前</span>
   <h2>待辦清單</h2>
   <p class="sub">勾選只存在你這台手機或電腦，不會同步給別人。</p>
-  <div class="todostat"><span><b id="todoDone">0</b> / <span id="todoTotal">0</span> 完成</span><button id="todoReset" type="button">清除勾選</button></div>
+  <div class="todostat"><span><b id="todoDone">0</b> / <span id="todoTotal">0</span> 完成</span><span class="prog" aria-hidden="true"><i id="todoBar"></i></span><button id="todoReset" type="button">清除勾選</button></div>
 
   <h3>急</h3>
   <ul class="todo">
@@ -269,7 +301,8 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S3 09/20 登船 ===== -->
 <section id="d0">
-  <h2>09/20（日）登船日</h2>
+  <span class="eyebrow">09/20 週日・基隆</span>
+  <h2>登船日</h2>
   <div class="deadline"><span class="badge b-hard">硬性截止</span>
     <div class="t">18:30</div><div class="l">完成報到</div>
     <div class="s">報到 16:00–18:30。關閘 19:00。開船 20:00。遲到視同放棄，不退費。</div></div>
@@ -311,6 +344,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S4 船上 ===== -->
 <section id="ship">
+  <span class="eyebrow">海上</span>
   <h2>船上生活</h2>
   <ul>
     <li>船上一律<b>台灣時間</b>。</li>
@@ -346,17 +380,13 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S5 09/21 那霸 ===== -->
 <section id="d1" data-naha="car">
-  <h2>09/21（一）那霸</h2>
-  <div class="two">
-    <div class="deadline"><span class="badge b-hard">硬性截止</span>
-      <div class="t">21:30</div><div class="l">離開國際通</div><div class="s">縣廳前搭計程車 5 分鐘回碼頭。</div></div>
-    <div class="deadline"><span class="badge b-hard">硬性截止</span>
-      <div class="t">22:00</div><div class="l">回到船上</div><div class="s">當地時間。＝船上 21:00。開船 23:59。</div></div>
-  </div>
+  <span class="eyebrow">09/21 週一・沖繩</span>
+  <h2>那霸</h2>
+  <div class="stickybar" role="note"><span class="k">回船</span><span class="n">22:00</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">21:00</span><span class="k">21:30 離開國際通・開船 23:59</span></div>
   <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。今天只去<b>瀨長島</b>，之後在<b>國際通</b>吃飯逛街。</p>
 
   <h3>交通二選一 <span class="badge b-either">二選一</span></h3>
-  <div class="tbl"><table>
+  <div class="tbl"><table class="nw1">
     <tr><th></th><th>租車 T1299</th><th>大型計程車</th></tr>
     <tr><td>怎麼上車</td><td>租車公司把車開到郵輪碼頭門口交給我們</td><td>司機舉牌在出口等</td></tr>
     <tr><td>時間限制</td><td><b>19:00 前還車</b>，只能開約 2 小時</td><td>沒有還車限制，可看完 18:40 日落</td></tr>
@@ -591,13 +621,9 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S6 09/22 石垣島 ===== -->
 <section id="d2">
-  <h2>09/22（二）石垣島</h2>
-  <div class="two">
-    <div class="deadline"><span class="badge b-hard">硬性截止</span>
-      <div class="t">17:40</div><div class="l">鐘乳洞最晚到達</div><div class="s">最後入場 18:00，18:30 關。</div></div>
-    <div class="deadline"><span class="badge b-hard">硬性截止</span>
-      <div class="t">21:30</div><div class="l">回到船上</div><div class="s">當地時間。＝船上 20:30。開船 23:00。這裡繳回護照影本。</div></div>
-  </div>
+  <span class="eyebrow">09/22 週二・八重山</span>
+  <h2>石垣島</h2>
+  <div class="stickybar" role="note"><span class="k">回船</span><span class="n">21:30</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">20:30</span><span class="k">鐘乳洞 17:40 前到・開船 23:00</span></div>
   <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。<b>石垣島叫不到車，一定要事先預約包車。</b></p>
   <p><b>集合點：</b>出關後往船尾方向，公廁旁。約 15:00 碰面。</p>
 
@@ -731,7 +757,8 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S7 09/23 ===== -->
 <section id="d3">
-  <h2>09/23（三）回基隆</h2>
+  <span class="eyebrow">09/23 週三・基隆</span>
+  <h2>回基隆</h2>
   <p><b>前一晚</b></p>
   <ul>
     <li>房間會收到離船通知。</li>
@@ -757,6 +784,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S8 費用 ===== -->
 <section id="cost">
+  <span class="eyebrow">預算</span>
   <h2>費用估算（日圓）</h2>
   <div class="tbl"><table>
     <tr><th>項目</th><th>金額</th><th>每人（8 人）</th></tr>
@@ -774,6 +802,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S9 電話 ===== -->
 <section id="contacts">
+  <span class="eyebrow">聯絡</span>
   <h2>電話與聯絡總表</h2>
   <div class="tbl"><table>
     <tr><th>對象</th><th>用途</th><th>電話／連結</th><th>備註</th></tr>
@@ -794,6 +823,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 
 <!-- ===== S10 來源 ===== -->
 <section id="sources" class="detail">
+  <span class="eyebrow">附錄</span>
   <h2>來源與證據</h2>
   <p>篩選標準：時間新、有具體時間和費用、有抱怨或負評、留言互相印證。有推銷的排除。</p>
   <h3>採用的社群心得</h3>
@@ -825,7 +855,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917b。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
@@ -834,12 +864,12 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
 (function(){
   var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
   // mode
-  var root=document.documentElement,btn=document.getElementById('modeBtn'),hint=document.getElementById('modeHint');
+  var root=document.documentElement,bf=document.getElementById('modeFast'),bd=document.getElementById('modeDetail');
   function applyMode(m){root.setAttribute('data-mode',m);store.set('mbs2026:mode',m);
-    if(m==='detail'){btn.textContent='詳細模式';btn.setAttribute('aria-pressed','true');hint.textContent='顯示原因、網友評價、雷點與來源。按一下切回快速模式。';}
-    else{btn.textContent='快速模式';btn.setAttribute('aria-pressed','false');hint.textContent='只看結論與時間。想看原因、網友評價、雷點與來源，按一下切到詳細模式。';}}
+    bf.setAttribute('aria-pressed',m==='fast'?'true':'false');bd.setAttribute('aria-pressed',m==='detail'?'true':'false');}
   applyMode(root.getAttribute('data-mode')==='detail'?'detail':'fast');
-  btn.addEventListener('click',function(){applyMode(root.getAttribute('data-mode')==='detail'?'fast':'detail');});
+  bf.addEventListener('click',function(){applyMode('fast');});
+  bd.addEventListener('click',function(){applyMode('detail');});
   // naha switch
   var d1=document.getElementById('d1');
   function applyNaha(v){d1.setAttribute('data-naha',v);store.set('mbs2026:naha',v);
@@ -849,7 +879,7 @@ footer{padding:2em 0 3em;color:var(--muted);font-size:.9em;border-top:1px solid 
   // todo
   var todo={};try{todo=JSON.parse(store.get('mbs2026:todo')||'{}')||{}}catch(e){todo={}}
   var boxes=document.querySelectorAll('.todo input[data-key]');
-  function stat(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});document.getElementById('todoDone').textContent=n;document.getElementById('todoTotal').textContent=boxes.length;}
+  function stat(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});document.getElementById('todoDone').textContent=n;document.getElementById('todoTotal').textContent=boxes.length;var bar=document.getElementById('todoBar');if(bar)bar.style.width=(boxes.length?Math.round(n/boxes.length*100):0)+'%';}
   boxes.forEach(function(b){b.checked=!!todo[b.getAttribute('data-key')];b.addEventListener('change',function(){todo[b.getAttribute('data-key')]=b.checked;store.set('mbs2026:todo',JSON.stringify(todo));stat();});});
   stat();
   document.getElementById('todoReset').addEventListener('click',function(){todo={};store.set('mbs2026:todo','{}');boxes.forEach(function(b){b.checked=false;});stat();});
