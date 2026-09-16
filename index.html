@@ -68,8 +68,10 @@ button{font:inherit;cursor:pointer;border:1px solid var(--rule);background:var(-
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
 .modehint{font-size:.88em;color:var(--ink-2)}
 .tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding:.4em max(var(--gutter),calc((100% - var(--maxw))/2 + var(--gutter))) 0;-webkit-overflow-scrolling:touch;height:var(--tabs-h)}
-html[data-mode="detail"] .detail{border-left:3px solid var(--sea-soft);padding-left:.7em;margin-left:-.7em;position:relative}
-html[data-mode="detail"] .detail::before{content:"詳細";position:absolute;left:-3px;top:-.9em;font-size:.68em;color:var(--sea);background:var(--paper);padding:0 .3em;letter-spacing:.05em}
+html[data-mode="detail"] .detail{border-left:3px solid var(--sea-soft);padding-left:.7em;margin-left:0;margin-top:1.3em;position:relative}
+html[data-mode="detail"] .detail::before{content:"詳細";position:absolute;left:-3px;top:-1.15em;font-size:.68em;color:var(--sea);background:var(--paper);padding:0 .3em;letter-spacing:.05em;line-height:1.4}
+html[data-mode="detail"] .place .detail::before{background:var(--surface)}
+@media (max-width:560px){.tbl table.wide{min-width:540px}}
 html[data-mode="detail"] .detail .detail{border-left:0;padding-left:0;margin-left:0}
 html[data-mode="detail"] .detail .detail::before{content:none}
 html[data-mode="detail"] li.detail{border-left:0;padding-left:0;margin-left:0}
@@ -478,7 +480,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
     <h3>關於碼頭排計程車</h3>
     <p>下船那一刻碼頭外會擠滿人排計程車。網友回報「靠港後至少 1 小時才走到計程車區」；那霸港官方說碼頭不代叫計程車。避開的方法：租車送到碼頭、事先預約大型計程車、在出口外叫 Uber（8 人要兩台）、或直接走 15 分鐘進國際通。</p>
     <h3>瀨長島以外還能去哪</h3>
-    <div class="tbl"><table>
+    <div class="tbl"><table class="wide">
       <tr><th>景點</th><th>車程</th><th>適合誰</th><th>說明</th></tr>
       <tr><td><b>瀨長島 Umikaji Terrace</b></td><td>20 分</td><td>看海、喝咖啡</td><td>白色階梯建築面海。免費停車。店家開到 21:00。首選。</td></tr>
       <tr><td>PARCO CITY</td><td>15 分</td><td>逛街也想看海</td><td>5 樓屋頂免費看夕陽，3 樓星巴克海景座。免費停車。開到 22:00。</td></tr>
@@ -675,7 +677,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
       <li>日落點離市區只有 10 分鐘，看完直接吃飯。</li>
     </ul>
     <h3>替代方案</h3>
-    <div class="tbl"><table>
+    <div class="tbl"><table class="wide">
       <tr><th>方案</th><th>主角</th><th>一句話</th></tr>
       <tr><td>A 川平灣玻璃船</td><td>海</td><td>網友首選。玻璃船 9:00–17:00 每 15–20 分一班，請業者先訂票。川平灣抓 90 分鐘，車程 40 分。</td></tr>
       <tr><td>B 川平灣不搭船＋御神崎夕陽</td><td>海＋夕陽</td><td>御神崎離川平灣 15 分，免費，傍晚停車場會塞。</td></tr>
@@ -814,7 +816,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 <section id="contacts">
   <span class="eyebrow">聯絡</span>
   <h2>電話與聯絡總表</h2>
-  <div class="tbl"><table>
+  <div class="tbl"><table class="wide">
     <tr><th>對象</th><th>用途</th><th>電話／連結</th><th>備註</th></tr>
     <tr><td>麗星郵輪 台灣客服</td><td>船務</td><td><a href="tel:0080-149-8887">0080 149 8887</a>；reservations.ts@rwcruises.com</td><td>只在台灣可撥免付費</td></tr>
     <tr><td>GO!GO!TOUR T1299</td><td>那霸租車</td><td><a href="https://tw.gogo-tour.com/car/detail/?plan_id=1299">方案頁</a>，訂後 LINE 聯絡</td><td>僅剩 1 輛</td></tr>
@@ -865,7 +867,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917c。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917d。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
