@@ -67,7 +67,17 @@ header.top{padding-top:1rem}
 button{font:inherit;cursor:pointer;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:.45em .8em}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
 .modehint{font-size:.88em;color:var(--ink-2)}
-.tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding:.4em var(--gutter) 0;-webkit-overflow-scrolling:touch;height:var(--tabs-h)}
+.tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding:.4em max(var(--gutter),calc((100% - var(--maxw))/2 + var(--gutter))) 0;-webkit-overflow-scrolling:touch;height:var(--tabs-h)}
+html[data-mode="detail"] .detail{border-left:3px solid var(--sea-soft);padding-left:.7em;margin-left:-.7em;position:relative}
+html[data-mode="detail"] .detail::before{content:"詳細";position:absolute;left:-3px;top:-.9em;font-size:.68em;color:var(--sea);background:var(--paper);padding:0 .3em;letter-spacing:.05em}
+html[data-mode="detail"] .detail .detail{border-left:0;padding-left:0;margin-left:0}
+html[data-mode="detail"] .detail .detail::before{content:none}
+html[data-mode="detail"] li.detail{border-left:0;padding-left:0;margin-left:0}
+html[data-mode="detail"] li.detail::before{content:none}
+html[data-mode="detail"] section.detail{border-left:0;padding-left:0;margin-left:0}
+html[data-mode="detail"] section.detail::before{content:none}
+html[data-mode="detail"] .tabs a.detail{border-left:0;padding-left:.7em;margin-left:0}
+html[data-mode="detail"] .tabs a.detail::before{content:none}
 .tabs a{text-decoration:none;padding:.5em .7em;color:var(--ink-2);font-size:.95em;border-bottom:2px solid transparent}
 .tabs a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--sea);font-weight:700}
 /* modes */
@@ -177,7 +187,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
       <button id="modeFast" type="button" aria-pressed="true">快速</button>
       <button id="modeDetail" type="button" aria-pressed="false">詳細</button>
     </div>
-    <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：加上原因、網友評價、雷點與來源。</span>
+    <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：多顯示 <b id="detailCount">0</b> 個補充區塊（原因、網友評價、替代方案、來源），以藍色左線標示。</span>
   </div>
 </header>
 
@@ -855,7 +865,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917b。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917c。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
@@ -868,6 +878,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   function applyMode(m){root.setAttribute('data-mode',m);store.set('mbs2026:mode',m);
     bf.setAttribute('aria-pressed',m==='fast'?'true':'false');bd.setAttribute('aria-pressed',m==='detail'?'true':'false');}
   applyMode(root.getAttribute('data-mode')==='detail'?'detail':'fast');
+  var dc=document.getElementById('detailCount');if(dc){dc.textContent=document.querySelectorAll('main .detail:not(.detail .detail):not(.tabs a)').length;}
   bf.addEventListener('click',function(){applyMode('fast');});
   bd.addEventListener('click',function(){applyMode('detail');});
   // naha switch
