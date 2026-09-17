@@ -10,142 +10,181 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;700&display=swap">
 <meta name="description" content="行動基地台 2026/09/20–09/23 探索星號 基隆→那霸→石垣島 員工旅遊行程頁：時間表、截止時間、餐廳必點、購物、注意事項。">
 <style>
+/* ===== 設計變數 ===== */
 :root{
   color-scheme:light dark;
-  --paper:#F4F7F9;--surface:#FFFFFF;--surface-2:#E9EFF3;
-  --ink:#16232E;--ink-2:#566270;--rule:#D3DCE3;
-  --sea:#0F6E8C;--sea-soft:#DCEEF3;
-  --gold:#8A6212;--gold-dot:#C9A24B;--gold-soft:#F6EEDB;
+  /* 面 */
+  --paper:#F4F7F9;--surface:#FFFFFF;--surface-2:#EAF0F4;
+  /* 字與線 */
+  --ink:#16232E;--ink-2:#5A6673;--rule:#D9E1E7;
+  /* 語意色：sea＝導覽、主要操作、二選一；ok＝已決定、完成；gold＝待確認、要留意；coral＝硬性截止、雷店、不可 */
+  --sea:#0F6E8C;--sea-soft:#DCEEF3;--on-sea:#FFFFFF;
+  --ok:#2A7A4B;--ok-soft:#E2F1E7;
+  --gold:#8A6212;--gold-soft:#F7EFDC;--gold-dot:#C9A24B;
   --coral:#B3372A;--coral-soft:#FBEBE8;
-  --base:17px;--gutter:16px;--maxw:760px;--tabs-h:52px;
+  /* 尺寸 */
+  --base:15px;--gutter:16px;--maxw:760px;--tabs-h:48px;--sticky-h:40px;
+  --r:10px;--r-s:6px;
   --display:"Huninn","PingFang TC","Noto Sans TC",system-ui,sans-serif;
   --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  /* 字級：29 / 22 / 17 / 15 / 13 / 11.5 */
+  --fs-h1:29px;--fs-h2:22px;--fs-h4:17px;--fs-body:15px;--fs-sub:13px;--fs-tag:11.5px;--fs-num:26px;
 }
+@media (max-width:600px){:root{--base:16px;--fs-body:16px;--fs-h1:26px;--fs-h2:21px;--fs-h4:17px;--fs-sub:13.5px;--fs-num:24px}}
 @media (prefers-color-scheme:dark){
   :root{--paper:#0F1A22;--surface:#172430;--surface-2:#1F2E3A;
-    --ink:#E8EEF2;--ink-2:#A9B6C1;--rule:#2C3C49;
-    --sea:#62B7D2;--sea-soft:#16323D;
-    --gold:#D9B15C;--gold-dot:#D9B15C;--gold-soft:#33301E;
+    --ink:#E8EEF2;--ink-2:#AAB7C2;--rule:#2E3F4C;
+    --sea:#62B7D2;--sea-soft:#16323D;--on-sea:#0F1A22;
+    --ok:#7CC79A;--ok-soft:#1B3326;
+    --gold:#D9B15C;--gold-soft:#33301E;--gold-dot:#D9B15C;
     --coral:#F08A7C;--coral-soft:#3A1B18;}
 }
+/* ===== 基礎 ===== */
 *{box-sizing:border-box}
-html{font-size:var(--base);-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--tabs-h) + 56px)}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+html{font-size:var(--base);-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--tabs-h) + var(--sticky-h) + 12px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--fs-body);line-height:1.65;overflow-x:hidden;font-variant-numeric:tabular-nums}
 main,header.top,footer{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+main{padding-bottom:4rem}
 a{color:var(--sea);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-h1,h2,.eyebrow,.t,.stickybar .n{font-family:var(--display);font-weight:400}
-h1{font-size:1.7rem;line-height:1.25;margin:.4em 0 .3em;text-wrap:balance}
-h2{font-size:1.4rem;margin:0 0 .5em;line-height:1.3}
-h3{font-family:var(--body);font-size:.82rem;font-weight:700;color:var(--sea);letter-spacing:.06em;margin:1.8em 0 .5em;padding-top:.6em;border-top:1px solid var(--rule)}
-h4{font-family:var(--display);font-weight:400;font-size:1.1rem;margin:0 0 .2em}
+h1,h2,.t,.stickybar .n{font-family:var(--display);font-weight:400}
+h1{font-size:var(--fs-h1);line-height:1.25;margin:.3em 0 .2em;text-wrap:balance}
+h2{font-size:var(--fs-h2);margin:0 0 .5em;line-height:1.3}
+h3{font-family:var(--body);font-size:var(--fs-sub);font-weight:700;color:var(--sea);letter-spacing:.06em;margin:2rem 0 .6rem}
+h3 .badge{letter-spacing:0}
+h4{font-family:var(--body);font-weight:700;font-size:var(--fs-h4);line-height:1.35;margin:0 0 .15em}
 p{margin:.5em 0}
-ul,ol{padding-left:1.25em;margin:.4em 0}
+ul,ol{padding-left:1.3em;margin:.4em 0}
 li{margin:.3em 0}
 b{font-weight:700}
-small,.sub{color:var(--ink-2);font-size:.92em}
-section{margin:2.4rem 0 0;padding-top:.2rem}
-section + section{border-top:1px solid var(--rule);padding-top:1.6rem}
-.eyebrow{display:block;color:var(--gold);font-size:1rem;letter-spacing:.02em;margin:0 0 .1em}
-.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6em 0}
-table{border-collapse:collapse;width:100%;font-size:.95em}
-th,td{border:0;border-bottom:1px solid var(--rule);padding:.5em .6em;text-align:left;vertical-align:top}
-th{font-size:.8em;font-weight:700;color:var(--ink-2);letter-spacing:.05em;white-space:nowrap}
+small,.sub{color:var(--ink-2);font-size:var(--fs-sub)}
+section{margin:3rem 0 0}
+section + section{border-top:1px solid var(--rule);padding-top:2rem}
+.eyebrow{display:block;color:var(--gold);font-size:var(--fs-sub);font-weight:700;letter-spacing:.06em;margin:0 0 .2em}
+/* 表格 */
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6em 0 1em}
+table{border-collapse:collapse;width:100%;font-size:var(--fs-body)}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:.55em .7em;text-align:left;vertical-align:top;line-height:1.5}
+th{font-size:var(--fs-sub);font-weight:700;color:var(--ink-2);white-space:nowrap}
 tbody tr:nth-child(even) td,table tr:nth-child(even) td{background:var(--surface-2)}
-.nw td:nth-child(-n+2){white-space:nowrap}
-/* header */
-header.top{padding-top:1rem}
-.route{display:block;width:100%;height:auto;margin:.4rem 0 .8rem}
+.nw td{white-space:nowrap}
+@media (max-width:600px){.nw{font-size:var(--fs-sub)}}
+.nw1 td:first-child,.nw1 th:first-child{white-space:nowrap}
+@media (max-width:600px){.tbl table.wide{min-width:540px}}
+/* 頁首 */
+header.top{padding-top:1.2rem}
+.route{display:block;width:100%;height:auto;margin:.6rem 0 .6rem}
 .route text{font-family:var(--body);font-size:19px;fill:var(--ink-2)}
 .route .name{fill:var(--ink);font-weight:700;font-size:24px}
 .route line{stroke:var(--sea);stroke-width:3}
 .route circle{fill:var(--gold-dot);stroke:var(--paper);stroke-width:3}
-.nw1 td:first-child,.nw1 th:first-child{white-space:nowrap}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:.6em 0 .8em}
-.segc{display:inline-flex;border:1px solid var(--sea);border-radius:999px;overflow:hidden}
-.segc button{border:0;border-radius:0;background:transparent;color:var(--sea);padding:.4em .9em;font-weight:700}
-.segc button[aria-pressed="true"]{background:var(--sea);color:var(--surface)}
-button{font:inherit;cursor:pointer;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:.45em .8em}
-button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
-.modehint{font-size:.88em;color:var(--ink-2)}
-.tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding:.4em max(var(--gutter),calc((100% - var(--maxw))/2 + var(--gutter))) 0;-webkit-overflow-scrolling:touch;height:var(--tabs-h)}
-html[data-mode="detail"] .detail{border-left:3px solid var(--sea-soft);padding-left:.7em;margin-left:0;margin-top:1.3em;position:relative}
-html[data-mode="detail"] .detail::before{content:"詳細";position:absolute;left:-3px;top:-1.15em;font-size:.68em;color:var(--sea);background:var(--paper);padding:0 .3em;letter-spacing:.05em;line-height:1.4}
-html[data-mode="detail"] .place .detail::before{background:var(--surface)}
-@media (max-width:560px){.tbl table.wide{min-width:540px}}
-html[data-mode="detail"] .detail .detail{border-left:0;padding-left:0;margin-left:0}
-html[data-mode="detail"] .detail .detail::before{content:none}
-html[data-mode="detail"] li.detail{border-left:0;padding-left:0;margin-left:0}
-html[data-mode="detail"] li.detail::before{content:none}
-html[data-mode="detail"] section.detail{border-left:0;padding-left:0;margin-left:0}
-html[data-mode="detail"] section.detail::before{content:none}
-html[data-mode="detail"] .tabs a.detail{border-left:0;padding-left:.7em;margin-left:0;margin-top:0;position:static}
-html[data-mode="detail"] .tabs a.detail::before{content:none}
-.tabs a{text-decoration:none;padding:.5em .7em;color:var(--ink-2);font-size:.95em;border-bottom:2px solid transparent}
-.tabs a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--sea);font-weight:700}
-/* modes */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:.6em 0 1em}
+.modehint{font-size:var(--fs-sub);color:var(--ink-2);flex:1;min-width:14em}
+@media (max-width:600px){.modehint{flex-basis:100%}}
+/* 按鈕與分段控制 */
+button{font:inherit;cursor:pointer;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:var(--r-s);padding:.4em .8em;line-height:1.3}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.segc,.seg{display:inline-flex;border:1px solid var(--sea);border-radius:var(--r-s);overflow:hidden;background:var(--surface)}
+.segc button,.seg button{border:0;border-radius:0;background:transparent;color:var(--sea);padding:.45em 1em;font-weight:700;font-size:var(--fs-body);min-height:36px}
+.segc button + button,.seg button + button{border-left:1px solid var(--sea)}
+.segc button[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--sea);color:var(--on-sea)}
+.seg{display:flex;margin:.8em 0}
+.seg button{flex:1}
+/* 分頁列 */
+.tabs{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:0;overflow-x:auto;white-space:nowrap;padding:0 max(var(--gutter),calc((100% - var(--maxw))/2 + var(--gutter)));-webkit-overflow-scrolling:touch;height:var(--tabs-h);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{text-decoration:none;padding:0 .75em;display:inline-flex;align-items:center;color:var(--ink-2);font-size:var(--fs-sub);font-weight:700;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--sea)}
+.tabs a.ext{color:var(--gold)}
+/* 快速／詳細 */
 html[data-mode="fast"] .detail{display:none !important}
 html[data-mode="detail"] .fast-only{display:none}
-/* deadline: compact */
-.deadline{display:flex;gap:.7em;align-items:center;border:1.5px solid var(--coral);background:var(--surface);padding:.55em .8em;border-radius:10px;margin:.6em 0;break-inside:avoid}
-.deadline .t{font-size:2rem;line-height:1;color:var(--coral);font-variant-numeric:tabular-nums;min-width:3.2em}
-.deadline .l{font-weight:700}
-.deadline .s{color:var(--ink-2);font-size:.88em}
-.deadline .badge{display:none}
-.stickybar{position:sticky;top:var(--tabs-h);z-index:9;display:flex;gap:.6em;align-items:baseline;flex-wrap:wrap;background:var(--surface);border:1.5px solid var(--coral);border-radius:10px;padding:.35em .8em;margin:.6em 0 1em;font-variant-numeric:tabular-nums;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.stickybar .k{font-size:.8em;color:var(--ink-2);letter-spacing:.05em}
-.stickybar .n{font-size:1.5rem;line-height:1;color:var(--coral)}
-.stickybar .sep{color:var(--rule);user-select:none}
-/* badges */
-.badge{display:inline-block;font-size:.72em;font-weight:700;padding:.05em .5em .05em .35em;border-radius:999px;vertical-align:middle;margin-left:.35em;white-space:nowrap;border:1px solid currentColor;line-height:1.5}
-.badge::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:currentColor;margin-right:.35em;vertical-align:middle}
-.b-hard,.b-avoid{color:var(--coral)}
-.b-verify,.b-mixed{color:var(--gold)}
-.b-ok,.b-either{color:var(--sea)}
-.b-skip,.b-backup{color:var(--ink-2)}
+html[data-mode="detail"] .detail{background:var(--surface-2);border-radius:var(--r);padding:.9em 1em .8em;margin:1.2em 0;position:relative}
+html[data-mode="detail"] .detail::before{content:"詳細";display:inline-block;font-size:var(--fs-tag);font-weight:700;color:var(--sea);letter-spacing:.08em;margin:0 0 .3em}
+html[data-mode="detail"] .detail > h3:first-of-type{margin-top:.2em}
+html[data-mode="detail"] .place .detail{background:var(--surface-2);margin:.8em 0 0}
+html[data-mode="detail"] .detail .detail{background:none;padding:0;margin:.4em 0 0;border-radius:0}
+html[data-mode="detail"] .detail .detail::before,html[data-mode="detail"] li.detail::before,html[data-mode="detail"] section.detail::before,html[data-mode="detail"] .tabs a.detail::before{content:none}
+html[data-mode="detail"] li.detail,html[data-mode="detail"] section.detail{background:none;padding:0;margin:0;border-radius:0}
+html[data-mode="detail"] section.detail{margin:3rem 0 0;padding-top:2rem}
+html[data-mode="detail"] .tabs a.detail{background:none;padding:0 .75em;margin:0 0 -1px;position:static}
+html[data-mode="detail"] .detail .place{background:var(--surface)}
+/* 只包一個摺疊區的詳細：不做灰底，標籤與摺疊標題同一列 */
+html[data-mode="detail"] .detail:has(> details:only-child){background:none;padding:0;margin:.7em 0 0;display:flex;gap:.6em;align-items:baseline;flex-wrap:wrap}
+html[data-mode="detail"] .detail:has(> details:only-child) > details{margin:0;flex:1 1 100%}
+html[data-mode="detail"] .detail:has(> details:only-child)::before{margin:0}
+html[data-mode="detail"] .detail:has(> details:only-child) > details:not([open]){flex:1 1 auto}
+/* 硬性截止卡 */
+.deadline{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.8em;align-items:center;background:var(--coral-soft);padding:.7em 1em;border-radius:var(--r);margin:.6em 0;break-inside:avoid}
+.deadline .badge{grid-column:1 / -1;justify-self:start;margin:0 0 .2em}
+.deadline .t{grid-row:2 / 4;font-size:var(--fs-num);line-height:1;color:var(--coral);min-width:2.6em}
+.deadline .l{font-weight:700;line-height:1.3}
+.deadline .s{color:var(--ink-2);font-size:var(--fs-sub);line-height:1.4}
+/* 每日固定小列 */
+.stickybar{position:sticky;top:var(--tabs-h);z-index:9;display:flex;gap:.35em 1em;align-items:baseline;flex-wrap:wrap;background:var(--paper);border-bottom:1px solid var(--rule);padding:.35em 0 .4em;margin:0 0 1em;min-height:var(--sticky-h)}
+.stickybar .k{font-size:var(--fs-sub);color:var(--ink-2)}
+.stickybar .n{font-size:20px;line-height:1;color:var(--coral);font-weight:400;margin-left:.25em}
+.stickybar .sep{display:none}
+.stickybar .k:last-child{margin-left:auto}
+@media (max-width:600px){.stickybar .k:last-child{margin-left:0;flex-basis:100%}}
+/* 標籤 */
+.badge{display:inline-block;font-size:var(--fs-tag);font-weight:700;padding:.15em .55em .15em .45em;border-radius:999px;vertical-align:middle;margin-left:.35em;white-space:nowrap;line-height:1.5;background:var(--surface-2);color:var(--ink-2)}
+.badge::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:currentColor;margin-right:.35em;vertical-align:.05em}
+.b-hard,.b-avoid{color:var(--coral);background:var(--coral-soft)}
+.b-verify,.b-mixed{color:var(--gold);background:var(--gold-soft)}
+.b-ok{color:var(--ok);background:var(--ok-soft)}
+.b-either{color:var(--sea);background:var(--sea-soft)}
+.b-skip,.b-backup{color:var(--ink-2);background:var(--surface-2)}
 .skip h4,.skip .name{text-decoration:line-through;color:var(--ink-2)}
-/* timeline */
-.timeline{list-style:none;padding:0;margin:.8em 0 .4em .3em;border-left:2px solid var(--rule)}
-.timeline li{position:relative;display:grid;grid-template-columns:6.6em 1fr;gap:10px;padding:.45em 0 .45em 1em}
+/* 時間軸 */
+.timeline{list-style:none;padding:0;margin:.8em 0 .6em .3em;border-left:2px solid var(--rule)}
+.timeline li{position:relative;display:grid;grid-template-columns:6.4em 1fr;gap:10px;padding:.45em 0 .45em 1em;margin:0}
 .timeline li::before{content:"";position:absolute;left:-6px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--gold-dot);border:2px solid var(--paper)}
-.timeline time{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95em;color:var(--ink-2)}
+.timeline time{font-weight:700;white-space:nowrap;font-size:var(--fs-sub);color:var(--ink-2);padding-top:.1em}
 .timeline li.hard::before{background:var(--coral)}
 .timeline li.hard time,.timeline li.hard b{color:var(--coral)}
 .timeline li.warn::before{background:var(--gold-dot)}
-.timeline li .n{display:block;color:var(--ink-2);font-size:.93em;font-weight:400}
-/* cards */
-.place,.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:.85em 1em;margin:.8em 0;break-inside:avoid}
-.place header{display:flex;flex-wrap:wrap;gap:.2em .5em;align-items:baseline}
-.place .type{color:var(--ink-2);font-size:.88em}
-.facts{display:grid;grid-template-columns:4em 1fr;gap:.25em .6em;margin:.6em 0 0}
-.facts dt{color:var(--ink-2);font-size:.85em;padding-top:.15em}
+.timeline li .n{display:block;color:var(--ink-2);font-size:var(--fs-sub);font-weight:400;margin-top:.1em}
+@media (max-width:600px){.timeline li{grid-template-columns:5.6em 1fr;gap:8px}}
+/* 卡片 */
+.place,.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:.9em 1.05em 1em;margin:.9em 0;break-inside:avoid}
+.place header{display:flex;flex-wrap:wrap;gap:.2em .5em;align-items:baseline;margin-bottom:.2em}
+.place .type{color:var(--ink-2);font-size:var(--fs-sub)}
+.facts{display:grid;grid-template-columns:4em 1fr;gap:.3em .7em;margin:.5em 0 0}
+.facts dt{color:var(--ink-2);font-size:var(--fs-sub);padding-top:.2em}
 .facts dd{margin:0}
-.warnline{margin:.6em 0 0;padding:.45em .7em;background:var(--gold-soft);color:var(--ink);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:.93em}
-.alertline{margin:.6em 0 0;padding:.45em .7em;background:var(--coral-soft);color:var(--ink);border-left:3px solid var(--coral);border-radius:0 6px 6px 0;font-size:.93em}
+/* 提醒（三級：提醒＝gold，小心＝coral，更新＝gold） */
+.warnline,.alertline,.update{margin:.8em 0 0;padding:.55em .8em .55em .8em;border-radius:var(--r-s);font-size:var(--fs-sub);line-height:1.55;color:var(--ink)}
+.warnline{background:var(--gold-soft)}
+.alertline{background:var(--coral-soft)}
+.update{background:var(--gold-soft);margin:.8em 0 1.2em}
+.warnline::before,.alertline::before,.update .k{display:inline-block;font-size:var(--fs-tag);font-weight:700;letter-spacing:.06em;margin-right:.6em;vertical-align:.05em;white-space:nowrap}
+.warnline::before{content:"提醒";color:var(--gold)}
+.alertline::before{content:"小心";color:var(--coral)}
+.update .k{color:var(--gold)}
 details{margin:.6em 0 0}
-summary{cursor:pointer;font-weight:700;color:var(--sea);font-size:.93em}
+summary{cursor:pointer;font-weight:700;color:var(--sea);font-size:var(--fs-sub);list-style:none;display:inline-flex;align-items:center;gap:.35em}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";width:.45em;height:.45em;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s;margin-top:-.15em}
+details[open] summary::before{transform:rotate(45deg)}
 details[open] summary{margin-bottom:.4em}
-.quote{border-left:3px solid var(--rule);padding-left:.7em;color:var(--ink-2);margin:.4em 0;font-size:.95em}
-/* grid boxes */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:.6em 0}
-@media (max-width:560px){.two{grid-template-columns:1fr}}
-.box{background:var(--sea-soft);border-radius:10px;padding:.8em 1em}
-.box h3{margin-top:0;border-top:0;padding-top:0}
-/* update note */
-.update{margin:.6em 0 1em;padding:.55em .85em;background:var(--surface);border:1px dashed var(--gold);border-radius:8px;font-size:.93em;color:var(--ink)}
-.update .k{display:inline-block;font-size:.74em;letter-spacing:.06em;color:var(--gold);font-weight:700;margin-right:.5em;white-space:nowrap}
-/* todo */
-.todo{list-style:none;padding:0;margin:.3em 0 1em}
-.todo li{display:flex;gap:.7em;align-items:flex-start;padding:.45em 0;border-bottom:1px solid var(--rule)}
-.todo input{width:1.25em;height:1.25em;margin-top:.2em;flex:none;accent-color:var(--sea)}
-.todo label{cursor:pointer}
-.todostat{display:flex;gap:1em;align-items:center;margin:.6em 0}
-.todostat button{border:0;background:none;color:var(--sea);text-decoration:underline;padding:0}
-.prog{flex:1;height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden;max-width:220px}
-.prog i{display:block;height:100%;background:var(--sea);width:0;transition:width .2s}
-/* naha switch */
-.seg{display:flex;gap:0;margin:.8em 0;border:1px solid var(--sea);border-radius:999px;overflow:hidden}
-.seg button{flex:1;border:0;border-radius:0;background:transparent;color:var(--sea);font-weight:700}
-.seg button[aria-pressed="true"]{background:var(--sea);color:var(--surface)}
+.quote{position:relative;padding-left:1.1em;color:var(--ink-2);margin:.45em 0;font-size:var(--fs-sub);line-height:1.55}
+.quote::before{content:"「";position:absolute;left:0;top:0;color:var(--gold-dot);font-weight:700}
+/* 兩欄與色底框 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:.8em 0}
+@media (max-width:600px){.two{grid-template-columns:1fr}}
+.box{background:var(--sea-soft);border-radius:var(--r);padding:.9em 1.05em}
+.box h3{margin-top:0}
+/* 待辦 */
+.todo{list-style:none;padding:0;margin:.3em 0 1.2em}
+.todo li{display:flex;gap:.7em;align-items:flex-start;padding:.55em 0;border-bottom:1px solid var(--rule);margin:0}
+.todo input{width:1.25em;height:1.25em;margin-top:.15em;flex:none;accent-color:var(--sea)}
+.todo label{cursor:pointer;line-height:1.55}
+.todo input:checked + label{color:var(--ink-2);text-decoration:line-through;text-decoration-color:var(--rule)}
+.todostat{display:flex;gap:1em;align-items:center;margin:.6em 0 1em;font-size:var(--fs-sub);flex-wrap:wrap}
+.todostat button{font-size:var(--fs-sub);padding:.3em .7em;color:var(--ink-2)}
+.prog{flex:1;height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden;max-width:220px;min-width:80px}
+.prog i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+/* 那霸兩版 */
 #d1[data-naha="car"] .naha-taxi{display:none}
 #d1[data-naha="taxi"] .naha-car{display:none}
 @media (min-width:900px){
@@ -153,8 +192,8 @@ details[open] summary{margin-bottom:.4em}
   #d1 .naha-car,#d1 .naha-taxi{display:block !important}
   .seg{display:none}
 }
-footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid var(--rule);margin-top:2.5em}
-.toplink{position:fixed;right:14px;bottom:14px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--sea);color:var(--surface);border-radius:50%;text-decoration:none;font-size:1rem;opacity:.85}
+footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top:1px solid var(--rule);margin-top:2rem}
+.toplink{position:fixed;right:14px;bottom:14px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--sea);color:var(--on-sea);border-radius:50%;text-decoration:none;font-size:14px;opacity:.9;box-shadow:0 2px 6px rgba(0,0,0,.18)}
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
 @media print{
   .tabs,.toolbar,.seg,#todoReset,.toplink,.modehint,.stickybar{display:none !important}
@@ -164,10 +203,10 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   section{break-before:page;border-top:0}
   section:first-of-type{break-before:auto}
   .place,.card,.deadline,.timeline li,.box{break-inside:avoid}
-  .badge{color:#000 !important}
+  .badge{color:#000 !important;background:none !important;border:1px solid #000}
   .facts a[href^="http"]:not([href*="google.com/maps"])::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}
   a{color:#000}
-  body{font-size:14px;background:#fff;color:#000}
+  body{font-size:13px;background:#fff;color:#000}
 }
 </style>
 <script>
@@ -192,12 +231,13 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
       <button id="modeFast" type="button" aria-pressed="true">快速</button>
       <button id="modeDetail" type="button" aria-pressed="false">詳細</button>
     </div>
-    <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：多顯示 <b id="detailCount">0</b> 個補充區塊（原因、網友評價、替代方案、來源），以藍色左線標示。</span>
+    <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：另外展開 <b id="detailCount">0</b> 個補充區塊（原因、網友評價、替代方案、來源），以灰底標示。</span>
   </div>
 </header>
 
 <nav class="tabs" aria-label="頁面分區">
   <a href="#glance">總覽</a>
+  <a href="compare.html" class="ext">方案比較</a>
   <a href="#todo">待辦</a>
   <a href="#d0">9/20 登船</a>
   <a href="#ship">船上</a>
@@ -217,7 +257,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   <h2>一眼看懂</h2>
   <div class="tbl"><table class="nw">
     <tr><th>日期</th><th>港口</th><th>到</th><th>開</th></tr>
-    <tr><td>09/20 日</td><td>基隆</td><td>—</td><td>20:00（16:00–18:30 報到）</td></tr>
+    <tr><td>09/20 日</td><td>基隆</td><td>—</td><td>20:00<br><small>報到 16:00–18:30</small></td></tr>
     <tr><td>09/21 一</td><td>那霸</td><td>當地 15:00</td><td>當地 23:59</td></tr>
     <tr><td>09/22 二</td><td>石垣島</td><td>當地 14:00</td><td>當地 23:00</td></tr>
     <tr><td>09/23 三</td><td>基隆</td><td>09:00</td><td>—</td></tr>
@@ -234,16 +274,17 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   <p><b>船不等人。</b>手機到日本會自動變日本時間，船上的鐘不會。所有靠岸行程都用當地時間寫，回船時間再往前抓 1.5 小時。</p>
 
   <div class="two">
-    <div class="box"><h3>已決定</h3>
+    <div class="box"><h3>目前想法（還沒定）</h3>
       <ul>
-        <li>那霸：只去<b>瀨長島</b>，之後在<b>國際通</b>吃飯逛街。交通租車或大型計程車二選一，還沒定。</li>
-        <li>石垣島：包車 4 小時，<b>やいま村看松鼠猴 → 鐘乳洞 → 富崎海灘看日落</b>，回市區吃石垣牛。松鼠猴已不能餵，原因見石垣島那頁。</li>
+        <li>那霸候選：<b>瀨長島＋國際通</b>、iias 豐崎＋DMM 水族館、PARCO CITY＋國際通。交通偏向<b>大型計程車</b>。</li>
+        <li>石垣島候選：<b>やいま村 → 鐘乳洞 → 富崎海灘</b>、川平灣玻璃船、川平灣＋御神崎夕陽、市區慢遊。都要包車。</li>
         <li>不去：舊海軍司令部壕、玉泉洞、護國寺。</li>
+        <li>各候選的照片、時間帶、路線圖和優缺點，看 <a href="compare.html">方案比較</a>。</li>
       </ul></div>
     <div class="box"><h3>現在要做的 3 件事</h3>
       <ol>
         <li>預約石垣島包車（8 人要兩台 4 人座或一台 9 人座）。</li>
-        <li>那霸交通二選一：租車 T1299 或大型計程車。</li>
+        <li>那霸交通：偏向大型計程車，先問到報價；租車 T1299 當備案。</li>
         <li>訂兩地晚餐。詳見 <a href="#todo">待辦</a>。</li>
       </ol></div>
   </div>
@@ -277,7 +318,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   <span class="eyebrow">出發前</span>
   <h2>待辦清單</h2>
   <p class="sub">勾選只存在你這台手機或電腦，不會同步給別人。</p>
-  <div class="todostat"><span><b id="todoDone">0</b> / <span id="todoTotal">0</span> 完成</span><span class="prog" aria-hidden="true"><i id="todoBar"></i></span><button id="todoReset" type="button">清除勾選</button></div>
+  <div class="todostat"><span><b id="todoDone">0</b> / <span id="todoTotal">0</span> 完成</span><span class="prog" aria-hidden="true"><i id="todoBar"></i></span><button id="todoReset" type="button">清除全部勾選</button></div>
 
   <h3>急</h3>
   <ul class="todo">
@@ -298,6 +339,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 
   <h3>要先打電話確認的店 <span class="badge b-verify">待確認</span></h3>
   <ul class="todo">
+    <li><input type="checkbox" id="t-v0" data-key="v-inaka"><label for="t-v0">那霸 田舎 公設市場南店：平日晚上幾點關（網路上 18:00 到 19:00 都有）。電話 090-9786-0501。</label></li>
     <li><input type="checkbox" id="t-v1" data-key="v-banburumai"><label for="t-v1">那霸 漁師食堂 大ばんぶる舞：晚上幾點開、幾點關。</label></li>
     <li><input type="checkbox" id="t-v2" data-key="v-tonton"><label for="t-v2">那霸 豚々ジャッキー TONTON JACKY：營業時間、地址。</label></li>
     <li><input type="checkbox" id="t-v3" data-key="v-ootsuka"><label for="t-v3">石垣島 焼肉おおつか 本店：營業時間。只知道一定要預約。</label></li>
@@ -394,13 +436,13 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 </section>
 
 <!-- ===== S5 09/21 那霸 ===== -->
-<section id="d1" data-naha="car">
+<section id="d1" data-naha="taxi">
   <span class="eyebrow">09/21 週一・沖繩</span>
   <h2>那霸</h2>
   <div class="stickybar" role="note"><span class="k">回船</span><span class="n">22:00</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">21:00</span><span class="k">21:30 離開國際通・開船 23:59</span></div>
-  <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。今天只去<b>瀨長島</b>，之後在<b>國際通</b>吃飯逛街。</p>
+  <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。行程還沒定，下面以<b>瀨長島＋國際通</b>為主線列時間，其他候選在「瀨長島以外還能去哪」。交通偏向<b>大型計程車</b>。</p>
 
-  <h3>交通二選一 <span class="badge b-either">二選一</span></h3>
+  <h3>交通 <span class="badge b-either">偏向計程車</span></h3>
   <div class="tbl"><table class="nw1">
     <tr><th></th><th>租車 T1299</th><th>大型計程車</th></tr>
     <tr><td>怎麼上車</td><td>租車公司把車開到郵輪碼頭門口交給我們</td><td>司機舉牌在出口等</td></tr>
@@ -409,8 +451,8 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
     <tr><td>適合</td><td>想自己開</td><td>想省錢、不想趕</td></tr>
   </table></div>
   <div class="seg" role="tablist">
-    <button type="button" data-naha="car" aria-pressed="true">租車版</button>
-    <button type="button" data-naha="taxi" aria-pressed="false">大型計程車版</button>
+    <button type="button" data-naha="taxi" aria-pressed="true">大型計程車版</button>
+    <button type="button" data-naha="car" aria-pressed="false">租車版</button>
   </div>
 
   <div class="naha-grid">
@@ -488,7 +530,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
       <tr><td><b>瀨長島 Umikaji Terrace</b></td><td>20 分</td><td>看海、喝咖啡</td><td>白色階梯建築面海。免費停車。店家開到 21:00。首選。</td></tr>
       <tr><td>PARCO CITY</td><td>15 分</td><td>逛街也想看海</td><td>5 樓屋頂免費看夕陽，3 樓星巴克海景座。免費停車。開到 22:00。</td></tr>
       <tr><td>首里城</td><td>20 分</td><td>看文化</td><td>只能看外觀，正殿內部 11/23 才開。門票 18:30 停賣。</td></tr>
-      <tr><td>iias 豐崎＋DMM 水族館</td><td>20 分</td><td>帶小孩、想吹冷氣</td><td>水族館最晚 19:00 入館。免費停車。</td></tr>
+      <tr><td>iias 豐崎＋DMM 水族館</td><td>20 分</td><td>怕下雨、想採買</td><td>水族館最後入館 18:00、19:00 關；9/21 旺季票 ¥3,200，前一天線上買 9 折。餵食體驗 15:30 後就沒了。商場開到 21:00、超市 22:00。</td></tr>
       <tr><td>ASHIBINAA 暢貨中心</td><td>20 分</td><td>買國際品牌</td><td>20:00 關。網友說只有想撿過季品才需要去。</td></tr>
     </table></div>
     <p><span class="badge b-skip">不去</span> 美國村（單程 40 分）、玉泉洞（17:30 關，網友說體質敏感者不推）、齋場御嶽與知念岬（太遠）。</p>
@@ -577,6 +619,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 
   <h3>不用訂位</h3>
   <ul>
+    <li><b>田舎 公設市場南店</b> <span class="badge b-verify">待確認</span>：一碗大塊軟骨排骨麵 ¥600，牧志市場旁小巷，黃色招牌。老闆娘一人經營，先付款、不收大鈔、店內不能拍照。日本網友 2026 年：「600 日圓有兩大塊肉，太神」。<b>問題是打烊早</b>：各網站寫 18:00 到 19:00 關，週日休。只有先進市區（18:00 前到）才吃得到，晚餐時段趕不上。</li>
     <li><b>第一牧志公設市場 2 樓</b>：20:00 最後點餐，1 樓 19:45 停止代客料理。常點龍蝦、夜光貝、海葡萄。網友說偏貴。</li>
     <li><b>國際通屋台村</b>：約 20 間小店，開到深夜。最後喝一杯。</li>
     <li><b>ジャッキーステーキハウス</b> <span class="badge b-mixed">評價兩極</span>：離郵輪碼頭走 15 分鐘，11:00–22:00 受理，週一有開，不接受訂位。必點菲力牛排三分熟。20:30 前到。</li>
@@ -639,12 +682,12 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   <span class="eyebrow">09/22 週二・八重山</span>
   <h2>石垣島</h2>
   <div class="stickybar" role="note"><span class="k">回船</span><span class="n">21:30</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">20:30</span><span class="k">鐘乳洞 17:40 前到・開船 23:00</span></div>
-  <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。<b>石垣島叫不到車，一定要事先預約包車。</b></p>
+  <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。行程還沒定，下面以方案 C 列時間，其他候選在「替代方案」。<b>石垣島叫不到車，一定要事先預約包車。</b></p>
   <p><b>集合點：</b>出關後往船尾方向，公廁旁。約 15:00 碰面。</p>
 
   <div class="update" role="note"><span class="k">9/17 更新</span>やいま村的松鼠猴從 2026-07-20 起不能餵了。園方公告是為了猴子的安全，餵食體驗停辦，園區照常能進，站著不動牠們可能自己跳上來。原本寫的「可以近距離摸」是停辦前的網友經驗，已改掉。要不要把這站換成港口旁的海豚互動，還在決定。</div>
 
-  <h3>主行程：方案 C <span class="badge b-ok">已決定</span></h3>
+  <h3>候選主線：方案 C <span class="badge b-either">候選</span></h3>
   <ol class="timeline">
     <li><time>14:00–14:45</time><div>靠岸、下船</div></li>
     <li><time>15:00</time><div><b>上包車</b><span class="n">出關後往船尾方向，公廁旁。</span></div></li>
@@ -675,7 +718,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   </div>
 
   <div class="detail">
-    <h3>為什麼選方案 C</h3>
+    <h3>方案 C 的好處</h3>
     <ul>
       <li>兩個室內或樹蔭景點，帶小孩、怕曬都合適。網友：「這次去石垣島最喜歡的就是松鼠猴。」這位網友去的時候還能餵，現在不能了。</li>
       <li>不受玻璃船班次限制，時間好控制。</li>
@@ -826,6 +869,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
     <tr><td>麗星郵輪 台灣客服</td><td>船務</td><td><a href="tel:0080-149-8887">0080 149 8887</a>；reservations.ts@rwcruises.com</td><td>只在台灣可撥免付費</td></tr>
     <tr><td>GO!GO!TOUR T1299</td><td>那霸租車</td><td><a href="https://tw.gogo-tour.com/car/detail/?plan_id=1299">方案頁</a>，訂後 LINE 聯絡</td><td>僅剩 1 輛</td></tr>
     <tr><td>日本租車 波之上店</td><td>那霸租車備案</td><td><a href="tel:+81-50-1712-2417">050-1712-2417</a></td><td>20:00 還車，問是否收護照影本</td></tr>
+    <tr><td>田舎 公設市場南店</td><td>那霸排骨麵</td><td><a href="tel:+81-90-9786-0501">090-9786-0501</a></td><td>18:00–19:00 關，要確認</td></tr>
     <tr><td>うりずん 本店</td><td>那霸晚餐</td><td><a href="tel:+81-98-885-2178">098-885-2178</a></td><td>只收電話</td></tr>
     <tr><td>琉球の牛 久茂地</td><td>那霸晚餐</td><td><a href="https://www.tablecheck.com/en/shops/yakiniku-kumoji/reserve">TableCheck</a></td><td>線上</td></tr>
     <tr><td>コション 浮島通り店</td><td>那霸豬排</td><td><a href="tel:+81-98-988-3435">098-988-3435</a></td><td>開到 23:00</td></tr>
@@ -873,7 +917,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917h。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917k。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
@@ -891,9 +935,9 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   bd.addEventListener('click',function(){applyMode('detail');});
   // naha switch
   var d1=document.getElementById('d1');
-  function applyNaha(v){d1.setAttribute('data-naha',v);store.set('mbs2026:naha',v);
+  function applyNaha(v){d1.setAttribute('data-naha',v);store.set('mbs2026:naha2',v);
     d1.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-naha')===v?'true':'false');});}
-  applyNaha(store.get('mbs2026:naha')==='taxi'?'taxi':'car');
+  applyNaha(store.get('mbs2026:naha2')==='car'?'car':'taxi');
   d1.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){applyNaha(b.getAttribute('data-naha'));});});
   // todo
   var todo={};try{todo=JSON.parse(store.get('mbs2026:todo')||'{}')||{}}catch(e){todo={}}
@@ -910,7 +954,7 @@ footer{padding:2em 0 3em;color:var(--ink-2);font-size:.9em;border-top:1px solid 
   // current tab
   var tabs=document.querySelectorAll('.tabs a');
   if('IntersectionObserver' in window){
-    var map={};tabs.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var map={};tabs.forEach(function(a){var h=a.getAttribute('href');if(h.charAt(0)==='#')map[h.slice(1)]=a;});
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){tabs.forEach(function(a){a.removeAttribute('aria-current');});var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}});},{rootMargin:'-40% 0px -55% 0px'});
     document.querySelectorAll('main section').forEach(function(s){io.observe(s);});
   }
