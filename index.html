@@ -152,6 +152,12 @@ html[data-mode="detail"] .detail:has(> details:only-child) > details:not([open])
 .facts{display:grid;grid-template-columns:4em 1fr;gap:.3em .7em;margin:.5em 0 0}
 .facts dt{color:var(--ink-2);font-size:var(--fs-sub);padding-top:.2em}
 .facts dd{margin:0}
+/* 照片 */
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:.8em 0 .2em}
+@media (max-width:600px){.photos{grid-template-columns:repeat(2,1fr)}}
+.photos a{display:block;text-decoration:none;color:var(--ink-2);font-size:var(--fs-tag);line-height:1.35}
+.photos img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-s);background:var(--surface-2)}
+.photos span{display:block;padding:.25em .1em 0}
 /* 提醒（三級：提醒＝gold，小心＝coral，更新＝gold） */
 .warnline,.alertline,.update{margin:.8em 0 0;padding:.55em .8em .55em .8em;border-radius:var(--r-s);font-size:var(--fs-sub);line-height:1.55;color:var(--ink)}
 .warnline{background:var(--gold-soft)}
@@ -734,6 +740,8 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
       <dt>時間</dt><dd>9:00–16:50，全年無休，免費。</dd>
       <dt>位置</dt><dd>離川平灣只有 12 分鐘，離市區 26 分鐘。</dd>
     </dl>
+  <div class="photos"><a href="img/yoneko_0.jpg" target="_blank" rel="noopener"><img src="img/yoneko_0.jpg" alt="園區入口的巨大風獅爺群" loading="lazy"><span>園區入口的巨大風獅爺群</span></a><a href="img/yoneko_1.jpg" target="_blank" rel="noopener"><img src="img/yoneko_1.jpg" alt="彩色風獅爺特寫" loading="lazy"><span>彩色風獅爺特寫</span></a><a href="img/yoneko_2.jpg" target="_blank" rel="noopener"><img src="img/yoneko_2.jpg" alt="入口造型，網友最常拍的角度" loading="lazy"><span>入口造型，網友最常拍的角度</span></a><a href="img/yoneko_3.jpg" target="_blank" rel="noopener"><img src="img/yoneko_3.jpg" alt="池邊的風獅爺" loading="lazy"><span>池邊的風獅爺</span></a><a href="img/yoneko_4.jpg" target="_blank" rel="noopener"><img src="img/yoneko_4.jpg" alt="大風獅爺" loading="lazy"><span>大風獅爺</span></a><a href="img/yoneko_5.jpg" target="_blank" rel="noopener"><img src="img/yoneko_5.jpg" alt="商店裡的小風獅爺，可以買回家" loading="lazy"><span>商店裡的小風獅爺，可以買回家</span></a></div>
+  <p class="sub">照片：Google 地圖網友實拍，僅供行前參考。點圖可放大。</p>
   </div>
 
   <div class="place">
@@ -935,7 +943,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917r。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917s。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
