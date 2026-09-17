@@ -237,7 +237,6 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 
 <nav class="tabs" aria-label="頁面分區">
   <a href="#glance">總覽</a>
-  <a href="compare.html" class="ext">方案比較</a>
   <a href="#todo">待辦</a>
   <a href="#d0">9/20 登船</a>
   <a href="#ship">船上</a>
@@ -274,12 +273,11 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
   <p><b>船不等人。</b>手機到日本會自動變日本時間，船上的鐘不會。所有靠岸行程都用當地時間寫，回船時間再往前抓 1.5 小時。</p>
 
   <div class="two">
-    <div class="box"><h3>目前想法（還沒定）</h3>
+    <div class="box"><h3>已決定</h3>
       <ul>
-        <li>那霸候選：<b>瀨長島＋國際通</b>、iias 豐崎＋DMM 水族館、PARCO CITY＋國際通。交通偏向<b>大型計程車</b>。</li>
-        <li>石垣島候選：<b>やいま村 → 鐘乳洞 → 富崎海灘</b>、川平灣玻璃船、川平灣＋御神崎夕陽、市區慢遊。都要包車。</li>
+        <li>那霸：<b>瀨長島 → 國際通</b>。交通偏向大型計程車，租車當備案。</li>
+        <li>石垣島二選一：<b>選項 1 川平灣玻璃船</b>，或 <b>選項 2 市區慢遊＋風獅爺公園＋富崎海灘</b>。都是包車 4 小時，出發前定案。</li>
         <li>不去：舊海軍司令部壕、玉泉洞、護國寺。</li>
-        <li>各候選的照片、時間帶、路線圖和優缺點，看 <a href="compare.html">方案比較</a>。</li>
       </ul></div>
     <div class="box"><h3>現在要做的 3 件事</h3>
       <ol>
@@ -322,7 +320,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 
   <h3>急</h3>
   <ul class="todo">
-    <li><input type="checkbox" id="t-charter" data-key="ishigaki-charter"><label for="t-charter">石垣島包車：09/22 當地 15:00 在新港郵輪岸壁「出關後往船尾方向、公廁旁」碰面，4 小時。8 人要兩台 4 人座或一台 9 人座。請業者代訂石垣牛晚餐。</label></li>
+    <li><input type="checkbox" id="t-charter" data-key="ishigaki-charter"><label for="t-charter">石垣島包車：09/22 當地 15:00 在新港郵輪岸壁「出關後往船尾方向、公廁旁」碰面，4 小時。兩條路線（選項 1 川平灣、選項 2 風獅爺＋富崎）都先給業者，請代訂玻璃船票和石垣牛晚餐。8 人要兩台 4 人座，或找 9 人座業者。</label></li>
     <li><input type="checkbox" id="t-naha" data-key="naha-transport"><label for="t-naha">那霸交通二選一：租車 GO!GO!TOUR T1299（僅剩 1 輛，先用 LINE 確認 4 件事）或 9 人座大型計程車 3 小時。</label></li>
     <li><input type="checkbox" id="t-dinner-naha" data-key="naha-dinner"><label for="t-dinner-naha">那霸晚餐：琉球の牛 久茂地 或 燒肉もとぶ牧場 國際通店（都可 TableCheck 線上訂）二選一，8 人 19:15。備案 うりずん（電話 098-885-2178）。想吃豬排選 小やじ（20:00 關）或 コション。</label></li>
     <li><input type="checkbox" id="t-dinner-ishi" data-key="ishigaki-dinner"><label for="t-dinner-ishi">石垣島晚餐：きたうち牧場 浜崎本店（0980-83-7000）或 焼肉おおつか。想吃生魚片訂 ひとし 本店。19:00 到店。</label></li>
@@ -345,7 +343,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
     <li><input type="checkbox" id="t-v3" data-key="v-ootsuka"><label for="t-v3">石垣島 焼肉おおつか 本店：營業時間。只知道一定要預約。</label></li>
     <li><input type="checkbox" id="t-v4" data-key="v-hitoshi"><label for="t-v4">石垣島 ひとし 本店：9/22 週二是否 17:00 開。</label></li>
     <li><input type="checkbox" id="t-v5" data-key="v-egao"><label for="t-v5">石垣島 とんかつ カレー食堂 えがお：是否還在營業。訂位頁已下架。</label></li>
-    <li><input type="checkbox" id="t-v6" data-key="v-cave"><label for="t-v6">石垣島鐘乳洞門票價、石垣島市區回港計程車車資。</label></li>
+    <li><input type="checkbox" id="t-v6" data-key="v-cave"><label for="t-v6">石垣島市區回港計程車車資；玻璃船票當天海況停開能否退。</label></li>
   </ul>
 
   <h3>靠岸日帶下船</h3>
@@ -450,7 +448,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
   <span class="eyebrow">09/21 週一・沖繩</span>
   <h2>那霸</h2>
   <div class="stickybar" role="note"><span class="k">回船</span><span class="n">22:00</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">21:00</span><span class="k">21:30 離開國際通・開船 23:59</span></div>
-  <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。行程還沒定，下面以<b>瀨長島＋國際通</b>為主線列時間，其他候選在「瀨長島以外還能去哪」。交通偏向<b>大型計程車</b>。</p>
+  <p>靠岸 15:00，實際下船約 16:00–16:30。日落 18:27。今天<b>瀨長島</b>看海看飛機，再回<b>國際通</b>吃飯逛街。交通偏向<b>大型計程車</b>，租車當備案。</p>
 
   <h3>交通 <span class="badge b-either">偏向計程車</span></h3>
   <div class="tbl"><table class="nw1">
@@ -534,16 +532,6 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
   <div class="detail">
     <h3>關於碼頭排計程車</h3>
     <p>下船那一刻碼頭外會擠滿人排計程車。網友回報「靠港後至少 1 小時才走到計程車區」；那霸港官方說碼頭不代叫計程車。避開的方法：租車送到碼頭、事先預約大型計程車、在出口外叫 Uber（8 人要兩台）、或直接走 15 分鐘進國際通。</p>
-    <h3>瀨長島以外還能去哪</h3>
-    <div class="tbl"><table class="wide">
-      <tr><th>景點</th><th>車程</th><th>適合誰</th><th>說明</th></tr>
-      <tr><td><b>瀨長島 Umikaji Terrace</b></td><td>20 分</td><td>看海、喝咖啡</td><td>白色階梯建築面海。免費停車。店家開到 21:00。首選。</td></tr>
-      <tr><td>PARCO CITY</td><td>15 分</td><td>逛街也想看海</td><td>5 樓屋頂免費看夕陽，3 樓星巴克海景座。免費停車。開到 22:00。</td></tr>
-      <tr><td>首里城</td><td>20 分</td><td>看文化</td><td>只能看外觀，正殿內部 11/23 才開。門票 18:30 停賣。</td></tr>
-      <tr><td>iias 豐崎＋DMM 水族館</td><td>20 分</td><td>怕下雨、想採買</td><td>水族館最後入館 18:00、19:00 關；9/21 旺季票 ¥3,200，前一天線上買 9 折。餵食體驗 15:30 後就沒了。商場開到 21:00、超市 22:00。</td></tr>
-      <tr><td>ASHIBINAA 暢貨中心</td><td>20 分</td><td>買國際品牌</td><td>20:00 關。網友說只有想撿過季品才需要去。</td></tr>
-    </table></div>
-    <p><span class="badge b-skip">不去</span> 美國村（單程 40 分）、玉泉洞（17:30 關，網友說體質敏感者不推）、齋場御嶽與知念岬（太遠）。</p>
     <h3>停車</h3>
     <ul>
       <li>瀨長島、PARCO CITY、iias：免費。</li>
@@ -694,36 +682,71 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 <section id="d2">
   <span class="eyebrow">09/22 週二・八重山</span>
   <h2>石垣島</h2>
-  <div class="stickybar" role="note"><span class="k">回船</span><span class="n">21:30</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">20:30</span><span class="k">鐘乳洞 17:40 前到・開船 23:00</span></div>
-  <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。行程還沒定，下面以方案 1 列時間，其他候選在「替代方案」。<b>石垣島叫不到車，一定要事先預約包車。</b></p>
+  <div class="stickybar" role="note"><span class="k">回船</span><span class="n">21:30</span><span class="sep">｜</span><span class="k">船上時鐘</span><span class="n">20:30</span><span class="k">玻璃船末班 17:00・開船 23:00</span></div>
+  <p>靠岸 14:00，實際下船約 14:30–14:45。日落 18:40。<b>石垣島叫不到車，一定要事先預約包車。</b>兩個選項都是包車 4 小時（15:00–19:00），晚餐都回市區吃，出發前二選一。</p>
   <p><b>集合點：</b>出關後往船尾方向，公廁旁。約 15:00 碰面。</p>
 
-  <div class="update" role="note"><span class="k">9/17 更新</span>やいま村的松鼠猴從 2026-07-20 起不能餵了。園方公告是為了猴子的安全，餵食體驗停辦，園區照常能進，站著不動牠們可能自己跳上來。原本寫的「可以近距離摸」是停辦前的網友經驗，已改掉。要不要把這站換成港口旁的海豚互動，還在決定。</div>
-
-  <h3>候選主線：方案 1 やいま村＋鐘乳洞＋富崎 <span class="badge b-either">候選</span></h3>
+  <h3>選項 1：川平灣玻璃船 <span class="badge b-either">二選一</span></h3>
+  <p class="sub">石垣島的招牌畫面。網友首選，「最不會後悔」。海況差玻璃船會停開，颱風季要有心理準備；停開就改走選項 2。</p>
   <ol class="timeline">
     <li><time>14:00–14:45</time><div>靠岸、下船</div></li>
     <li><time>15:00</time><div><b>上包車</b><span class="n">出關後往船尾方向，公廁旁。</span></div></li>
-    <li><time>15:20–16:30</time><div><b>石垣やいま村 松鼠猴之森</b><span class="n">門票 ¥1,200，17:30 關，最後入園 17:00。只能看，不能餵、不能追。網友提醒牠們會翻口袋和背包。</span></div></li>
-    <li class="hard"><time>16:50–17:40</time><div><b>石垣島鐘乳洞</b><span class="n">走 40 分鐘就夠。最後入場 18:00。</span></div></li>
-    <li><time>18:00–18:50</time><div><b>富崎海灘看日落</b><span class="n">日落 18:40。離市區 10 分鐘。</span></div></li>
-    <li><time>19:00</time><div>市區放人，包車 4 小時結束</div></li>
-    <li><time>19:00–20:15</time><div><b>石垣牛晚餐</b><span class="n">先訂位。公設市場 20:00 關，這版逛不到；改逛商店街藥妝，或請司機 18:50 前先停 SAN-A 超市。</span></div></li>
+    <li><time>15:00–15:40</time><div>開去川平灣<span class="n">單程 30 到 40 分。</span></div></li>
+    <li class="hard"><time>15:40–17:10</time><div><b>川平灣</b><span class="n">玻璃船 30 分鐘、每 15 分一班，末班 17:00，請包車業者先訂票。展望台、沙灘拍照。川平灣禁止游泳。</span></div></li>
+    <li><time>17:10–17:50</time><div>回市區<span class="n">順路可停 Miru Miru 本舖吃冰（面海，要排隊）。</span></div></li>
+    <li><time>17:50–19:00</time><div><b>公設市場、超市</b><span class="n">公設市場 20:00 關；SAN-A 或 MaxValu 超市補貨。</span></div></li>
+    <li><time>19:00</time><div>包車 4 小時結束</div></li>
+    <li><time>19:00–20:15</time><div><b>石垣牛晚餐</b><span class="n">先訂位，見下方。</span></div></li>
     <li><time>20:15–20:45</time><div>歐格麗娜商店街、大國藥妝</div></li>
     <li><time>20:45–21:00</time><div>計程車回港<span class="n">市區有招呼站，等 10 到 15 分鐘。不確定就請餐廳幫忙叫。</span></div></li>
     <li class="hard"><time>21:30</time><div><b>回到船上</b></div></li>
   </ol>
+  <div class="place">
+    <header><h4>川平灣玻璃船</h4><span class="type">川平マリンサービス</span></header>
+    <dl class="facts">
+      <dt>票價</dt><dd>大人 ¥2,300、4 到 11 歲 ¥1,200。8 人 ¥18,400。</dd>
+      <dt>班次</dt><dd>9:00 起每 15 分一班，航程約 30 分，末班 17:00。全年無休，颱風或海況不佳停開。</dd>
+      <dt>停留</dt><dd>抓 90 分鐘：買票排隊 15 分、搭船 30 分、展望台和沙灘 45 分。</dd>
+    </dl>
+    <p class="warnline">請包車業者先訂票，網友說沒訂到現場會收原價又要排。</p>
+  </div>
+
+  <h3>選項 2：市區慢遊＋風獅爺公園＋富崎海灘 <span class="badge b-either">二選一</span></h3>
+  <p class="sub">不趕、不曬。先去北邊看巨大風獅爺，回市區逛公設市場，傍晚在富崎看日落。海況差、不想坐船時的首選。</p>
+  <ol class="timeline">
+    <li><time>14:00–14:45</time><div>靠岸、下船</div></li>
+    <li><time>15:00</time><div><b>上包車</b><span class="n">出關後往船尾方向，公廁旁。</span></div></li>
+    <li><time>15:00–15:30</time><div>開去米子燒工房<span class="n">28 分鐘，在島的北邊桴海。</span></div></li>
+    <li class="hard"><time>15:30–16:15</time><div><b>米子燒工房 風獅爺農園</b><span class="n">免費入園，16:50 關。巨大彩色風獅爺、工房可參觀，好拍。</span></div></li>
+    <li><time>16:15–16:45</time><div>回市區<span class="n">26 分鐘。</span></div></li>
+    <li><time>16:45–17:45</time><div><b>市區慢遊、公設市場</b><span class="n">公設市場零食、石垣牛握壽司攤、歐格麗娜商店街。市場 20:00 關，這版最寬裕。</span></div></li>
+    <li><time>17:45–18:00</time><div>開去富崎海灘<span class="n">12 分鐘。</span></div></li>
+    <li><time>18:00–18:50</time><div><b>富崎海灘看日落</b><span class="n">日落 18:40。棧橋面西，站在棧橋盡頭看。</span></div></li>
+    <li><time>18:50–19:00</time><div>回市區，包車 4 小時結束</div></li>
+    <li><time>19:00–20:15</time><div><b>石垣牛晚餐</b><span class="n">先訂位，見下方。</span></div></li>
+    <li><time>20:15–20:45</time><div>大國藥妝、超市</div></li>
+    <li><time>20:45–21:00</time><div>計程車回港</div></li>
+    <li class="hard"><time>21:30</time><div><b>回到船上</b></div></li>
+  </ol>
+  <div class="place">
+    <header><h4>米子燒工房 風獅爺農園</h4><span class="type">桴海 447-1・0980-88-2559</span></header>
+    <dl class="facts">
+      <dt>時間</dt><dd>9:00–16:50，全年無休，免費。</dd>
+      <dt>位置</dt><dd>離川平灣只有 12 分鐘，離市區 26 分鐘。</dd>
+    </dl>
+  </div>
 
   <div class="place">
     <header><h4>包車：8 人怎麼算</h4><span class="badge b-verify">待確認</span></header>
     <dl class="facts">
       <dt>價目</dt><dd>港口官方觀光計程車，<b>4 人座</b>：2 小時 ¥8,800、3 小時 ¥13,200、4 小時 ¥17,600、5 小時 ¥22,000。</dd>
       <dt>8 人</dt><dd><b>兩台 4 人座 4 小時 ¥35,200</b>（港口看板價，沒預約要現場排）。石垣旅行社<b>只有 4 到 5 人座</b>，一台 6 小時 ¥33,000、加 1 小時 ¥4,400，8 人要兩台 ¥66,000。想一車 8 人要找有 9 或 10 人座的業者：行腳沖繩 9 人座 5 小時 ¥48,500 起（日文司機，中文客服）、okitour 10 人座有 4 小時方案（價格線上查）。</dd>
-      <dt>業者</dt><dd><b>石垣旅行社</b>：LINE <a href="https://lin.ee/LLQOVp0">@430woflk</a>，WhatsApp +81-80-6480-2127，中文客服、日文司機。流程：LINE 問有沒有車 → 3 小時內下單付訂金 ¥6,600 → 尾款現金給司機。免費代訂一家餐廳。三天內取消要付全額；船沒靠港退訂金。網友 2025 年 4 月用過，「司機態度超好」。另有網友推薦「阿菜阿姨」，台語可通，未驗證。</dd>
+      <dt>業者</dt><dd><b>石垣旅行社</b>：LINE <a href="https://lin.ee/LLQOVp0">@430woflk</a>，WhatsApp +81-80-6480-2127，中文客服、日文司機。流程：LINE 問有沒有車 → 3 小時內下單付訂金 ¥6,600 → 尾款現金給司機。免費代訂一家餐廳。三天內取消要付全額；船沒靠港退訂金。網友 2025 年 4 月用過，「司機態度超好」。</dd>
+      <dt>兩條路線都要先講</dt><dd>訂車時把選項 1 和選項 2 的路線都給業者，說明「當天看海況決定」，玻璃船票請他們先問能不能當天取消。</dd>
     </dl>
     <div class="detail"><details><summary>距離與為什麼一定要預約</summary>
       <ul>
-        <li>從郵輪碼頭：離島碼頭 10 分（接駁巴士 ¥200）、公設市場 10 分、SAN-A 與 MaxValu 超市 15 分、川平灣 40 分。</li>
+        <li>從郵輪碼頭：離島碼頭 10 分（接駁巴士 ¥200）、公設市場 10 分、SAN-A 與 MaxValu 超市 15 分、川平灣 30 到 40 分、米子燒 28 分、富崎 14 分。</li>
         <li>石垣市觀光交流協會：郵輪靠港時計程車嚴重不足，請預約。網友 2023 年沒預約走了 1 小時進城。石垣島沒有 Uber，DiDi 靠港時也叫不到。</li>
         <li>石垣旅行社與 Threads 帳號 @ishigaki_twjp 的配偶有關，但 Dcard 兩位無關旅客實際用過並給正評。</li>
       </ul>
@@ -731,34 +754,14 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
   </div>
 
   <div class="detail">
-    <h3>方案 1 的好處</h3>
+    <h3>網友怎麼說</h3>
     <ul>
-      <li>兩個室內或樹蔭景點，帶小孩、怕曬都合適。網友：「這次去石垣島最喜歡的就是松鼠猴。」這位網友去的時候還能餵，現在不能了。</li>
-      <li>不受玻璃船班次限制，時間好控制。</li>
-      <li>日落點離市區只有 10 分鐘，看完直接吃飯。</li>
+      <li>Dcard 貝貝魯多，2025 年 4 月，同船探索星號：石垣島去了「川平灣、牛乳屋、公設市場、米魯米魯冰淇淋」。</li>
+      <li>Threads 多位網友：「玻璃船值得」「珊瑚比想像清楚」；御神崎那類夕陽點「停車場和路邊都塞」，所以這次日落改看富崎，離市區只有 12 分鐘。</li>
+      <li>Dcard 網友，2025 年 9 月：「石垣島市區小，公設市場買零食、離島碼頭吃飯就差不多了。」</li>
     </ul>
-    <h3>替代方案</h3>
-    <div class="tbl"><table class="wide">
-      <tr><th>方案</th><th>主角</th><th>一句話</th></tr>
-      <tr><td>2 川平灣玻璃船</td><td>海</td><td>網友首選。玻璃船 9:00–17:00 每 15–20 分一班，請業者先訂票。川平灣抓 90 分鐘，車程 40 分。</td></tr>
-      <tr><td>3 川平灣不搭船＋御神崎夕陽</td><td>海＋夕陽</td><td>御神崎離川平灣 15 分，免費，傍晚停車場會塞。</td></tr>
-      <tr><td>4 市區慢遊＋風獅爺公園＋富崎海灘</td><td>放空</td><td>包車 2 小時就夠。</td></tr>
-      <tr><td>5 玉取崎展望台＋川平灣</td><td>山海全景</td><td>單程 60 分，各只能待 30 分。</td></tr>
-    </table></div>
-    <p><span class="badge b-skip">去不了</span> 幻之島與藍洞浮潛（13:30 前出港）、平久保崎燈塔（單程 90 分）、星空團（20:00 起 80 分鐘，趕不回船）、名藏灣夕陽獨木舟或 SUP（約 2 小時，兩份資料開始時間衝突，無論何者都與晚餐衝突，視為不可行）。</p>
-
-    <h3>租機車？不建議</h3>
-    <ul>
-      <li>日本租機車要護照正本，我們只有影本。沒有機車店明說接受影本。</li>
-      <li>汽車駕照譯本只能騎 50cc 且不能雙載。8 人要 4 到 8 位有重機駕照加譯本的人。</li>
-      <li>機車店 17:00–18:00 停止還車。市區的 HAPPY ROAD 週二公休，9/22 正好週二。</li>
-      <li>石垣島機車本來就少，9 月颱風季。</li>
-    </ul>
-    <h3>備案</h3>
-    <ul>
-      <li><b>竹富島</b>：只在 15:00 前順利下船時用。15:30 高速船去，末班回程 <b>17:50</b>。港口旁沒店，腳踏車靠店家接送。</li>
-      <li><b>只逛市區</b>：接駁巴士到離島碼頭，走路逛商店街、公設市場。零風險但玩不過癮。</li>
-    </ul>
+    <h3>去不了的</h3>
+    <p><span class="badge b-skip">去不了</span> 幻之島與藍洞浮潛（13:30 前出港）、平久保崎燈塔（單程 90 分）、星空團（20:00 起，趕不回船）、竹富島（末班船 17:50，下船時間太不確定）。租機車也不建議：要護照正本、17:00 就要還車、9 月颱風季。</p>
   </div>
 
   <h3>晚餐（先訂位）</h3>
@@ -865,7 +868,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
     <tr><td>那霸大型計程車版</td><td>3 小時 ¥15,500 起＋回程 ¥900</td><td>約 ¥2,050 起</td></tr>
     <tr><td>那霸晚餐</td><td>琉球の牛 約 ¥6,300／もとぶ牧場 約 ¥5,000–6,000／備案 うりずん 約 ¥1,900／豬排 ¥1,500–2,000</td><td>—</td></tr>
     <tr><td><b>石垣島包車 4 小時</b></td><td><b>4 人座 ×2 台 ¥35,200</b>（港口看板價）。石垣旅行社 4–5 人座兩台 6 小時 ¥66,000；9 人座一台 5 小時 ¥48,500 起（行腳沖繩）</td><td>約 ¥4,400–8,250</td></tr>
-    <tr><td>石垣島門票</td><td>やいま村 ¥1,200；鐘乳洞 <span class="badge b-verify">待查</span></td><td>—</td></tr>
+    <tr><td>石垣島門票</td><td>選項 1 玻璃船 ¥2,300／人；選項 2 風獅爺農園免費</td><td>¥2,300 或 0</td></tr>
     <tr><td>石垣島回港計程車</td><td><span class="badge b-verify">待查</span>，市區 10–15 分</td><td>—</td></tr>
     <tr><td>石垣島晚餐</td><td>燒肉 ¥3,000–5,000／島そば ¥715–1,375</td><td>—</td></tr>
     <tr><td>船上固定（台幣）</td><td>服務費 600×3 晚、日本觀光稅 220、網路 290/晚（選）</td><td>NT$2,020 起</td></tr>
@@ -915,7 +918,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
   <h3>官方與店家資料</h3>
   <ul>
     <li>石垣市觀光交流協會：郵輪乘客頁、計程車不足。港口看板：觀光計程車價目。</li>
-    <li>石垣やいま村官網首頁公告與官方 X、FB、IG（2026-07-15 至 16）：松鼠猴餵食體驗 2026-07-20 起休止。</li>
+    <li>米子燒工房官網與じゃらん：風獅爺農園 9:00–16:50、免費、桴海 447-1。</li>
     <li>竹富島船班（NAVITIME）、川平灣玻璃船、石垣やいま村、石垣島鐘乳洞、首里城 7 到 9 月營業時間、瀨長島 Umikaji Terrace、PARCO CITY。</li>
     <li>HotPepper、Retty、TableCheck：うりずん、琉球の牛、ひとし、つーなー、小やじ、コション。</li>
     <li>GO!GO!TOUR T1299、T902、T1248 方案頁；日本租車波之上店。</li>
@@ -932,7 +935,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-17。網頁版本 v20260917q。</p>
+  <p>資料整理至 2026-09-17。網頁版本 v20260917r。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
