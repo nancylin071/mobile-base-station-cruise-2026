@@ -218,6 +218,9 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 .tl-two .timeline{margin-top:.4em}
 .sub-h{font-size:var(--fs-body);margin:1.2em 0 .4em;color:var(--ink)}
 .place-group{margin:.8em 0}
+.toolbar .dl{margin-left:auto;font-size:var(--fs-sub);font-weight:700;color:var(--sea);white-space:nowrap}
+@media (max-width:600px){.toolbar .dl{margin-left:0;flex-basis:100%}}
+@media print{.toolbar .dl{display:none}}
 </style>
 <script>
 (function(){try{var m=localStorage.getItem('mbs2026:mode');if(m==='detail'||m==='fast'){document.documentElement.setAttribute('data-mode',m);}}catch(e){}})();
@@ -242,6 +245,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
       <button id="modeDetail" type="button" aria-pressed="false">詳細</button>
     </div>
     <span class="modehint" id="modeHint">快速：只看結論與時間。詳細：另外展開 <b id="detailCount">0</b> 個補充區塊（原因、網友評價、替代方案、來源），以灰底標示。</span>
+    <a class="dl" href="handbook_A4.pdf" target="_blank" rel="noopener">下載 A4 行程手冊 PDF（14 頁，可列印）</a>
   </div>
 </header>
 
@@ -906,7 +910,7 @@ footer{padding:1.5em 0 3em;color:var(--ink-2);font-size:var(--fs-sub);border-top
 </main>
 
 <footer>
-  <p>資料整理至 2026-09-18。網頁版本 v20260918j。</p>
+  <p>資料整理至 2026-09-18。網頁版本 v20260919a。</p>
   <p>所有時間以船方廣播與現場公告為準。建議上船前先開一次這頁，或列印、存成 PDF，船上網路很慢。</p>
   <p>勾選狀態只存在你這台裝置。</p>
 </footer>
