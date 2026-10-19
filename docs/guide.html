@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>行動基地台 出海去：探索星號 那霸・石垣島 行程手冊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== 設計系統 ===== */
+:root{
+  --ink:#1F2A33; --ink-2:#5B6770; --ink-3:#8A95A0;
+  --rule:#D6DEE4; --surface-2:#F1F4F6;
+  --sea:#1B6F8C; --sea-soft:#E4EEF3;
+  --red:#B23A2E; --red-soft:#F8E7E3;
+  --gold:#8A6212; --gold-soft:#F7EDD3;
+  --green:#2E7D4F; --green-soft:#E3F1E7;
+}
+@page{
+  size:A4 portrait; margin:17mm 18mm 19mm;
+  @bottom-left{content:"行動基地台 出海去・探索星號 2026/09/20–23";font:8.5pt "Noto Sans TC",sans-serif;color:#8A95A0}
+  @bottom-right{content:counter(page);font:9pt "Noto Sans TC",sans-serif;color:#5B6770}
+}
+@page cover{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-size:10.5pt;line-height:1.58;color:var(--ink);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;orphans:2;widows:2}
+a{color:var(--sea);text-decoration:none}
+p{margin:0 0 .55em}
+ul,ol{margin:.1em 0 .6em;padding-left:1.3em}
+li{margin:.15em 0}
+b,strong{font-weight:700}
+.muted{color:var(--ink-2)}
+.small{font-size:9pt;line-height:1.5}
+.note{font-size:8.5pt;color:var(--ink-2);line-height:1.5;margin:.25em 0 .8em}
+/* 標題層級 */
+.ch{break-before:page}
+.chx{margin-top:2.2em}
+.chap{display:flex;align-items:baseline;gap:.6em;border-bottom:2px solid var(--sea);padding-bottom:.35em;margin:0 0 .9em}
+.chap .no{font-size:11pt;font-weight:500;color:var(--sea);letter-spacing:.06em}
+h2{font-size:17pt;font-weight:700;margin:0;line-height:1.3;color:var(--ink);break-after:avoid}
+h3{font-size:12.5pt;font-weight:700;margin:1.25em 0 .4em;line-height:1.35;break-after:avoid;color:var(--ink)}
+h4{font-size:10.5pt;font-weight:700;margin:.9em 0 .25em;break-after:avoid}
+.lead{font-size:11pt;color:var(--ink);margin:0 0 .9em}
+/* 卡片：只用於截止、已訂、提醒、避開 */
+.card{border-radius:6px;padding:.65em .95em;margin:.45em 0 .7em;break-inside:avoid}
+.card.red{background:var(--red-soft)} .card.gold{background:var(--gold-soft)} .card.green{background:var(--green-soft)} .card.sea{background:var(--sea-soft)}
+.card .t{font-weight:700;margin:0 0 .2em}
+.card p:last-child{margin-bottom:0}
+.deadline{display:grid;grid-template-columns:auto 1fr;column-gap:.9em;align-items:center}
+.deadline .big{font-size:22pt;font-weight:700;color:var(--red);line-height:1}
+.tag{display:inline-block;font-size:8pt;font-weight:700;padding:.05em .55em;border-radius:3px;vertical-align:.1em;line-height:1.6;margin-left:.3em}
+.tag.green{color:var(--green);background:var(--green-soft)} .tag.red{color:var(--red);background:var(--red-soft)} .tag.gold{color:var(--gold);background:var(--gold-soft)} .tag.grey{color:var(--ink-2);background:var(--surface-2)}
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:9.5pt;line-height:1.5;margin:.3em 0 .4em;break-inside:auto}
+caption{text-align:left;font-weight:700;font-size:10pt;padding:0 0 .35em;caption-side:top}
+thead{display:table-header-group}
+th{text-align:left;font-weight:700;color:var(--ink-2);font-size:8.8pt;padding:.35em .5em;border-bottom:1.5px solid var(--ink-3);vertical-align:bottom}
+td{padding:.42em .5em;border-bottom:1px solid var(--rule);vertical-align:top}
+tr{break-inside:avoid}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.k{font-weight:700;white-space:nowrap}
+/* 時間表 */
+.tl{list-style:none;margin:.3em 0 .6em;padding:0}
+.tl li{display:grid;grid-template-columns:7.5em 1fr;gap:.8em;padding:.32em 0;border-bottom:1px solid var(--rule);break-inside:avoid}
+.tl li:last-child{border-bottom:0}
+.tl time{font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:9.8pt;padding-top:.1em}
+.tl li.hard time,.tl li.hard .h{color:var(--red)}
+.tl .h{font-weight:700}
+.tl .d{display:block;color:var(--ink-2);font-size:9.3pt;line-height:1.5}
+/* 兩欄 */
+.cols{column-count:2;column-gap:9mm}
+.cols>*{break-inside:avoid}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6mm;align-items:start}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;align-items:start}
+.tight li{margin:.05em 0}
+/* 事實表（店家、租車） */
+.facts{display:grid;grid-template-columns:5em 1fr;gap:.15em .8em;margin:.2em 0 .5em;font-size:9.6pt}
+.facts dt{color:var(--ink-2);font-size:9pt;padding-top:.12em}.facts dd{margin:0}
+.venue{break-inside:avoid;margin:0 0 .6em}
+.venue h4{margin:.4em 0 .15em;font-size:11pt}
+.venue .sub{color:var(--ink-2);font-size:9pt;margin:0 0 .25em}
+/* 圖 */
+figure{margin:.4em 0 .9em;break-inside:avoid}
+figure img{width:100%;display:block;border-radius:3px}
+figcaption{font-size:8.5pt;color:var(--ink-2);margin:.3em 0 0;line-height:1.45}
+.fig2{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.fig2 img{height:24mm;object-fit:cover}
+.route{width:100%;height:auto;margin:.2em 0 .6em}
+.route line{stroke:var(--sea);stroke-width:2.5}
+.route circle{fill:#fff;stroke:var(--sea);stroke-width:2.5}
+.route circle.hard{stroke:var(--red)}
+.route text{font-size:12px;fill:var(--ink-2);font-family:"Noto Sans TC",sans-serif}
+.route text.name{font-size:13.5px;fill:var(--ink);font-weight:700}
+.route text.leg{font-size:10.5px;fill:var(--sea)}
+/* 流程 */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:.4em 0 .8em;font-size:9.3pt;break-inside:avoid}
+.flow>div{position:relative;padding:.5em .7em .5em .9em;background:var(--surface-2);border-radius:4px;margin-right:9px;line-height:1.45}
+.flow>div::after{content:"›";position:absolute;right:-9px;top:50%;transform:translateY(-50%);font-size:14pt;color:var(--ink-3);line-height:1}
+.flow>div:last-child::after{content:none}
+.flow>div:last-child{margin-right:0}
+.flow .step{display:block;font-size:8pt;color:var(--sea);font-weight:700;letter-spacing:.05em}
+/* 勾選 */
+.check{list-style:none;padding:0}
+.check li{position:relative;padding-left:1.55em;margin:.18em 0}
+.check li::before{content:"";position:absolute;left:0;top:.28em;width:.95em;height:.95em;border:1.3px solid var(--ink-2);border-radius:2px}
+/* 封面 */
+.cover{page:cover;height:297mm;padding:34mm 24mm 24mm;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,#E4EEF3 0%,#fff 55%)}
+.cover .kicker{font-size:11pt;color:var(--sea);font-weight:500;letter-spacing:.08em;margin:0 0 .6em}
+.cover h1{font-size:30pt;font-weight:700;line-height:1.25;margin:0 0 .5em;color:var(--ink)}
+.cover .sub{font-size:13pt;color:var(--ink-2);margin:0}
+.cover .meta{font-size:9.5pt;color:var(--ink-2);line-height:1.7}
+.cover .meta b{color:var(--ink)}
+/* 目錄 */
+.toc{list-style:none;padding:0;margin:.5em 0}
+.toc li{display:flex;align-items:baseline;gap:.5em;padding:.32em 0;border-bottom:1px solid var(--rule);font-size:10.5pt}
+.toc li.sub{padding-left:1.6em;font-size:9.8pt;border-bottom:0;padding-top:.15em;padding-bottom:.15em;color:var(--ink-2)}
+.toc .lab{flex:0 0 auto}
+.toc .dots{flex:1 1 auto;border-bottom:1px dotted var(--ink-3);transform:translateY(-.35em)}
+.toc .pn{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.toc li:not(.sub) .lab{color:var(--ink)}
+/* 摘要頁 */
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+</style>
+</head>
+<body>
+
+<!-- ===== 封面 ===== -->
+<section class="cover">
+  <div>
+    <p class="kicker">麗星郵輪 探索星號・2026 年 9 月 20 日至 23 日</p>
+    <h1>行動基地台 出海去<br>那霸・石垣島 行程手冊</h1>
+    <p class="sub">基隆 → 那霸 → 石垣島 → 基隆，三晚四天，8 人團體</p>
+  </div>
+  <svg class="route" viewBox="0 0 720 120" role="img" aria-label="航線：基隆、那霸、石垣島、基隆">
+    <line x1="60" y1="34" x2="660" y2="34"/>
+    <circle cx="60" cy="34" r="9"/><circle cx="260" cy="34" r="9"/><circle cx="460" cy="34" r="9"/><circle cx="660" cy="34" r="9"/>
+    <text class="name" x="60" y="74" text-anchor="middle">基隆</text><text x="60" y="98" text-anchor="middle">9/20 20:00 開船</text>
+    <text class="name" x="260" y="74" text-anchor="middle">那霸</text><text x="260" y="98" text-anchor="middle">9/21 15:00–23:59</text>
+    <text class="name" x="460" y="74" text-anchor="middle">石垣島</text><text x="460" y="98" text-anchor="middle">9/22 14:00–23:00</text>
+    <text class="name" x="660" y="74" text-anchor="middle">基隆</text><text x="660" y="98" text-anchor="middle">9/23 09:00 到港</text>
+  </svg>
+  <p class="meta"><b>版本</b> 2026-09-19（依網頁 v20260918j）<br><b>給誰看</b> 同行 8 位成員，出發前讀一遍，靠岸當天查時間與店家<br><b>行程有變時</b> 以網頁版為準：nancylin071.github.io/mobile-base-station-cruise-2026</p>
+</section>
+
+<!-- ===== 閱讀重點 ===== -->
+<section class="ch" id="summary">
+  <div class="chap"><span class="no">閱讀重點</span><h2>五分鐘看完整趟</h2></div>
+  <p class="lead">兩個時間絕對不能錯，三件事已經訂好，其餘都是彈性。</p>
+  <div class="kv">
+    <div class="card red"><div class="deadline"><div class="big">22:30</div><div><p class="t">9/21 那霸 回到船上</p><p class="small muted">當地時間。船上時鐘 21:30。開船 23:59。</p></div></div></div>
+    <div class="card red"><div class="deadline"><div class="big">21:30</div><div><p class="t">9/22 石垣島 回到船上</p><p class="small muted">當地時間。船上時鐘 20:30。開船 23:00。</p></div></div></div>
+  </div>
+  <p><b>船不等人。</b>手機到日本會自動變成日本時間，船上的鐘不會。本手冊靠岸行程一律用當地時間；回船前把兩個時間都對一次。</p>
+
+  <h3>已經訂好的三件事</h3>
+  <table>
+    <thead><tr><th style="width:22%">項目</th><th>內容</th><th style="width:26%">要注意</th></tr></thead>
+    <tbody>
+      <tr><td class="k">那霸租車<span class="tag green">已訂</span></td><td>Sunrise Rentacar 日產 Serena Hybrid 8 人座。碼頭取車、19:00 還車到店，店家再送到國際通。</td><td>餘額取車時付現金；駕駛帶三樣證件。</td></tr>
+      <tr><td class="k">那霸晚餐<span class="tag green">已訂</span></td><td>燒肉もとぶ牧場 那霸店，20:00 集合，三桌：Verna 2 人、Nancy 4 人（20:00）、Paula 2 人（20:15）。</td><td>90 分鐘制，21:30 前吃完。</td></tr>
+      <tr><td class="k">石垣島不包車<span class="tag grey">已決定</span></td><td>市區慢逛、公設市場、藥妝，傍晚計程車去富崎海灘看日落，回市區在公設市場周邊吃晚餐，不訂位。</td><td>三趟計程車要在 9/21 先預約。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>每天一句話</h3>
+  <table>
+    <thead><tr><th style="width:16%">日期</th><th style="width:18%">港口</th><th>當天重點</th></tr></thead>
+    <tbody>
+      <tr><td class="k">09/20 日</td><td>基隆</td><td>16:00–18:30 西岸旅客中心報到，20:00 開船。想逛開港祭市集的 14:00 到。</td></tr>
+      <tr><td class="k">09/21 一</td><td>那霸</td><td>租車去瀨長島看海看飛機，還車後國際通分開逛，20:00 集合吃燒肉，22:30 前回船。</td></tr>
+      <tr><td class="k">09/22 二</td><td>石垣島</td><td>市區、公設市場、大國藥妝慢逛，17:00 計程車去富崎看 18:41 日落，晚餐市場周邊，21:30 前回船。</td></tr>
+      <tr><td class="k">09/23 三</td><td>基隆</td><td>09:00 到港。前一晚結帳、行李放門口。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>出發前最後確認</h3>
+  <ul class="check cols">
+    <li>線上預辦登船（09/19 20:00 前），截圖存手機</li>
+    <li>每人護照影本 A4 一份，不裁切、不寫字</li>
+    <li>駕駛：駕照、日文譯本、護照正本三樣拍照</li>
+    <li>租車餘額現金；日圓零錢</li>
+    <li>LINE 加「石垣島タクシー配車」；裝 DiDi、Uber、eSIM</li>
+    <li>藥妝留到石垣島買，那霸先不逛</li>
+  </ul>
+</section>
+
+<!-- ===== 目錄 ===== -->
+<section class="ch" id="toc">
+  <div class="chap"><span class="no">目錄</span><h2>本手冊內容</h2></div>
+  <ul class="toc">
+    <li><a class="lab" href="#summary">閱讀重點：五分鐘看完整趟</a><span class="dots"></span><span class="pn" data-target="summary">2</span></li>
+    <li><a class="lab" href="#ch1">第 1 章　出發前與登船日（9/20）</a><span class="dots"></span><span class="pn" data-target="ch1">4</span></li>
+    <li><a class="lab" href="#ch2">第 2 章　船上生活與船上費用</a><span class="dots"></span><span class="pn" data-target="ch2">5</span></li>
+    <li><a class="lab" href="#ch3">第 3 章　9/21 那霸：租車、瀨長島、國際通</a><span class="dots"></span><span class="pn" data-target="ch3">6</span></li>
+    <li class="sub"><a class="lab" href="#ch3-car">租車與取還車流程</a><span class="dots"></span><span class="pn" data-target="ch3-car">7</span></li>
+    <li class="sub"><a class="lab" href="#ch3-dinner">晚餐與購物</a><span class="dots"></span><span class="pn" data-target="ch3-dinner">8</span></li>
+    <li><a class="lab" href="#ch4">第 4 章　9/22 石垣島：市區、富崎海灘</a><span class="dots"></span><span class="pn" data-target="ch4">9</span></li>
+    <li class="sub"><a class="lab" href="#ch4-taxi">叫車與備案</a><span class="dots"></span><span class="pn" data-target="ch4-taxi">9</span></li>
+    <li class="sub"><a class="lab" href="#ch4-dinner">晚餐候選</a><span class="dots"></span><span class="pn" data-target="ch4-dinner">11</span></li>
+    <li><a class="lab" href="#ch5">第 5 章　9/23 回基隆</a><span class="dots"></span><span class="pn" data-target="ch5">12</span></li>
+    <li><a class="lab" href="#ch6">第 6 章　費用與現金</a><span class="dots"></span><span class="pn" data-target="ch6">12</span></li>
+    <li><a class="lab" href="#apA">附錄 A　電話與聯絡總表</a><span class="dots"></span><span class="pn" data-target="apA">13</span></li>
+    <li><a class="lab" href="#apB">附錄 B　勾選清單</a><span class="dots"></span><span class="pn" data-target="apB">13</span></li>
+    <li><a class="lab" href="#apC">附錄 C　資料來源與版本</a><span class="dots"></span><span class="pn" data-target="apC">14</span></li>
+  </ul>
+  <h3>怎麼讀這本手冊</h3>
+  <ul>
+    <li>靠岸行程的時間一律是<b>當地時間</b>（比船上時鐘快 1 小時）；船上活動用台灣時間。</li>
+    <li>標記 <span class="tag green" style="margin-left:0">已訂</span> 表示已付訂或有訂位紀錄；<span class="tag grey" style="margin-left:0">已決定</span> 表示方案定案但不需預約；<span class="tag red" style="margin-left:0">雷店</span> 表示網友一致不推。</li>
+    <li>紅底卡片是硬性截止時間，金底卡片是當天要留意的事，綠底卡片是已訂好的內容。</li>
+    <li>每章開頭先給當天一句話和路線圖，接著是時間表，最後才是店家與備案。趕時間只看前兩段。</li>
+  </ul>
+  <p class="note">本手冊內容整理自 2026-09-16 至 09-19 的規劃筆記與網頁；價格於 2026-09-17 逐項對業者官網核實。手冊與網頁不同時，以網頁為準。</p>
+</section>
+
+<!-- ===== 第 1 章 ===== -->
+<section class="ch" id="ch1">
+  <div class="chap"><span class="no">第 1 章</span><h2>出發前與登船日（9/20 週日）</h2></div>
+  <div class="card red"><div class="deadline"><div class="big">18:30</div><div><p class="t">完成報到</p><p class="small muted">報到 16:00–18:30，關閘 19:00，開船 20:00。遲到視同放棄，不退費。</p></div></div></div>
+
+  <h3>報到地點與流程</h3>
+  <p><b>基隆港西岸旅客服務中心</b>（仁愛區港西街 16 號），基隆火車站北站出口步行 4 分鐘。現場人多、每關都排，建議 16:00 就到。</p>
+  <div class="flow">
+    <div><span class="step">1</span>託運行李<br><span class="muted">只收硬殼箱，貴重物、藥品、證件隨身</span></div>
+    <div><span class="step">2</span>2 樓報到<br><span class="muted">護照正本＋影本＋船票，領房卡、入境卡、海關申報單</span></div>
+    <div><span class="step">3</span>安檢、移民署查驗</div>
+    <div><span class="step">4</span>上船<br><span class="muted">船員收走護照，最後一天憑房卡領回</span></div>
+  </div>
+  <p class="small muted">領到的入境卡與申報單遺失不補發。開船前安全演習強制參加，集合點印在房卡上。</p>
+
+  <div class="grid2">
+    <div>
+      <h3>每人要帶</h3>
+      <ul>
+        <li>護照正本，效期 6 個月以上</li>
+        <li>A4 護照影本一份：一比一、清晰、不寫字、不用回收紙</li>
+        <li>船票（紙本或手機）</li>
+        <li>自備：牙刷牙膏、拖鞋、房卡掛繩、萬國插頭、薄外套、暈船藥、日圓零錢、eSIM</li>
+      </ul>
+      <h3>行李與資格</h3>
+      <ul>
+        <li>每人 2 件、合計 50 公斤內</li>
+        <li>懷孕 24 週以上、未滿 6 個月嬰兒、90 歲以上不能上船</li>
+        <li>房號前 1 到 2 位是樓層，例如 06519 在 6 樓</li>
+      </ul>
+    </div>
+    <div>
+      <h3>不能帶上船</h3>
+      <ul>
+        <li>吹風機、電熨斗、直髮器、電湯匙、電毯</li>
+        <li>指甲刀以外的刀具，含刮鬍刀片</li>
+        <li>酒：會被保管到下船</li>
+        <li>無人機、雷射筆、變壓器、電子菸</li>
+        <li>未煮熟或未真空的食物</li>
+      </ul>
+      <h3>不能帶進日本或台灣</h3>
+      <ul>
+        <li>肉類、水果、農產品、寵物飼料。肉類未申報最高罰 300 萬。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>順道：基隆開港祭</h3>
+  <p>海洋廣場就在旅客中心對面，走路 5 分鐘。市集 14:00–20:00（在地小吃、文創、台啤攤、集章抽獎）。想逛的人 14:00 到基隆，逛完 16:00 報到；行李先託運再逛。9/20 晚上 20:00 港灣花火由麗星郵輪贊助，我們 20:00 開船，在甲板上看即可。</p>
+</section>
+
+<!-- ===== 第 2 章 ===== -->
+<section class="ch" id="ch2">
+  <div class="chap"><span class="no">第 2 章</span><h2>船上生活與船上費用</h2></div>
+  <div class="grid2">
+    <div>
+      <h3>基本規則</h3>
+      <ul>
+        <li>船上一律<b>台灣時間</b>。船上郵報、表演、餐廳都寫台灣時間。</li>
+        <li>消費刷房卡記帳，離船前一晚到 7 樓結帳（或下船前至少 3 小時）。信用卡只收 VISA、MASTER；不用先綁卡。</li>
+        <li>房間有吹風機、保險箱、熱水壺。沒有瓶裝水，各樓層有飲水機。</li>
+        <li>7 樓櫃台有暈船藥與紙本每日郵報；醫務中心在 4 樓船頭，收費。</li>
+        <li>只能在指定室外區抽菸。看表演不能錄影。</li>
+        <li>網路慢又貴，建議用日本 eSIM，靠近日本就有訊號。</li>
+      </ul>
+    </div>
+    <div>
+      <h3>吃</h3>
+      <ul>
+        <li>免費餐廳三間：<b>麗都自助</b>（12 樓船尾）、<b>百味軒</b>（6 樓船中）、<b>星夢</b>（6 樓船尾）。</li>
+        <li>同一餐期只能選一間；同時段吃第二間要付費（早餐 350、午晚餐 450）。其他餐廳都付費。</li>
+        <li>上船先去餐廳吃，房間還在整理。12 樓自助餐要早到才不用排。</li>
+        <li>三、四人房加床晚餐後才會鋪。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>船上必付費用（每人，台幣）</h3>
+  <table>
+    <thead><tr><th style="width:30%">項目</th><th class="num" style="width:22%">金額</th><th>說明</th></tr></thead>
+    <tbody>
+      <tr><td>服務費</td><td class="num">600 × 3 晚</td><td>內艙、海景房；陽台房 800、套房 1,000；2 歲以下免收</td></tr>
+      <tr><td>燃油附加費</td><td class="num">300 × 3 晚</td><td>2026-06-26 起出發航次；10/01 起調為 450</td></tr>
+      <tr><td>日本國際觀光旅客稅</td><td class="num">約 630</td><td>2026-07-01 起每人 ¥3,000，船上結清</td></tr>
+      <tr><td class="k">合計</td><td class="num k">約 3,300</td><td>海景房 3 晚。網路標準方案另計 290／晚，須整程購買（3 晚 870）</td></tr>
+    </tbody>
+  </table>
+  <p class="note">金額依台灣代理旅行社 2026 年公告；船公司官網未列金額。船上消費是否另加服務費，以船上公告為準。</p>
+</section>
+
+<!-- ===== 第 3 章 那霸 ===== -->
+<section class="ch" id="ch3">
+  <div class="chap"><span class="no">第 3 章</span><h2>9/21 那霸：租車、瀨長島、國際通</h2></div>
+  <p class="lead">靠岸 15:00，實際下船約 16:00–16:30，日落 18:27。租車已訂：碼頭取車開去瀨長島，還車後店家送到國際通分開逛，20:00 集合吃燒肉，22:30 前回船。</p>
+  <svg class="route" viewBox="0 0 720 100" role="img" aria-label="那霸路線">
+    <line x1="40" y1="30" x2="680" y2="30"/>
+    <circle cx="40" cy="30" r="8"/><circle cx="200" cy="30" r="8"/><circle cx="360" cy="30" r="8"/><circle cx="520" cy="30" r="8"/><circle class="hard" cx="680" cy="30" r="8"/>
+    <text class="leg" x="120" y="19" text-anchor="middle">自駕 16 分</text><text class="leg" x="280" y="19" text-anchor="middle">自駕 15 分</text><text class="leg" x="440" y="19" text-anchor="middle">店家接送 10 分</text><text class="leg" x="600" y="19" text-anchor="middle">計程車 10 分</text>
+    <text class="name" x="40" y="60" text-anchor="middle">碼頭取車</text><text class="name" x="200" y="60" text-anchor="middle">瀨長島</text><text class="name" x="360" y="60" text-anchor="middle">還車</text><text class="name" x="520" y="60" text-anchor="middle">國際通</text><text class="name" x="680" y="60" text-anchor="middle">回船</text>
+    <text x="40" y="82" text-anchor="middle">16:30</text><text x="200" y="82" text-anchor="middle">16:50 起</text><text x="360" y="82" text-anchor="middle">18:10 或 18:50</text><text x="520" y="82" text-anchor="middle">20:00 晚餐</text><text x="680" y="82" text-anchor="middle">22:30</text>
+  </svg>
+
+  <h3>時間表</h3>
+  <div class="card gold"><p class="t">瀨長島待多久，當天 17:30 在現場舉手表決</p><p class="small"><b>多逛國際通</b>：17:50 離開，18:25 到國際通，晚餐前有 1 個半小時。<b>看日落</b>：18:27 看完日落 18:30 離開，19:05 到國際通，晚餐前 55 分鐘。其餘時間兩種都一樣。</p></div>
+  <ul class="tl">
+    <li><time>15:00–16:30</time><div><span class="h">靠岸、入境、下船</span><span class="d">租車店家 15:00 起在外面等；出關那一刻就用 LINE 通知店家。</span></div></li>
+    <li><time>16:30</time><div><span class="h">碼頭出口外第 3 個休息亭取車</span><span class="d">拍車況、付餘額現金。</span></div></li>
+    <li><time>16:50 起</time><div><span class="h">瀨長島 Umikaji Terrace</span><span class="d">露台看海、看飛機、喝一杯。17:50 或 18:30 離開。</span></div></li>
+    <li class="hard"><time>17:50 或 18:30</time><div><span class="h">開回租車店還車</span><span class="d">那霸市曙 1-6-1，約 15 分鐘。最晚 19:30。店家再送大家到國際通。</span></div></li>
+    <li><time>18:25 或 19:05</time><div><span class="h">國際通分開行動</span><span class="d">伴手禮、逛街、公設市場周邊。藥妝留到明天石垣島。</span></div></li>
+    <li class="hard"><time>20:00</time><div><span class="h">集合：燒肉もとぶ牧場 那霸店</span><span class="d">久茂地 MK 大樓 3F。Verna 2 人、Nancy 4 人 20:00；Paula 2 人 20:15。90 分鐘制。</span></div></li>
+    <li><time>21:30–22:05</time><div><span class="h">吃完再逛一下</span><span class="d">多數店 21:00–22:00 關，唐吉訶德、屋台村還開。22:05 在縣廳前搭計程車，8 人兩台，5 到 10 分鐘，約 ¥750–950／台。</span></div></li>
+    <li class="hard"><time>22:30</time><div><span class="h">回到船上</span></div></li>
+  </ul>
+
+  <h3 id="ch3-car">租車與取還車流程 <span class="tag green">已訂</span></h3>
+  <div class="grid2">
+    <figure><img src="img/pickup.jpg" alt="取車等候點" style="height:50mm;object-fit:cover;object-position:top"><figcaption>店家提供的等候點示意：出碼頭出口往外走，第 3 個休息亭，車停在旁邊。出關時先傳訊息。</figcaption></figure>
+    <div>
+      <dl class="facts">
+        <dt>車輛</dt><dd>Sunrise Rentacar 日產 Serena Hybrid 8 人座。禁菸、日文導航、手機架、藍牙。</dd>
+        <dt>取車</dt><dd>店家 15:00 起在若狹郵輪碼頭等。出關後 LINE 通知，走到第 3 個休息亭。交車時雙方拍照。</dd>
+        <dt>還車</dt><dd>19:00 開到店（那霸市曙 1-6-1，離國際通約 10 分鐘），最晚 19:30。還完店家送大家到國際通。</dd>
+        <dt>費用</dt><dd>餘額 <b>取車時付現金</b>（刷卡加 4%）。含車資 1 天＋一般保險 1 天。</dd>
+        <dt>駕駛帶</dt><dd>台灣駕照正本、日文譯本、護照正本，三樣先拍照存手機（店家要電子檔）。</dd>
+        <dt>取消</dt><dd>10 天前免費；6–10 天 30%；4–5 天 50%；1–3 天 100%。</dd>
+        <dt>聯絡</dt><dd>GOGOTOUR LINE 訂單對話；店家電話 070-4445-7046。</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="grid2">
+    <div>
+      <h4>條款重點</h4>
+      <ul class="small tight">
+        <li>基本保險對人無上限；車輛損壞有自負額。NOC（車輛修理期間營業損失）由顧客負擔。</li>
+        <li>車內禁菸，還車有菸味或異味收清潔費。</li>
+        <li>交車、還車都會拍照錄影，自己也拍一輪。</li>
+        <li>車輛證件放手套箱不拿出；鑰匙套、行車記錄器等配件不可拆。</li>
+        <li>出事先報警 110，再通知店家；沒有事故證明書保險不賠。</li>
+        <li>停車、高速費自付。瀨長島停車免費。</li>
+      </ul>
+    </div>
+    <div>
+      <h4>延誤怎麼辦</h4>
+      <ul class="small tight">
+        <li><b>17:15 還沒出關</b>：瀨長島縮成 30 分鐘，或改去 PARCO CITY（15 分鐘，停車免費），18:30 出發還車。</li>
+        <li><b>18:00 還沒出關</b>：不開了。跟店家說改在碼頭交還、只付車資，走路 15 分鐘進國際通。</li>
+      </ul>
+      <h4>停車費參考</h4>
+      <ul class="small tight">
+        <li>瀨長島、PARCO CITY：免費。</li>
+        <li>縣廳前地下停車場：第一小時 ¥300，之後每 30 分 ¥150，5 小時以上一律 ¥1,500。</li>
+        <li>看牌子注意「最大料金」封頂價、「小型車専用」不能停 8 人座。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>地點</h3>
+  <div class="grid2">
+    <div class="venue">
+      <figure class="fig2"><img src="img/senaga_a.jpg" alt=""><img src="img/senaga_b.jpg" alt=""></figure>
+      <h4>瀨長島 Umikaji Terrace</h4>
+      <p class="sub">白色階梯露台，離碼頭 16 分鐘、離國際通 17 分鐘</p>
+      <dl class="facts">
+        <dt>時間</dt><dd>店家多開到 21:00。免門票、免停車費。日落 18:27，17:45 後天色最美。</dd>
+        <dt>怎麼玩</dt><dd>沿階梯往上逛，找一家面海的店坐下。想放空選 HAMMOCK CAFE LA ISLA 的吊床座（11:00–21:00）。機場跑道就在對面，飛機一直起降。</dd>
+        <dt>別排</dt><dd>幸福鬆餅要等 1 到 2 小時，我們沒有這個時間。蝦蝦飯想試就點一盤分著吃，別當晚餐。</dd>
+      </dl>
+    </div>
+    <div class="venue">
+      <figure><img src="img/kokusai.jpg" alt="" style="height:24mm;object-fit:cover"></figure>
+      <h4>國際通</h4>
+      <p class="sub">1.6 公里主街，走完約 25 分鐘</p>
+      <dl class="facts">
+        <dt>走向</dt><dd>西端縣廳前站（晚餐、回碼頭計程車都在這）到東端安里站（唐吉訶德）。多數店 21:00–22:00 關。</dd>
+        <dt>市場</dt><dd>第一牧志公設市場從中段轉進市場本通走 3 分。2 樓食堂 20:00 最後點餐，1 樓 19:45 停收代客料理（每人 ¥550、3 道內）。晚餐後只能逛周邊巷子。</dd>
+        <dt>怎麼逛</dt><dd>店家放人後分開逛 → 20:00 集合吃燒肉 → 21:30 吃完再逛 → 22:05 縣廳前攔車回碼頭。</dd>
+      </dl>
+    </div>
+  </div>
+  <p class="note">照片：Google 地圖網友實拍與 Wikimedia 授權照，僅供行前辨認。</p>
+
+  <h3 id="ch3-dinner">晚餐與購物</h3>
+  <div class="card green">
+    <p class="t">燒肉もとぶ牧場 那霸店・20:00 集合（已訂）</p>
+    <div class="grid2">
+      <div>
+        <table style="margin:0">
+          <thead><tr><th>時間</th><th>訂位人</th><th class="num">人數</th></tr></thead>
+          <tbody><tr><td>20:00</td><td>Verna</td><td class="num">2</td></tr><tr><td>20:00</td><td>Nancy</td><td class="num">4</td></tr><tr><td>20:15</td><td>Paula</td><td class="num">2</td></tr></tbody>
+        </table>
+        <p class="small muted" style="margin:.4em 0 0">90 分鐘制，21:30 前吃完。國際通店訂滿，改訂這家分店。</p>
+      </div>
+      <dl class="facts" style="margin:0">
+        <dt>地址</dt><dd>久茂地 2-1-3 久茂地 MK 大樓 3F，ロコアナハ飯店內，國際通みずほ銀行對面，縣廳前站走 2 分。</dd>
+        <dt>電話</dt><dd>098-943-3897</dd>
+        <dt>營業</dt><dd>晚餐 15:00–22:00，21:30 最後點餐。可刷卡、PayPay。</dd>
+        <dt>必點</dt><dd>本部牛上等牛舌、英式烤牛肉、牛尾湯。套餐 ¥6,600–7,600 起，單點約 ¥6,000–8,000／人。</dd>
+        <dt>不吃牛</dt><dd>點豬、雞、海鮮單品，先看菜單。</dd>
+      </dl>
+    </div>
+  </div>
+  <p class="small"><b>備案</b>（沒到或臨時換店才用）：うりずん 本店，安里站旁，098-885-2178 只收電話，琉球料理老店，含酒約 ¥3,000–5,000／人；小やじ 上里肌豬排定食 ¥1,980，不用訂位，20:00 關。</p>
+
+  <div class="grid2">
+    <div>
+      <h4>國際通買什麼</h4>
+      <p class="small"><b>大家都說好：</b>御菓子御殿 紅芋塔（冰過更好吃）、鹽屋 雪塩厚夾心餅乾（「沖繩版白色戀人」）、Royce 石垣鹽巧克力洋芋片（日本價約台灣一半）、Calbee 現炸紅芋條（只有國際通門市有）、石垣島辣油（唐吉訶德最便宜）、Orion 豆菓子、首里石鹼。</p>
+      <p class="small muted">不用買：雪鹽費南雪、雪鹽棉花餅。Calbee 和鹽屋先逛，多數店 21:00–22:00 關。美麗海水族館伴手禮店可退稅。<b>藥妝建議留到明天石垣島大國藥妝慢慢逛，這裡可先不逛。</b></p>
+    </div>
+    <div>
+      <h4>避開與不去</h4>
+      <p class="small"><span class="tag red" style="margin-left:0">雷店</span> <b>幸福鬆餅</b>（瀨長島）網友實測等 76 分鐘到 2 小時；<b>蝦蝦飯</b>評價兩極，不當正餐；<b>唐吉訶德</b>人多空間小，補貨可以別逛太久。</p>
+      <p class="small"><b>不去：</b>舊海軍司令部壕、玉泉洞、護國寺（經過波上宮時別進去）。</p>
+      <p class="small"><b>想看海看書：</b>瀨長島 HAMMOCK CAFE LA ISLA（11:00–21:00，吊床面海）；ジュンク堂書店 那霸店（10:00–21:00，離國際通走 5 分）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第 4 章 石垣島 ===== -->
+<section class="ch" id="ch4">
+  <div class="chap"><span class="no">第 4 章</span><h2>9/22 石垣島：市區、富崎海灘</h2></div>
+  <p class="lead">靠岸 14:00，實際下船約 14:30–14:45。不包車、不租車：市區慢慢逛，傍晚計程車去富崎海灘看 18:41 日落，回市區在公設市場周邊吃晚餐。三趟計程車前一天先預約。</p>
+  <svg class="route" viewBox="0 0 720 100" role="img" aria-label="石垣島路線">
+    <line x1="40" y1="30" x2="680" y2="30"/>
+    <circle cx="40" cy="30" r="8"/><circle cx="200" cy="30" r="8"/><circle cx="360" cy="30" r="8"/><circle cx="520" cy="30" r="8"/><circle class="hard" cx="680" cy="30" r="8"/>
+    <text class="leg" x="120" y="19" text-anchor="middle">走路 10 分</text><text class="leg" x="280" y="19" text-anchor="middle">計程車 12 分</text><text class="leg" x="440" y="19" text-anchor="middle">計程車 12 分</text><text class="leg" x="600" y="19" text-anchor="middle">計程車 5 分</text>
+    <text class="name" x="40" y="60" text-anchor="middle">碼頭</text><text class="name" x="200" y="60" text-anchor="middle">市區</text><text class="name" x="360" y="60" text-anchor="middle">富崎海灘</text><text class="name" x="520" y="60" text-anchor="middle">市區晚餐</text><text class="name" x="680" y="60" text-anchor="middle">回船</text>
+    <text x="40" y="82" text-anchor="middle">14:45</text><text x="200" y="82" text-anchor="middle">15:00–17:00</text><text x="360" y="82" text-anchor="middle">日落 18:41</text><text x="520" y="82" text-anchor="middle">19:15</text><text x="680" y="82" text-anchor="middle">21:30</text>
+  </svg>
+
+  <h3>時間表</h3>
+  <ul class="tl">
+    <li><time>14:00–14:45</time><div><span class="h">靠岸、下船</span></div></li>
+    <li><time>14:45–15:00</time><div><span class="h">走進市區</span><span class="d">碼頭到公設市場走路 10 分鐘；或搭接駁到離島碼頭再走 5 分鐘。</span></div></li>
+    <li><time>15:00–17:00</time><div><span class="h">市區慢遊</span><span class="d">公設市場（石垣牛握壽司、2 樓伴手禮）→ 歐格麗娜商店街 → 大國藥妝（730 記念碑前，Joy World 2 樓）→ SAN-A 或 MaxValu 超市。</span></div></li>
+    <li><time>17:00</time><div><span class="h">預約好的計程車去富崎</span><span class="d">兩台，12 分鐘，約 ¥1,800／台。沒約到車就改搭 16:15 公車，見「叫車與備案」。</span></div></li>
+    <li class="hard"><time>17:15–18:50</time><div><span class="h">富崎海灘看日落</span><span class="d">日落 18:41。棧橋走到盡頭，太陽正對著。海灘 9 月營業到 18:30，到了先問櫃檯 18:30 後能不能留在棧橋。</span></div></li>
+    <li><time>18:50</time><div><span class="h">預約好的計程車在飯店正門接</span><span class="d">12 分鐘回市區。車沒來：請櫃檯叫，或 19:42 末班公車。</span></div></li>
+    <li><time>19:15–20:30</time><div><span class="h">晚餐：公設市場周邊現場挑</span><span class="d">不訂位，分 2 到 3 桌。候選店見「晚餐候選」。</span></div></li>
+    <li><time>20:30–21:00</time><div><span class="h">預約好的計程車回港</span><span class="d">5 分鐘。走路要 40 分鐘，別走。</span></div></li>
+    <li class="hard"><time>21:30</time><div><span class="h">回到船上</span></div></li>
+  </ul>
+  <p class="small muted">下雨也能走：公設市場、商店街、藥妝都在拱廊裡。富崎下雨就不去，改在市區多逛。</p>
+
+  <h3 id="ch4-taxi">叫車與備案</h3>
+  <div class="card gold"><p class="t">9/22 是日本國民の休日，又是靠港日，現場很難攔到車</p><p class="small">三趟（17:00 市區→富崎、18:50 富崎→市區、20:30 市區→碼頭）都在 9/21 先約好。8 人要說清楚兩台，或一台 9 人座。</p></div>
+  <div class="flow">
+    <div><span class="step">先試</span><b>LINE「石垣島タクシー配車」</b><br><span class="muted">全島 12 家車行 265 台共用，加好友就能叫，24 小時</span></div>
+    <div><span class="step">其次</span><b>電話叫車中心</b><br><span class="muted">0980-82-4649；石垣タクシー 0980-82-3088。指定時間加 ¥550／台</span></div>
+    <div><span class="step">第三</span><b>DiDi App</b><br><span class="muted">官方寫石垣市可用、可預約 2 天內；旺季要等很久，未找到郵輪日實例</span></div>
+    <div><span class="step">備案</span><b>東運輸 ⑨ 線公車</b><br><span class="muted">16:15 去、19:42 末班回</span></div>
+  </div>
+  <div class="grid2">
+    <div>
+      <h4>公車細節</h4>
+      <p class="small">東運輸 <b>⑨ 川平リゾート線</b>是唯一經過富崎的公車。巴士總站（美崎町 3，離島碼頭走 3 分）<b>16:15 發、16:37 到「フサキビーチリゾート」</b>，¥360。一天只有 6 班，18:15 那班 18:37 到、太趕。回程末班 <b>19:42 發、20:05 到總站</b>，之後沒車。東運輸 0980-87-5423。</p>
+      <h4>行不通的</h4>
+      <p class="small">飯店接駁車只給住客、只跑機場。租電動腳踏車實際路程 6.7 公里、回程天黑。GO 叫車 App 石垣島不能用，Uber 也沒有。</p>
+    </div>
+    <div>
+      <h4>真的去不了富崎</h4>
+      <p class="small">市區走路看日落：<b>サザンゲートブリッジ橋頂</b>（公設市場走 20 分，視野最開）或<b>舊離島棧橋</b>（走 10 分，港內船影配夕陽）。9 月太陽落在西表島剪影後面，不是落海。</p>
+      <h4>回港</h4>
+      <p class="small">市區到新港郵輪碼頭 3 公里，計程車 5 分鐘；走路 40 分鐘不建議。這趟也先預約，或在離島碼頭招呼站排。</p>
+    </div>
+  </div>
+
+  <h3>地點</h3>
+  <div class="grid2">
+    <div class="venue">
+      <figure><img src="img/ishimarket.jpg" alt="" style="height:36mm;object-fit:cover"></figure>
+      <h4>石垣市公設市場</h4>
+      <p class="sub">碼頭走 10 分鐘，先逛這裡</p>
+      <dl class="facts">
+        <dt>時間</dt><dd>9:00–20:00。我們 15:00 到，很寬裕。</dd>
+        <dt>怎麼玩</dt><dd>門口先吃一貫石垣牛握壽司（いしぎゅう本舗，¥350 起，可刷卡），1 樓看肉攤魚攤，2 樓特產中心買伴手禮。整條歐格麗娜商店街是拱廊，下雨也能走。</dd>
+        <dt>順路</dt><dd>離島碼頭、730 交差點、大國藥妝都在 5 分鐘內。</dd>
+      </dl>
+      <h4>大國藥妝 石垣730記念碑前店</h4>
+      <p class="sub">那霸沒逛的在這裡補</p>
+      <dl class="facts">
+        <dt>地址</dt><dd>大川 245 Joy World 2 樓，730 交差點旁，公設市場走 3 分鐘。</dd>
+        <dt>時間</dt><dd>10:05–21:50。電話 0980-87-0091。島上只有這一家大國，免稅帶護照影本。量大的最後回港前再買，不用提著去富崎。</dd>
+      </dl>
+    </div>
+    <div class="venue">
+      <figure class="fig2"><img src="img/fusaki_a.jpg" alt=""><img src="img/fusaki_b.jpg" alt=""></figure>
+      <h4>富崎海灘</h4>
+      <p class="sub">Fusaki 度假村前的公共海灘，離市區 12 分鐘</p>
+      <dl class="facts">
+        <dt>時間</dt><dd>免費，非住客可進。<b>9 月營業 9:00–18:30</b>，日落 18:41 在營業結束後，先問櫃檯能不能留在棧橋。</dd>
+        <dt>怎麼看</dt><dd>棧橋面西，走到盡頭視野最開，太陽正對著棧橋。日落時棧橋上很多人，早點卡位。度假村有廁所和飲料。</dd>
+        <dt>位置</dt><dd>島上離市區最近的西向海灘。飯店正門是回程計程車的接送點。</dd>
+      </dl>
+    </div>
+  </div>
+  <p class="note">照片：Google 地圖網友實拍，僅供行前辨認。</p>
+
+  <h3 id="ch4-dinner" style="break-before:page;margin-top:0">晚餐候選 <span class="tag green">不訂位</span></h3>
+  <p>19:10 回到市區後直接去第一家問位，沒位走到下一家，四家都在 730 交差點旁、彼此走路 1 到 3 分鐘。8 人分 2 到 3 桌比較快入座。菜單都有豬、雞、炸物、炒物，不吃牛、不吃生食的人有得吃。下午 17:00 前請一個人打電話問第一家「19:15 八人有沒有位」，等於當天預約。</p>
+  <div class="grid2">
+    <div class="venue">
+      <h4>1. こてっぺん <span class="tag grey">第一順位</span></h4>
+      <p class="sub">島料理居酒屋・美崎町 12-7 舊市役所正面・公設市場走 5 分・113 席</p>
+      <dl class="facts">
+        <dt>電話</dt><dd>0980-87-0257</dd>
+        <dt>營業</dt><dd>16:00–24:00。週二定休但官網寫不定休，<b>當天打電話確認</b>。2 樓大座敷最能塞 8 人。刷卡 ¥5,000 以上。有小菜費。</dd>
+        <dt>可點</dt><dd>炸雞 ¥759、炸魚 ¥869、島魚天婦羅 ¥759、黑糖滷肉 ¥1,089、苦瓜炒蛋 ¥869、八重山そば ¥649。每人約 ¥2,800–4,000。</dd>
+        <dt>注意</dt><dd>19:00 前常滿，早到或分桌。網友負評：炸物像微波、店員態度普通。</dd>
+      </dl>
+    </div>
+    <div class="venue">
+      <h4>2. あじまー商店</h4>
+      <p class="sub">島料理居酒屋・大川 250-3 市役所通・走 3 分・65 席</p>
+      <dl class="facts">
+        <dt>營業</dt><dd>12:00–23:00 無休，料理 22:00 收。刷卡、PayPay。每人小菜費 ¥429。全店禁菸。</dd>
+        <dt>可點</dt><dd>苦瓜炒蛋 ¥858、八重山そば ¥858、海蘊湯 ¥660、滷肉、土鍋炊飯、島菜天婦羅。每人約 ¥3,000–4,000。</dd>
+        <dt>注意</dt><dd>2023 年網友沒訂位也進得去。負評：鐵板料理上桌已溫掉。</dd>
+      </dl>
+    </div>
+    <div class="venue">
+      <h4>3. そば処 まーさん道</h4>
+      <p class="sub">八重山そば・定食・美崎町 3，730 交差點旁・走 3 分・50 席</p>
+      <dl class="facts">
+        <dt>營業</dt><dd>10:00–24:00 無休。<b>不接受預約</b>，純現場。<b>只收現金</b>。全店禁菸。</dd>
+        <dt>可點</dt><dd>八重山そば ¥858、滷肉排骨定食 ¥1,580、炸魚定食 ¥1,080、麩炒蛋、苦瓜炒蛋。每人 ¥1,000–2,000。</dd>
+        <dt>注意</dt><dd>2026 年 7 月網友「幾乎滿座」，旺季排 10 分鐘。偏觀光價。最便宜、最快。</dd>
+      </dl>
+    </div>
+    <div class="venue">
+      <h4>4. 海人居酒屋 源 海人めし店</h4>
+      <p class="sub">海鮮居酒屋・大川 286 源大樓 1F・走 5 分・55 席</p>
+      <dl class="facts">
+        <dt>營業</dt><dd>16:00–23:00。週二定休、祝日營業，<b>當天確認</b>。刷卡、QR。小菜費 ¥550。</dd>
+        <dt>可點</dt><dd>苦瓜炒蛋 ¥800、海蘊天婦羅 ¥850、墨魚炒飯 ¥880、近海魚煮付。每人約 ¥3,000–4,000。</dd>
+        <dt>注意</dt><dd>海鮮生食為主，不吃生食的人選項較少，排最後。</dd>
+      </dl>
+    </div>
+  </div>
+  <p class="small"><span class="tag red" style="margin-left:0">避開</span> <b>ひとし</b>：沒訂位進不去、以生鮪魚為主。<b>うさぎや</b>：收表演費 ¥800，網友說點餐一小時沒上菜。<b>南風</b>：搬家後常滿、90 分鐘制、不收團體。市場 3 樓 いちば食堂 19:30 最後點餐，趕不上。</p>
+</section>
+
+<!-- ===== 第 5 章 ===== -->
+<section class="ch" id="ch5">
+  <div class="chap"><span class="no">第 5 章</span><h2>9/23 回基隆（週三）</h2></div>
+  <div class="grid2">
+    <div>
+      <h3>前一晚（9/22 回船後）</h3>
+      <ul>
+        <li>房間會收到離船通知。</li>
+        <li>到 7 樓結帳（或下船前至少 3 小時）。</li>
+        <li>大件行李放門口，會有人收。</li>
+      </ul>
+      <h3>當天</h3>
+      <ul>
+        <li>依廣播領回護照。代領要帶對方房卡。</li>
+        <li>離房前檢查保險箱、抽屜、床底。</li>
+        <li>房卡帶著，下船前要再刷一次。</li>
+        <li>09:00 靠基隆。</li>
+      </ul>
+    </div>
+    <div>
+      <h3>入境台灣</h3>
+      <ul>
+        <li>酒 1.5 公升、菸 200 支以內免稅。</li>
+        <li>現金等值 1 萬美元以上要申報。</li>
+        <li>肉類、蔬果、種子不能帶。水果可以帶回船上吃，不能帶下船。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第 6 章 ===== -->
+<section class="chx" id="ch6">
+  <div class="chap"><span class="no">第 6 章</span><h2>費用與現金</h2></div>
+  <p class="lead">兩天靠岸合計每人約 ¥12,000–15,000，加船上台幣約 3,300。價格於 2026-09-17 逐項對業者官網核實。</p>
+  <table>
+    <caption>每人費用估算（8 人平分）</caption>
+    <thead><tr><th style="width:24%">項目</th><th class="num" style="width:20%">每人</th><th>怎麼算</th></tr></thead>
+    <tbody>
+      <tr><td>船上必付</td><td class="num">約 NT$3,300</td><td>服務費 600×3、燃油附加費 300×3、日本觀光稅約 630，船上結清</td></tr>
+      <tr><td>那霸租車</td><td class="num">約 ¥2,100</td><td>租車 約 ¥15,000＋回程計程車兩台 ¥1,800</td></tr>
+      <tr><td>那霸晚餐</td><td class="num">¥6,000–8,000</td><td>もとぶ牧場 那霸店，套餐 ¥6,600–7,600 起，單點約 ¥6,000–8,000</td></tr>
+      <tr><td>石垣島交通</td><td class="num">約 ¥600–900</td><td>計程車三趟各兩台約 ¥5,000（指定時間每台加 ¥550）；公車去程 ¥360／人</td></tr>
+      <tr><td>石垣島晚餐</td><td class="num">¥1,500–4,000</td><td>まーさん道 ¥1,000–2,000；こてっぺん、あじまー商店 ¥3,000–4,000</td></tr>
+      <tr><td>伴手禮、藥妝</td><td class="num">自訂</td><td>大國藥妝、御菓子御殿、鹽屋</td></tr>
+    </tbody>
+  </table>
+  <div class="card sea">
+    <p class="t">日圓現金建議每人 ¥15,000 以上</p>
+    <p class="small" style="margin:0">租車餘額由駕駛代付再平分；まーさん道、市場攤、公車、接駁車都只收現金；那霸回程計程車、石垣島三趟計程車也可能只收現金。刷卡在燒肉店、藥妝店、超市都可以。</p>
+  </div>
+  <p class="note">石垣島計程車以起跳價估算，8 人分兩台。租車價格由 GOGOTOUR 訂單確認；船上費用依台灣代理旅行社 2026 年公告。</p>
+</section>
+
+<!-- ===== 附錄 A ===== -->
+<section class="ch" id="apA">
+  <div class="chap"><span class="no">附錄 A</span><h2>電話與聯絡總表</h2></div>
+  <table>
+    <thead><tr><th style="width:30%">對象</th><th style="width:20%">用途</th><th style="width:28%">電話／連結</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td class="k">麗星郵輪 台灣客服</td><td>船務</td><td>0080-149-8887</td><td>只在台灣可撥免付費</td></tr>
+      <tr><td class="k">Sunrise Rentacar</td><td>那霸租車（已訂）</td><td>070-4445-7046；GOGOTOUR LINE 訂單對話</td><td>出關後 LINE 通知，第 3 個休息亭取車</td></tr>
+      <tr><td class="k">燒肉もとぶ牧場 那霸店</td><td>那霸晚餐（已訂 20:00）</td><td>098-943-3897</td><td>三桌，90 分鐘制</td></tr>
+      <tr><td class="k">うりずん 本店</td><td>那霸晚餐備案</td><td>098-885-2178</td><td>只收電話</td></tr>
+      <tr><td class="k">石垣島タクシーコールセンター</td><td>石垣島叫車</td><td>0980-82-4649；LINE「石垣島タクシー配車」；DiDi App</td><td>指定時間加 ¥550／台</td></tr>
+      <tr><td class="k">石垣タクシー</td><td>石垣島叫車</td><td>0980-82-3088</td><td>有 9 人座</td></tr>
+      <tr><td class="k">東運輸 巴士</td><td>富崎公車備案</td><td>0980-87-5423</td><td>⑨ 線 16:15 去、19:42 末班回</td></tr>
+      <tr><td class="k">こてっぺん</td><td>石垣島晚餐第一順位</td><td>0980-87-0257</td><td>當天下午問 19:15 八人</td></tr>
+      <tr><td class="k">大國藥妝 石垣店</td><td>藥妝</td><td>0980-87-0091</td><td>10:05–21:50</td></tr>
+      <tr><td class="k">役男短期出境</td><td>出發前申請</td><td>內政部役政署網站</td><td>出發前 3 到 30 日</td></tr>
+    </tbody>
+  </table>
+  <p class="note">在日本境內撥打不加國碼；從台灣撥加 +81 並去掉開頭的 0。</p>
+</section>
+
+<!-- ===== 附錄 B ===== -->
+<section class="chx" id="apB">
+  <div class="chap"><span class="no">附錄 B</span><h2>勾選清單</h2></div>
+  <div class="grid3 small">
+    <div>
+      <h3>出發前</h3>
+      <ul class="check">
+        <li>線上預辦登船（09/19 20:00 前），截圖存手機</li>
+        <li>護照影本 A4 一份，不裁切、不寫字</li>
+        <li>駕駛：駕照、日文譯本、護照正本三樣拍照</li>
+        <li>租車餘額現金；日圓零錢</li>
+        <li>手機裝好：LINE 加「石垣島タクシー配車」、DiDi、Uber、eSIM</li>
+        <li>牙刷牙膏、拖鞋、房卡掛繩、萬國插頭、薄外套、暈船藥</li>
+      </ul>
+    </div>
+    <div>
+      <h3>9/21 那霸</h3>
+      <ul class="check">
+        <li>出關 LINE 通知租車店家</li>
+        <li>取車拍照、付餘額現金</li>
+        <li>17:30 表決瀨長島待多久</li>
+        <li>預約 9/22 三趟石垣島計程車</li>
+        <li>22:30 前回船</li>
+      </ul>
+      <h3>9/20 登船日</h3>
+      <ul class="check">
+        <li>護照正本、A4 影本、船票</li>
+        <li>硬殼箱託運，貴重物隨身</li>
+        <li>18:30 前完成報到</li>
+      </ul>
+    </div>
+    <div>
+      <h3>靠岸日帶下船</h3>
+      <ul class="check">
+        <li>房卡＋護照影本（貼上陸許可）＋海關申報單（一家一張）</li>
+        <li>日圓現金</li>
+        <li>eSIM 下船前 2 小時裝好</li>
+      </ul>
+      <h3>9/22 石垣島</h3>
+      <ul class="check">
+        <li>17:00 前打 こてっぺん 問 19:15 八人</li>
+        <li>到富崎先問櫃檯 18:30 後能否留在棧橋</li>
+        <li>21:30 前回船</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 附錄 C ===== -->
+<section class="ch" id="apC">
+  <div class="chap"><span class="no">附錄 C</span><h2>資料來源與版本</h2></div>
+  <p>本手冊的時間、價格、營業資訊來自以下業者與官方頁面，於 2026-09-17 至 09-19 查證。網友評價取自 Threads、Dcard、PTT、食べログ、HotPepper 的公開貼文，僅引用可對照日期的內容。</p>
+  <table>
+    <thead><tr><th style="width:34%">項目</th><th>來源</th></tr></thead>
+    <tbody>
+      <tr><td>租車方案與訂單</td><td><a href="https://tw.gogo-tour.com/car/detail/?plan_id=1299">GOGOTOUR 方案 T1299</a>；店家確認圖與訊息（2026-09-18）；<a href="https://sunrise-rent.com/ja/about-us">Sunrise Rentacar 店舖資訊</a></td></tr>
+      <tr><td>もとぶ牧場 那霸店</td><td><a href="https://motobu-farm.com/en/pages/store-naha">官方店舖頁</a>；<a href="https://www.hotpepper.jp/strJ000980955/">HotPepper</a></td></tr>
+      <tr><td>那霸計程車費率、停車場</td><td><a href="https://www.oki-taxi.or.jp/fee.html">沖繩縣計程車協會（2026-08-24 新費率）</a>；<a href="https://www.pref.okinawa.jp/machizukuri/dorokotsu/1012759/1022309/1012994.html">沖繩縣 縣民廣場地下停車場</a></td></tr>
+      <tr><td>富崎海灘、飯店接駁</td><td><a href="https://www.fusaki.com/facility/beach">Fusaki 海灘營業時間</a>；<a href="https://www.fusaki.com/faq/access/148">Fusaki FAQ 接駁</a>；<a href="https://www.hinode-hinoiri.com/47207.html">石垣市日落時刻</a></td></tr>
+      <tr><td>石垣島公車</td><td><a href="http://www.azumabus.co.jp/">東運輸 時刻表（令和 8 年 2 月起）</a></td></tr>
+      <tr><td>石垣島叫車</td><td><a href="https://ishigaki.taxi/fare/">石垣タクシー 費率</a>；<a href="https://mobacre.jp/news-release/news-ishigaki/">LINE 配車新聞稿（2024-09）</a>；<a href="https://didimobility.co.jp/column/app-osusume-ishigakijima/">DiDi 石垣島專欄（2026，PR）</a></td></tr>
+      <tr><td>石垣島晚餐候選</td><td><a href="https://ishigakijimateppen.co.jp/menu/food_koteppen.php">こてっぺん 官方菜單</a>；<a href="https://www.hotpepper.jp/strJ004090546/">あじまー商店 HotPepper</a>；<a href="https://tabelog.com/okinawa/A4705/A470501/47001759/">まーさん道 食べログ</a>；<a href="https://www.hotpepper.jp/strJ003694117/">源 海人めし店 HotPepper</a></td></tr>
+      <tr><td>大國藥妝 石垣店</td><td><a href="https://daikokudrug.com/store/703/">官方店舖頁</a></td></tr>
+      <tr><td>船上費用</td><td>上順旅遊、統一旅遊、新進旅行社 2026 年產品頁；日本國際觀光旅客稅 2026-07 新制（日經）</td></tr>
+      <tr><td>登船須知</td><td>麗星郵輪 登輪通知與旅遊指南、港口資訊（PDF，2026-09）</td></tr>
+    </tbody>
+  </table>
+  <h3>版本</h3>
+  <p class="small">2026-09-19 版，依網頁 v20260918j 整理。完整筆記、核價紀錄與候選方案備份在 Obsidian 資料夾「2026-09 探索星號 那霸石垣島 旅遊規劃」。網頁版隨時更新：<a href="https://nancylin071.github.io/mobile-base-station-cruise-2026/">nancylin071.github.io/mobile-base-station-cruise-2026</a></p>
+</section>
+
+</body>
+</html>
